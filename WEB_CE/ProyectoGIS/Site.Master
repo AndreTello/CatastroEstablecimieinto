@@ -1,0 +1,242 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ProyectoGIS.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+        <link rel="stylesheet" href="./publics/templates.css">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server" id="general">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="./home"><img src="../publics/imgs/QH_HORIZONTAL-01.png"
+                class="  rounded shadow-xl img-fluid" style="width: 160px; filter: brightness(1.30);" alt=""></a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+                
+
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <asp:Button class="btn nav-link px-3 me-3 btn-danger text-white" OnClick="btnLogout_Click"   Text="Cerrar Sesión" runat="server" />
+            </div>
+        </div>
+                
+    </header>
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <div id="rol-admin">
+
+                            <asp:HyperLink ID="adminLink" runat="server" class="text-start text-muted text-decoration-none" Visible="false">
+
+                            <h6
+                                class="sidebar-heading d-flex justify-content-between  px-3 mt-4 mb-1 text-muted text-uppercase">
+                                <span>Administración</span>
+                                
+                            </h6>
+
+                            <li class="nav-item">
+                                
+                                <a class="nav-link" aria-current="page" href="./GestionUsuario">
+                                <span data-feather="home" class="align-text-bottom">Gestionar Usuarios</span>
+                                 
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./GestionRoles">
+                            <span data-feather="file" class="align-text-bottom"></span>
+                                Gestión de Roles
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./permisos">
+                            <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                Gestión de Permisos
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./rolPermiso">
+                            <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                Gestión de Rol y Permisos
+                            </a>
+                            </li>
+
+                            </asp:HyperLink>
+                        </div>
+                         <asp:HyperLink ID="modLink" runat="server" class="text-start text-muted text-decoration-none" Visible="false">
+
+                            <div id="rol-mod">
+                                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                            <span>Consultas</span>
+
+                            </h6>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./consultas">
+                                    <span data-feather="users" class="align-text-bottom"></span>
+                                    Busqueda
+                                </a>
+                            </li>
+                            <h6
+                                class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                                <span>Reportes</span>
+
+                            </h6>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./reportes">
+                                    <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                    Reportes
+                                </a>
+                            </li>
+                            </div>
+                        </asp:HyperLink>
+                        <h6
+                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                            <span>Geovisualización</span>
+
+                        </h6>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./visor">
+                                <span data-feather="layers" class="align-text-bottom"></span>
+                                Visor
+                            </a>
+                        </li>
+                       
+                        <h6
+                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                            <span>GeoPortal</span>
+
+                        </h6>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./GeoVisor">
+                                <span data-feather="layers" class="align-text-bottom"></span>
+                                GeoVisor
+                            </a>
+                        </li>
+                        <li class="nav-item mt-4">
+                           <!-- <footer class="">
+                                <p> <a href="#" class="nav-link text-dark">Sefaks Solutions&copy;</a>
+                            </footer>
+                            -->
+                        </li>
+                        
+                    </ul>
+
+
+                    
+                </div>
+            </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div
+                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2"><%: Page.Title %></h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <asp:Label ID="rol" name="rol" Text="" runat="server" />
+                </div>
+            </div>
+            <!-- Centro Main -->
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+               
+            </div>
+        </main>
+     
+        
+
+    </form>
+   
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\GIS</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/es/Microsoft.QualityTools.Testing.Fakes.resources.dll">
+      <publishTime>10/05/2013 04:09:56</publishTime>
+    </File>
+    <File Include="bin/GMaps.dll">
+      <publishTime>02/08/2017 00:01:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>02/09/2017 15:54:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>02/09/2017 15:54:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.Logging.dll">
+      <publishTime>02/09/2017 15:54:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.QualityTools.Testing.Fakes.dll">
+      <publishTime>10/05/2013 02:38:22</publishTime>
+    </File>
+    <File Include="bin/Npgsql.dll">
+      <publishTime>02/09/2017 15:54:43</publishTime>
+    </File>
+    <File Include="bin/ProyectoGIS.dll">
+      <publishTime>02/14/2017 20:10:46</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>02/09/2017 15:54:35</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>02/09/2017 15:54:42</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>02/14/2017 19:54:19</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/.gitignore">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/bower.json">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/addlayer.html">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/addlayer.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/browserify/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/browserify/index.html">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/browserify/index.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/browserify/package.json">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/browserify/README.md">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/layerswitcher.css">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/layerswitcher.html">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/layerswitcher.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/scroll.css">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/scroll.html">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/examples/scroll.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/package.json">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/README.md">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/src/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/src/ol3-layerswitcher.css">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/src/ol3-layerswitcher.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/test/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/test/index.html">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/test/spec/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/test/spec/ol3-layerswitcher.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/test/spec/twomaps.js">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/util/desktop.ini">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="ol3-layerswitcher-master/util/README.md">
+      <publishTime>02/10/2017 11:22:28</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/09/2017 15:55:00</publishTime>
+    </File>
+    <File Include="Visualizador.aspx">
+      <publishTime>02/11/2017 14:07:21</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/14/2017 20:10:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
