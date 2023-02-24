@@ -1,0 +1,76 @@
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.pdb
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.AssemblyReference.cache
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CoreCompileInputs.cache
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.pdb
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.dll.config
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Npgsql.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Buffers.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Collections.Immutable.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Memory.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Numerics.Vectors.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Encodings.Web.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Json.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Channels.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.ValueTuple.dll
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Npgsql.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Buffers.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Collections.Immutable.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Memory.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Numerics.Vectors.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Encodings.Web.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Json.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Channels.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.ValueTuple.xml
+C:\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CopyComplete
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.dll.config
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.pdb
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Npgsql.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Buffers.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Collections.Immutable.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Memory.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Numerics.Vectors.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Encodings.Web.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Json.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Channels.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.ValueTuple.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\Npgsql.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Buffers.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Collections.Immutable.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Memory.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Numerics.Vectors.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Encodings.Web.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Text.Json.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Channels.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\bin\Debug\System.ValueTuple.xml
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.AssemblyReference.cache
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CoreCompileInputs.cache
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CopyComplete
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.dll
+D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.pdb

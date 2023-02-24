@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5A8F03E-CC12-46C4-A1FA-424135BC6CFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL_CE</RootNamespace>
+    <AssemblyName>BLL_CE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\Cls_Permiso_BLL.cs" />
+    <Compile Include="Administracion\Cls_Rol_BLL.cs" />
+    <Compile Include="Administracion\Cls_Rol_Permiso_BLL.cs" />
+    <Compile Include="Administracion\Cls_Usuario_BLL.cs" />
+    <Compile Include="Auditoria\Cls_Acciones_Registradas_BLL.cs" />
+    <Compile Include="Catastro\Cls_Administracion_Zonal_BLL.cs" />
+    <Compile Include="Catastro\Cls_Asociacion_BLL.cs" />
+    <Compile Include="Catastro\Cls_Ayudante_BLL.cs" />
+    <Compile Include="Catastro\Cls_Bloque_BLL.cs" />
+    <Compile Include="Catastro\Cls_Canton_BLL.cs" />
+    <Compile Include="Catastro\Cls_Comerciante_BLL.cs" />
+    <Compile Include="Catastro\Cls_Discapacidad_BLL.cs" />
+    <Compile Include="Catastro\Cls_Documento_Comerciante_BLL.cs" />
+    <Compile Include="Catastro\Cls_Documento_Puesto_BLL.cs" />
+    <Compile Include="Catastro\Cls_Establecimiento_BLL.cs" />
+    <Compile Include="Catastro\Cls_Estado_Civil_BLL.cs" />
+    <Compile Include="Catastro\Cls_Estatus_Legal_BLL.cs" />
+    <Compile Include="Catastro\Cls_Etnia_BLL.cs" />
+    <Compile Include="Catastro\Cls_Familiar_BLL.cs" />
+    <Compile Include="Catastro\Cls_Genero_BLL.cs" />
+    <Compile Include="Catastro\Cls_Giro_Negocio_BLL.cs" />
+    <Compile Include="Catastro\Cls_Identificacion_Socio_Economica_BLL.cs" />
+    <Compile Include="Catastro\Cls_Intervencion_Tecnica_Establecimiento_BLL.cs" />
+    <Compile Include="Catastro\Cls_Lote_BLL.cs" />
+    <Compile Include="Catastro\Cls_Manzana_BLL.cs" />
+    <Compile Include="Catastro\Cls_Nacionalidad_BLL.cs" />
+    <Compile Include="Catastro\Cls_Nivel_Educacion_BLL.cs" />
+    <Compile Include="Catastro\Cls_Parroquia_BLL.cs" />
+    <Compile Include="Catastro\Cls_Piso_BLL.cs" />
+    <Compile Include="Catastro\Cls_Provincia_BLL.cs" />
+    <Compile Include="Catastro\Cls_Puesto_BLL.cs" />
+    <Compile Include="Catastro\Cls_Reemplazo_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipos_Producto_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Area_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Documento_Comerciante_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Documento_Puesto_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Establecimiento_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Familiar_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Identificacion_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Intervencion_Tecnica_BLL.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Ocupante_BLL.cs" />
+    <Compile Include="Catastro\Cls_Zona_BLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_CE_Postgresql\DAL_CE_Postgresql.csproj">
+      <Project>{b49c8792-1844-429b-a78c-6bcade3a9e04}</Project>
+      <Name>DAL_CE_Postgresql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_CE_SQLLite\DAL_CE_SQLLite.csproj">
+      <Project>{9f2d2de9-05b0-4e6a-8e60-87de8a022b97}</Project>
+      <Name>DAL_CE_SQLLite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
