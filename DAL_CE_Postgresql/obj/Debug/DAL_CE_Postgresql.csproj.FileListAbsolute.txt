@@ -74,3 +74,41 @@ D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\Ca
 D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CopyComplete
 D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.dll
 D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.dll.config
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\DAL_CE_Postgresql.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.HashCode.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Npgsql.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Buffers.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Collections.Immutable.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Memory.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Numerics.Vectors.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Text.Encodings.Web.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Text.Json.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Threading.Channels.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.ValueTuple.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Microsoft.Bcl.HashCode.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\Npgsql.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Buffers.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Collections.Immutable.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Memory.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Numerics.Vectors.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Text.Encodings.Web.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Text.Json.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Threading.Channels.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\bin\Debug\System.ValueTuple.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.AssemblyReference.cache
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CoreCompileInputs.cache
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.csproj.CopyComplete
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\DAL_CE_Postgresql\obj\Debug\DAL_CE_Postgresql.pdb

@@ -80,3 +80,45 @@ D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\Ca
 D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\BLL_CE\obj\Debug\BLL_CE.csproj.CopyComplete
 D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\BLL_CE\obj\Debug\BLL_CE.dll
 D:\Archivos\Grupo de desarollo del software\Mi tarea\CatastroEstablecimieinto\CatastroEstablecimiento\BLL_CE\obj\Debug\BLL_CE.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\BLL_CE.dll.config
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\BLL_CE.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\BLL_CE.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\DAL_CE_Postgresql.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\DAL_CE_SQLLite.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Npgsql.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Memory.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Microsoft.Bcl.HashCode.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Threading.Channels.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Text.Json.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Buffers.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Numerics.Vectors.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.ValueTuple.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Text.Encodings.Web.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\DAL_CE_Postgresql.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\DAL_CE_Postgresql.dll.config
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\DAL_CE_SQLLite.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\DAL_CE_SQLLite.dll.config
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Npgsql.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Memory.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Microsoft.Bcl.HashCode.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Threading.Channels.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Text.Json.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Buffers.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Numerics.Vectors.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.ValueTuple.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\bin\Debug\System.Text.Encodings.Web.xml
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\obj\Debug\BLL_CE.csproj.AssemblyReference.cache
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\obj\Debug\BLL_CE.csproj.CoreCompileInputs.cache
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\obj\Debug\BLL_CE.csproj.CopyComplete
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\obj\Debug\BLL_CE.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\BLL_CE\obj\Debug\BLL_CE.pdb
