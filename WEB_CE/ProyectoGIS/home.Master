@@ -51,7 +51,7 @@
                     <form action="#" method="post" id="formulario" runat="server">
                         <asp:ContentPlaceHolder ID="home" runat="server">
                         </asp:ContentPlaceHolder>
-                        <div class="bg-primary p-3 px-5 rounded shadow-lg border border-primary-subtle">
+                        <div class="backQ p-3 px-5 rounded shadow-lg border borderQ">
                             <h3 class="text-center mb-4">Login</h3>
                                <asp:Label Text="text" ID="errorLabel" name="errorLabel" class="alert alert-danger mt-5 mb-5" role="alert" Visible="false" runat="server" />
                             <hr />

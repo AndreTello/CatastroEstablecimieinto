@@ -264,6 +264,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Catastro\AdministracionZonal.aspx" />
     <Content Include="App\GestionRoles.aspx" />
     <Content Include="App\GestionUsuario.aspx" />
     <Content Include="App\Home.aspx" />
@@ -309,6 +310,7 @@
     <Content Include="publics\imgs\mantenimiento.png" />
     <Content Include="publics\imgs\QH_HORIZONTAL-01.png" />
     <Content Include="publics\imgs\quito.jpg" />
+    <Content Include="publics\menus.css" />
     <Content Include="publics\styles.css" />
     <Content Include="publics\templates.css" />
     <Content Include="Content\bootstrap-theme.css.map" />
@@ -395,6 +397,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Catastro\AdministracionZonal.aspx.cs">
+      <DependentUpon>AdministracionZonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\AdministracionZonal.aspx.designer.cs">
+      <DependentUpon>AdministracionZonal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App\GestionRoles.aspx.cs">
       <DependentUpon>GestionRoles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

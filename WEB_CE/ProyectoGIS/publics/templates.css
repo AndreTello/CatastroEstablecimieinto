@@ -10,7 +10,12 @@
 /*
    * Sidebar
    */
-
+.backQ {
+    background-color: #020659;
+}
+.borderQ {
+    border: 1px solid #060b79;
+}
 .sidebar {
     position: fixed;
     top: 0;
