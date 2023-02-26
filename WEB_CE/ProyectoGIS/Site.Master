@@ -38,6 +38,10 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+            .logBtn{
+                transform: translateX(0px);
+            }
+
         }
 
         .b-example-divider {
@@ -78,7 +82,11 @@
         }
         .imgT{
             width: 160px;
+            filter: brightness(1.15);
         }
+        .logBtn{
+               margin-right:50px;
+            }
     </style>
 </head>
 <body>
@@ -115,9 +123,9 @@
         </button>
                 
 
-        <div class="navbar-nav">
+        <div class="navbar navbar-nav">
             <div class="nav-item text-nowrap">
-                <asp:Button class="btn nav-link px-3 me-3 btn-danger text-white" OnClick="btnLogout_Click"   Text="Cerrar Sesión" runat="server" />
+                <asp:Button class="btn nav-link px-3 me-3 btn-danger text-white logBtn" OnClick="btnLogout_Click"   Text="Cerrar Sesión" runat="server" />
             </div>
         </div>
                 
@@ -160,12 +168,80 @@
                           <li>
                               <a href="#"  class="a fw-bold">Catastro</a>
                               <ul class="sub-menu">
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="/App/Catastro/AdministracionZonal">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Provincia/Ficha">
                                     <span data-feather="shopping-cart" class="align-text-bottom"></span>
-                                        Administracion Zonal
+                                        Provincias
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Canton/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Cantones
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Zona/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Zona
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Parroquia/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Parroquia
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Manzana/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Manzana
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Lote/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Lote
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/TipoIntervencion/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Tipo de Intervención
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Intervencion/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Intervenciones
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/AdministracionZonal/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Administración Zonal
+                                    </a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Asociacion/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Asociación
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/TipoEstablecimiento/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Tipo Establecimiento
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Establecimiento/Ficha">
+                                    <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Establecimiento
+                                    </a>
+                                </li>
+                                
+
                               </ul>
                           </li>
                       </asp:HyperLink>

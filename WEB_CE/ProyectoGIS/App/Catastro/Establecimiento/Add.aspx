@@ -1,0 +1,36 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Forms.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="ProyectoGIS.App.Catastro.Establecimiento.Add" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <label>Lote</label>
+    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="LOTE_ID" />
+    <label>Administración Zonal</label>
+    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="ADMINISTRACION_ZONAL_ID" />
+    <label>Tipo de Establecimiento</label>
+    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="TIPO_ESTABLECIMIENTO_ID" />
+    <label>Asociación</label>
+    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="ASOCIACION_ID" />
+    <label>Intervencion Técnica del Establecimiento</label>
+    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ID" />
+    <label>Predio</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_PREDIO" />
+    <label>Clave Catastral</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_CLAVE_CATASTRAL" />
+    <label>Nomenclatura Vial</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_NOMENCLATURA_VIAL" />
+    <label>Calle Principal</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_CALLE_PRINCIPAL" />
+    <label>Calle Secundaria</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_CALLE_SECUNDARIA" />
+    <label>Parqueadero</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_PARQUEADERO" />
+    <label>Numero de Parqueadero</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_NUMERO_PARQUEADERO" />
+    <label>Dias de Apertura</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_DIAS_APERTURA" />
+    <label>Horario de Atención</label>
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_HORARIO_ATENCION" />
+
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
+    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+</asp:Content>

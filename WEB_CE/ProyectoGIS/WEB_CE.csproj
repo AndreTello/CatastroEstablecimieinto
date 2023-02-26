@@ -104,7 +104,9 @@
       <HintPath>..\..\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.QualityTools.Testing.Fakes.16.11.230815\lib\net35\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ScriptManager.MSAjax, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
       <Private>True</Private>
@@ -264,7 +266,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\Catastro\AdministracionZonal.aspx" />
+    <Content Include="App\Catastro\AdministracionZonal\Add.aspx" />
+    <Content Include="App\Catastro\AdministracionZonal\Ficha.aspx" />
+    <Content Include="App\Catastro\Asociacion\Add.aspx" />
+    <Content Include="App\Catastro\Asociacion\Ficha.aspx" />
+    <Content Include="App\Catastro\Canton\Add.aspx" />
+    <Content Include="App\Catastro\Canton\Ficha.aspx" />
+    <Content Include="App\Catastro\Establecimiento\Add.aspx" />
+    <Content Include="App\Catastro\Establecimiento\Ficha.aspx" />
+    <Content Include="App\Catastro\Intervencion\Add.aspx" />
+    <Content Include="App\Catastro\Intervencion\Ficha.aspx" />
+    <Content Include="App\Catastro\Lote\Add.aspx" />
+    <Content Include="App\Catastro\Lote\Ficha.aspx" />
+    <Content Include="App\Catastro\Manzana\Add.aspx" />
+    <Content Include="App\Catastro\Manzana\Ficha.aspx" />
+    <Content Include="App\Catastro\Parroquia\Add.aspx" />
+    <Content Include="App\Catastro\Parroquia\Ficha.aspx" />
+    <Content Include="App\Catastro\Provincia\Add.aspx" />
+    <Content Include="App\Catastro\Provincia\Ficha.aspx" />
+    <Content Include="App\Catastro\TipoEstablecimiento\Add.aspx" />
+    <Content Include="App\Catastro\TipoEstablecimiento\Ficha.aspx" />
+    <Content Include="App\Catastro\TipoIntervencion\Add.aspx" />
+    <Content Include="App\Catastro\TipoIntervencion\Ficha.aspx" />
+    <Content Include="App\Catastro\Zona\Add.aspx" />
+    <Content Include="App\Catastro\Zona\Ficha.aspx" />
     <Content Include="App\GestionRoles.aspx" />
     <Content Include="App\GestionUsuario.aspx" />
     <Content Include="App\Home.aspx" />
@@ -397,12 +422,173 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\Catastro\AdministracionZonal.aspx.cs">
-      <DependentUpon>AdministracionZonal.aspx</DependentUpon>
+    <Compile Include="App\Catastro\AdministracionZonal\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\AdministracionZonal.aspx.designer.cs">
-      <DependentUpon>AdministracionZonal.aspx</DependentUpon>
+    <Compile Include="App\Catastro\AdministracionZonal\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\AdministracionZonal\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\AdministracionZonal\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Asociacion\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Asociacion\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Asociacion\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Asociacion\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Canton\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Canton\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Canton\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Canton\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Establecimiento\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Establecimiento\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Establecimiento\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Establecimiento\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Intervencion\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Intervencion\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Intervencion\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Intervencion\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Lote\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Lote\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Lote\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Lote\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Manzana\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Manzana\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Manzana\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Manzana\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Parroquia\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Parroquia\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Parroquia\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Parroquia\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Provincia\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Provincia\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Provincia\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Provincia\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\TipoEstablecimiento\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\TipoEstablecimiento\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\TipoEstablecimiento\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\TipoEstablecimiento\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\TipoIntervencion\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\TipoIntervencion\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\TipoIntervencion\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\TipoIntervencion\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Zona\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Zona\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Zona\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Zona\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
     <Compile Include="App\GestionRoles.aspx.cs">
       <DependentUpon>GestionRoles.aspx</DependentUpon>
@@ -470,12 +656,26 @@
     <Compile Include="App\Visualizador.aspx.designer.cs">
       <DependentUpon>Visualizador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="home.Mobile.Master.cs">
+      <DependentUpon>home.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.Mobile.Master.designer.cs">
+      <DependentUpon>home.Mobile.Master</DependentUpon>
+    </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms.Master.cs">
+      <DependentUpon>Forms.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms.Master.designer.cs">
+      <DependentUpon>Forms.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -507,6 +707,8 @@
     <Content Include="Scripts\jquery-3.6.3.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.3.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="home.Mobile.Master" />
+    <Content Include="Forms.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -552,6 +754,13 @@
   <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\CatastroEstablecimiento\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\..\packages\Microsoft.QualityTools.Testing.Fakes.16.11.230815\build\Microsoft.Qualitytools.Testing.Fakes.targets" Condition="Exists('..\..\packages\Microsoft.QualityTools.Testing.Fakes.16.11.230815\build\Microsoft.Qualitytools.Testing.Fakes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.QualityTools.Testing.Fakes.16.11.230815\build\Microsoft.Qualitytools.Testing.Fakes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.QualityTools.Testing.Fakes.16.11.230815\build\Microsoft.Qualitytools.Testing.Fakes.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
