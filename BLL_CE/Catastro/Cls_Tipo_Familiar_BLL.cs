@@ -1,9 +1,9 @@
-﻿using System;
+﻿using DAL_CE_Postgresql.Catastro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL_CE_Postgresql.Catastro;
 
 namespace BLL_CE.Catastro
 {
@@ -30,6 +30,5 @@ namespace BLL_CE.Catastro
         {
             objdll.Eliminar_Tipo_Familiar();
         }
-
     }
 }

@@ -21,6 +21,7 @@ namespace DAL_CE_Postgresql.Catastro
         public string PISO_CODIGO1 { get => PISO_CODIGO; set => PISO_CODIGO = value; }
         public string PISO_NOMBRE1 { get => PISO_NOMBRE; set => PISO_NOMBRE = value; }
         public int PISO_ESTADO1 { get => PISO_ESTADO; set => PISO_ESTADO = value; }
+        public string PISO_OBSERVACION1 { get => PISO_OBSERVACION; set => PISO_OBSERVACION = value; }
 
         public void Ingresar_Piso()
         {

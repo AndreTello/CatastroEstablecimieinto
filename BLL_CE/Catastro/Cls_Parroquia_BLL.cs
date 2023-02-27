@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Parroquia_DAL objdll = new Cls_Parroquia_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Parroquia()
         {
-            objdll.Consultar_Parroquia();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Parroquia()
         {
-            objdll.Ingresar_Parroquia();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Parroquia();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Parroquia(int zona, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Modificar_Parroquia();
+            objdll.Insertar(zona, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Parroquia(int zona, string codigo, string nombre, string observacion, string estado, string id)
         {
-            objdll.Eliminar_Parroquia();
+            objdll.Editar(zona, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Parroquia(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

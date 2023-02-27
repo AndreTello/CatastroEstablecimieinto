@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Manzana_DAL objdll = new Cls_Manzana_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Manzana()
         {
-            objdll.Consultar_Manzana();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Manzana()
         {
-            objdll.Ingresar_Manzana();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Manzana();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Manzana(int parroquia, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Modificar_Manzana();
+            objdll.Insertar(parroquia, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Manzana(int parroquia, string codigo, string nombre, string observacion, string estado, string id)
         {
-            objdll.Eliminar_Manzana();
+            objdll.Editar(parroquia, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Manzana(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

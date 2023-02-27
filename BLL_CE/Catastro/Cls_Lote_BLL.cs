@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Lote_DAL objdll = new Cls_Lote_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Lote()
         {
-            objdll.Consultar_Lote();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        /*public DataTable Listar_Manzana()
         {
-            objdll.Ingresar_Lote();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Manzana();
+            return tabla;
+        }*/
+
+        public void Insertar_Lote(int manzana, string codigo, string nombre, string observacion, string estado)
+        {
+            objdll.Insertar(manzana, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Editar()
+        public void Editar_Lote(int manzana, string codigo, string nombre, string observacion, string estado, string id)
         {
-            objdll.Modificar_Lote();
+            objdll.Editar(manzana, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
-        public void Eliminar()
+        public void Eliminar_Lote(string id)
         {
-            objdll.Eliminar_Lote();
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

@@ -15,7 +15,7 @@ namespace DAL_CE_Postgresql.Catastro
         private string REEMPLAZO_NOMBRES;
         private string REEMPLAZO_AUTORIZACION;
         private string REEMPLAZO_NUMERO_OFICIO;
-        private byte[] REEMPLAZO_OFICIO_ARCHIVO;
+        private int REEMPLAZO_OFICIO_ARCHIVO;
 		private DateTime REEMPLAZO_FECHA_INICIO;
         private DateTime REEMPLAZO_FECHA_FIN;
         private int REEMPLAZO_ESTADO;
@@ -26,7 +26,7 @@ namespace DAL_CE_Postgresql.Catastro
         public string REEMPLAZO_NOMBRES1 { get => REEMPLAZO_NOMBRES; set => REEMPLAZO_NOMBRES = value; }
         public string REEMPLAZO_AUTORIZACION1 { get => REEMPLAZO_AUTORIZACION; set => REEMPLAZO_AUTORIZACION = value; }
         public string REEMPLAZO_NUMERO_OFICIO1 { get => REEMPLAZO_NUMERO_OFICIO; set => REEMPLAZO_NUMERO_OFICIO = value; }
-        public byte[] REEMPLAZO_OFICIO_ARCHIVO1 { get => REEMPLAZO_OFICIO_ARCHIVO; set => REEMPLAZO_OFICIO_ARCHIVO = value; }
+        public int REEMPLAZO_OFICIO_ARCHIVO1 { get => REEMPLAZO_OFICIO_ARCHIVO; set => REEMPLAZO_OFICIO_ARCHIVO = value; }
         public DateTime REEMPLAZO_FECHA_INICIO1 { get => REEMPLAZO_FECHA_INICIO; set => REEMPLAZO_FECHA_INICIO = value; }
         public DateTime REEMPLAZO_FECHA_FIN1 { get => REEMPLAZO_FECHA_FIN; set => REEMPLAZO_FECHA_FIN = value; }
         public int REEMPLAZO_ESTADO1 { get => REEMPLAZO_ESTADO; set => REEMPLAZO_ESTADO = value; }

@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Asociacion_DAL objdll = new Cls_Asociacion_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Asociacion()
         {
-            objdll.Consultar_Asociacion();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Asociacion()
         {
-            objdll.Ingresar_Asociacion();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Asociacion();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Asociacion(string codigo, string nombre, string telefono, string mail, string contacto, string observacion, string estado)
         {
-            objdll.Modificar_Asociacion();
+            objdll.Insertar(codigo, nombre, telefono, mail, contacto, observacion, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Asociacion(string codigo, string nombre, string telefono, string mail, string contacto, string observacion, string estado, string id)
         {
-            objdll.Eliminar_Asociacion();
+            objdll.Editar(codigo, nombre, telefono, mail, contacto, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Asociacion(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

@@ -30,7 +30,5 @@ namespace BLL_CE.Catastro
         {
             objdll.Eliminar_Tipo_Identificacion();
         }
-
-
     }
 }

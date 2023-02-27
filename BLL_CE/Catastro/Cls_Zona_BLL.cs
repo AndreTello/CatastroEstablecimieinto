@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,25 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Zona_DAL objdll = new Cls_Zona_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Zona()
         {
-            objdll.Consultar_Zona();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Zona()
         {
-            objdll.Ingresar_Zona();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Zona();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Zona(int canton, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Modificar_Zona();
+            objdll.Insertar(canton, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Zona(int canton, string codigo, string nombre, string observacion, string estado, string id)
         {
-            objdll.Eliminar_Zona();
+            objdll.Editar(canton, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
+        public void Eliminar_Zona(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
+        }
     }
 }

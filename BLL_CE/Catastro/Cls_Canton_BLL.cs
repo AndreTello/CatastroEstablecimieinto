@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Canton_DAL objdll = new Cls_Canton_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Canton()
         {
-            objdll.Consultar_Canton();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Canton()
         {
-            objdll.Ingresar_Canton();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Canton();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Canton(int provincia, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Modificar_Canton();
+            objdll.Insertar(provincia, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Canton(int provincia, string codigo, string nombre, string observacion, string estado, string id)
         {
-            objdll.Eliminar_Canton();
+            objdll.Editar(provincia, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Canton(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

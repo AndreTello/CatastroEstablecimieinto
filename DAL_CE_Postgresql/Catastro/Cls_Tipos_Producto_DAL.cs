@@ -1,15 +1,19 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace DAL_CE_Postgresql.Catastro
 {
     public class Cls_Tipos_Producto_DAL
     {
+        Cls_Conexion_Postgresql_DAL con = new Cls_Conexion_Postgresql_DAL();
+        
         private int TIPO_PRODUCTO_ID;
         private string TIPO_PRODUCTO_NOMBRE;
         private string TIPO_PRODUCTO_DETALLE;
@@ -37,11 +41,12 @@ namespace DAL_CE_Postgresql.Catastro
 
             }
         }
+
         public void Consultar_Tipos_Producto()
         {
             try
             {
-
+               
             }
             catch (Exception ex)
             {
@@ -52,6 +57,7 @@ namespace DAL_CE_Postgresql.Catastro
 
             }
         }
+
         public void Modificar_Tipos_Producto()
         {
             try

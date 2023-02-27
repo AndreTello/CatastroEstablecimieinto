@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,28 +9,36 @@ using System.Threading.Tasks;
 namespace BLL_CE.Catastro
 {
     public class Cls_Intervencion_Tecnica_Establecimiento_BLL
-    {   
+    {
         Cls_Intervencion_Tecnica_Establecimiento_DAL objdll = new Cls_Intervencion_Tecnica_Establecimiento_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Intervencion_Tecnica_Establecimiento()
         {
-            objdll.Consultar_Intervencion_Tecnica_Establecimiento();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Intervencion_Tecnica_Establecimiento()
         {
-            objdll.Ingresar_Intervencion_Tecnica_Establecimiento();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Intervencion_Tecnica();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Intervencion_Tecnica_Establecimiento(int tipo, string nombre, string fecha_inicio, string fecha_fin, string estado)
         {
-            objdll.Modificar_Intervencion_Tecnica_Establecimiento();
+            objdll.Insertar(tipo, nombre, fecha_inicio, fecha_fin, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Intervencion_Tecnica_Establecimiento(int tipo, string nombre, string fecha_inicio, string fecha_fin, string estado, string id)
         {
-            objdll.Eliminar_Intervencion_Tecnica_Establecimiento();
+            objdll.Editar(tipo, nombre, fecha_inicio, fecha_fin, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
+        public void Eliminar_Intervencion_Tecnica_Establecimiento(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
+        }
     }
 }

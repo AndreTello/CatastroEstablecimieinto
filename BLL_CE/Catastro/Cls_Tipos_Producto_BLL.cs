@@ -1,6 +1,8 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,13 @@ namespace BLL_CE.Catastro
             objdll.Consultar_Tipos_Producto();
         }
 
+        /*public DataTable Consultar()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar_Tipos_Producto();
+            return tabla;
+        }*/
+
         public void Insertar()
         {
             objdll.Ingresar_Tipos_Producto();
@@ -30,6 +39,5 @@ namespace BLL_CE.Catastro
         {
             objdll.Eliminar_Tipos_Producto();
         }
-
     }
 }

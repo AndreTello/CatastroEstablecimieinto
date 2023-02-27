@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,13 @@ namespace DAL_CE_Postgresql
     {
         NpgsqlConnection con = new NpgsqlConnection();
         static string servidor="localhost";
-        static string bd= "Prueba1";
+        static string bd= "poscatastroestablecimiento";
         static string usuario="postgres";
         static string password= "123456";
         static string puerto="5432";
 
         string CadenaConexion = "server=" + servidor + "; port=" + puerto + "; user id=" + usuario + "; password=" + password + "; database= " + bd +";";
+        
         public NpgsqlConnection EstablecerConexion()
         {
             try
@@ -30,6 +32,17 @@ namespace DAL_CE_Postgresql
             }
             return con;
         }
+
+        /*public DataTable Consultar()
+        {
+            string query = "select * from cm_tipo_producto";
+            NpgsqlCommand conector = new NpgsqlCommand(query, con);
+            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
+            DataTable tabla = new DataTable();
+            datos.Fill(tabla);
+            con.Close();
+            return tabla;
+        }*/
 
     }
 }

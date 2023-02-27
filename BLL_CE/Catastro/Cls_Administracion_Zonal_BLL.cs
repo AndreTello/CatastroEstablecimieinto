@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,33 @@ namespace BLL_CE.Catastro
     {
         Cls_Administracion_Zonal_DAL objdll = new Cls_Administracion_Zonal_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Administracion_Zonal()
         {
-            objdll.Consultar_Administracion_Zonal();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Listar_Administracion_Zonal()
         {
-            objdll.Ingresar_Administracion_Zonal();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Administracion_Zonal();
+            return tabla;
         }
 
-        public void Editar()
+        public void Insertar_Administracion_Zonal(string nombre, string detalle, string telefono, string celular, string mail, string pagina_web, string representante, string estado)
         {
-            objdll.Modificar_Administracion_Zonal();
+            objdll.Insertar(nombre, detalle, telefono, celular, mail, pagina_web, representante, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Administracion_Zonal(string nombre, string detalle, string telefono, string celular, string mail, string pagina_web, string representante, string estado, string id)
         {
-            objdll.Eliminar_Administracion_Zonal();
+            objdll.Editar(nombre, detalle, telefono, celular, mail, pagina_web, representante, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Administracion_Zonal(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }
