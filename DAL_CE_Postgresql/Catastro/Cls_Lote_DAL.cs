@@ -60,7 +60,39 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
-        /*public DataTable Lote()
+        public DataTable ConsultarID(int id)
+        {
+            NpgsqlConnection con = null;
+            string query = "select lote_id, manzana_nombre, lote_codigo, lote_nombre, lote_observacion, lote_estado " +
+                "from catastroestablecimiento.cm_lote " +
+                "join catastroestablecimiento.cm_manzana " +
+                "on catastroestablecimiento.cm_manzana.manzana_id = catastroestablecimiento.cm_lote.manzana_id where lote_id = " + id + " order by lote_id asc";
+            NpgsqlCommand conector = null;
+            NpgsqlDataAdapter datos = null;
+            DataTable tabla = new DataTable();
+            try
+            {
+                con = conexion.EstablecerConexion();
+                conector = new NpgsqlCommand(query, con);
+                datos = new NpgsqlDataAdapter(conector);
+                tabla = new DataTable();
+                datos.Fill(tabla);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+            return tabla;
+        }
+
+        public DataTable Lote()
         {
             NpgsqlConnection con = null;
             string query = "select lote_id, lote_nombre from catastroestablecimiento.cm_lote order by lote_id asc";
@@ -87,8 +119,7 @@ namespace DAL_CE_Postgresql.Catastro
                 }
             }
             return tabla;
-        }*/
-
+        }
 
         public void Insertar(int manzana, string codigo, string nombre, string observacion, int estado)
         {

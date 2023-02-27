@@ -19,6 +19,13 @@ namespace BLL_CE.Catastro
             return tabla;
         }
 
+        public DataTable Consultar_IdAsociacion(string id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
+        }
+
         public DataTable Listar_Asociacion()
         {
             DataTable tabla = new DataTable();

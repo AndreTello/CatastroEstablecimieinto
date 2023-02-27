@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 using System.Configuration;
 using System.Data.SQLite;
-
+using DAL_CE_Postgresql.Catastro;
 
 namespace BLL_CE.Catastro
 {
     public class Cls_Ayudante_BLL
     {
-        /*Cls_Ayudante_DAL objdll = new Cls_Ayudante_DAL();
+        Cls_Ayudante_DAL objdll = new Cls_Ayudante_DAL();
 
         public void Consultar()
         {
@@ -33,6 +33,7 @@ namespace BLL_CE.Catastro
         public void Eliminar()
         {
             objdll.Eliminar_Ayudante();
+<<<<<<< HEAD
         }*/
         /*
         private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
@@ -152,5 +153,10 @@ namespace BLL_CE.Catastro
             }
             return res;
         }*/
+=======
+        }
+
+        
+>>>>>>> 415bf3cf339eac3f47e3828b19d402454e11addf
     }
 }

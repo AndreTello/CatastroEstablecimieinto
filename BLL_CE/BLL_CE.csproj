@@ -110,10 +110,6 @@
       <Project>{b49c8792-1844-429b-a78c-6bcade3a9e04}</Project>
       <Name>DAL_CE_Postgresql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL_CE_SQLLite\DAL_CE_SQLLite.csproj">
-      <Project>{9f2d2de9-05b0-4e6a-8e60-87de8a022b97}</Project>
-      <Name>DAL_CE_SQLLite</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

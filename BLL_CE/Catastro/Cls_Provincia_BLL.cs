@@ -19,6 +19,13 @@ namespace BLL_CE.Catastro
             return tabla;
         }
 
+        public DataTable Consultar_IdProvincia(string id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
+        }
+
         public DataTable Listar_Provincia()
         {
             DataTable tabla = new DataTable();

@@ -19,6 +19,14 @@ namespace BLL_CE.Catastro
             return tabla;
         }
 
+        public DataTable Consultar_IdManzana(string id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
+        }
+
+
         public DataTable Listar_Manzana()
         {
             DataTable tabla = new DataTable();

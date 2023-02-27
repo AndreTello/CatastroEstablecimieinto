@@ -62,6 +62,36 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
+        public DataTable ConsultarID(int id)
+        {
+            NpgsqlConnection con = null;
+            string query = "select asociacion_id, asociacion_codigo, asociacion_nombre, asociacion_telefono, asociacion_mail, asociacion_contacto, asociacion_observacion, asociacion_estado " +
+                "from catastroestablecimiento.cm_asociacion where asociacion_id = " + id + " order by asociacion_id asc;";
+            NpgsqlCommand conector = null;
+            NpgsqlDataAdapter datos = null;
+            DataTable tabla = new DataTable();
+            try
+            {
+                con = conexion.EstablecerConexion();
+                conector = new NpgsqlCommand(query, con);
+                datos = new NpgsqlDataAdapter(conector);
+                tabla = new DataTable();
+                datos.Fill(tabla);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+            return tabla;
+        }
+
         public DataTable Asociacion()
         {
             NpgsqlConnection con = null;
