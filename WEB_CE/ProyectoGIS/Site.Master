@@ -461,7 +461,12 @@
 
     </form>
     <script>
-        
+
+        const form = document.querySelector("#general");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+        })
         
         const menuItems = document.querySelectorAll(".vertical-menu li > a");
 

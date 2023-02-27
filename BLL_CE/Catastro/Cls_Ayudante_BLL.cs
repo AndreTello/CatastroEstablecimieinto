@@ -1,4 +1,4 @@
-﻿using DAL_CE_SQLLite.Catastro;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +34,7 @@ namespace BLL_CE.Catastro
         {
             objdll.Eliminar_Ayudante();
         }*/
-
+        /*
         private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
 
         private static Cls_Ayudante_BLL _instancia = null;
@@ -151,6 +151,6 @@ namespace BLL_CE.Catastro
                 }
             }
             return res;
-        }
+        }*/
     }
 }

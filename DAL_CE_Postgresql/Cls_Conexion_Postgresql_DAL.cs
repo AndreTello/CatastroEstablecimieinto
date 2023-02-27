@@ -11,10 +11,10 @@ namespace DAL_CE_Postgresql
     public class Cls_Conexion_Postgresql_DAL
     {
         NpgsqlConnection con = new NpgsqlConnection();
-        static string servidor="localhost";
-        static string bd= "poscatastroestablecimiento";
-        static string usuario="postgres";
-        static string password= "123456";
+        static string servidor= "ec2-54-160-109-68.compute-1.amazonaws.com";
+        static string bd= "d11m763ckv12i2";
+        static string usuario= "hxldeyhnvsoncq";
+        static string password= "e2a615c96a473f6d11017e38a1ce910fa72f03862bdbd85b1e53f9688cf8ac13";
         static string puerto="5432";
 
         string CadenaConexion = "server=" + servidor + "; port=" + puerto + "; user id=" + usuario + "; password=" + password + "; database= " + bd +";";

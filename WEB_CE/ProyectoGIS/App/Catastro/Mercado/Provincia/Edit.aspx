@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Forms.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="ProyectoGIS.App.Catastro.Provincia.Add" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Forms.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="ProyectoGIS.App.Catastro.Mercado.Provincia.Edit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <label>Codigo de la Provincia </label>
+     <label>Codigo de la Provincia </label>
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="PROVINCIA_CODIGO"  />
     <label>Nombre de la Provincia </label>
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="PROVINCIA_NOMBRE" />
