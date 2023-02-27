@@ -60,6 +60,38 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
+        public DataTable ConsultarID(int id)
+        {
+            NpgsqlConnection con = null;
+            string query = "select manzana_id, parroquia_nombre, manzana_codigo, manzana_nombre, manzana_observacion, manzana_estado " +
+                "from catastroestablecimiento.cm_manzana " +
+                "join catastroestablecimiento.cm_parroquia " +
+                "on catastroestablecimiento.cm_parroquia.parroquia_id = catastroestablecimiento.cm_manzana.parroquia_id where manzana_id = " + id + " order by manzana_id asc";
+            NpgsqlCommand conector = null;
+            NpgsqlDataAdapter datos = null;
+            DataTable tabla = new DataTable();
+            try
+            {
+                con = conexion.EstablecerConexion();
+                conector = new NpgsqlCommand(query, con);
+                datos = new NpgsqlDataAdapter(conector);
+                tabla = new DataTable();
+                datos.Fill(tabla);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+            return tabla;
+        }
+
         public DataTable Manzana()
         {
             NpgsqlConnection con = null;

@@ -19,6 +19,14 @@ namespace BLL_CE.Catastro
             return tabla;
         }
 
+        public DataTable Consultar_IdIntervencion_Tecnica_Establecimiento(string id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
+        }
+
+
         public DataTable Listar_Intervencion_Tecnica_Establecimiento()
         {
             DataTable tabla = new DataTable();

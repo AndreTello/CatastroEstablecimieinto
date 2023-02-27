@@ -83,8 +83,6 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.Threading.Ch
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.ValueTuple.dll
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\DAL_CE_Postgresql.dll
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\DAL_CE_SQLLite.dll
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.Data.SQLite.dll
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\BLL_CE.pdb
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\BLL_CE.dll.config
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
@@ -104,9 +102,6 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.Threading.Ta
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.ValueTuple.xml
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\DAL_CE_Postgresql.pdb
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\DAL_CE_Postgresql.dll.config
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\DAL_CE_SQLLite.pdb
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\DAL_CE_SQLLite.dll.config
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\System.Data.SQLite.xml
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.csproj.AssemblyReference.cache
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.csproj.SuggestedBindingRedirects.cache
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Administracion_Zonal.resources
@@ -117,7 +112,6 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Manzana.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Parroquia.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Provincia.resources
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Tipos_Producto.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Tipo_Establecimiento.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Zona.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Menu.resources
@@ -127,3 +121,8 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.csp
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.csproj.CopyComplete
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.exe
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.pdb
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Intervencion_Tecnica_E.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Frm_Establecimiento.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Comerciante.Frm_Tipo_Identificacion.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Comerciante.Frm_Tipo_Ocupante.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Comerciante.Frm_Comerciante.resources

@@ -94,94 +94,94 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_Administracion_Zonal.cs">
+    <Compile Include="Comerciante\Frm_Comerciante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Administracion_Zonal.Designer.cs">
+    <Compile Include="Comerciante\Frm_Comerciante.Designer.cs">
+      <DependentUpon>Frm_Comerciante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comerciante\Frm_Tipo_Identificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comerciante\Frm_Tipo_Identificacion.Designer.cs">
+      <DependentUpon>Frm_Tipo_Identificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comerciante\Frm_Tipo_Ocupante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comerciante\Frm_Tipo_Ocupante.Designer.cs">
+      <DependentUpon>Frm_Tipo_Ocupante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mercado\Frm_Administracion_Zonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mercado\Frm_Administracion_Zonal.Designer.cs">
       <DependentUpon>Frm_Administracion_Zonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Asociacion.cs">
+    <Compile Include="Mercado\Frm_Asociacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Asociacion.Designer.cs">
+    <Compile Include="Mercado\Frm_Asociacion.Designer.cs">
       <DependentUpon>Frm_Asociacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Bloque.cs">
+    <Compile Include="Mercado\Frm_Canton.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Bloque.Designer.cs">
-      <DependentUpon>Frm_Bloque.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Canton.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Canton.Designer.cs">
+    <Compile Include="Mercado\Frm_Canton.Designer.cs">
       <DependentUpon>Frm_Canton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Establecimiento.cs">
+    <Compile Include="Mercado\Frm_Establecimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Establecimiento.Designer.cs">
+    <Compile Include="Mercado\Frm_Establecimiento.Designer.cs">
       <DependentUpon>Frm_Establecimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Intervencion_Tecnica_E.cs">
+    <Compile Include="Mercado\Frm_Intervencion_Tecnica_E.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Intervencion_Tecnica_E.Designer.cs">
+    <Compile Include="Mercado\Frm_Intervencion_Tecnica_E.Designer.cs">
       <DependentUpon>Frm_Intervencion_Tecnica_E.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Tipo_I_T_E.cs">
+    <Compile Include="Mercado\Frm_Tipo_I_T_E.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Tipo_I_T_E.Designer.cs">
+    <Compile Include="Mercado\Frm_Tipo_I_T_E.Designer.cs">
       <DependentUpon>Frm_Tipo_I_T_E.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Lote.cs">
+    <Compile Include="Mercado\Frm_Lote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Lote.Designer.cs">
+    <Compile Include="Mercado\Frm_Lote.Designer.cs">
       <DependentUpon>Frm_Lote.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Manzana.cs">
+    <Compile Include="Mercado\Frm_Manzana.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Manzana.Designer.cs">
+    <Compile Include="Mercado\Frm_Manzana.Designer.cs">
       <DependentUpon>Frm_Manzana.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Parroquia.cs">
+    <Compile Include="Mercado\Frm_Parroquia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Parroquia.Designer.cs">
+    <Compile Include="Mercado\Frm_Parroquia.Designer.cs">
       <DependentUpon>Frm_Parroquia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Piso.cs">
+    <Compile Include="Mercado\Frm_Provincia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Piso.Designer.cs">
-      <DependentUpon>Frm_Piso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Provincia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Provincia.Designer.cs">
+    <Compile Include="Mercado\Frm_Provincia.Designer.cs">
       <DependentUpon>Frm_Provincia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Tipos_Producto.cs">
+    <Compile Include="Mercado\Frm_Tipo_Establecimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Tipos_Producto.Designer.cs">
-      <DependentUpon>Frm_Tipos_Producto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Tipo_Establecimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Tipo_Establecimiento.Designer.cs">
+    <Compile Include="Mercado\Frm_Tipo_Establecimiento.Designer.cs">
       <DependentUpon>Frm_Tipo_Establecimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Zona.cs">
+    <Compile Include="Mercado\Frm_Zona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Zona.Designer.cs">
+    <Compile Include="Mercado\Frm_Zona.Designer.cs">
       <DependentUpon>Frm_Zona.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
@@ -192,37 +192,49 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Frm_Administracion_Zonal.resx">
+    <EmbeddedResource Include="Comerciante\Frm_Comerciante.resx">
+      <DependentUpon>Frm_Comerciante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comerciante\Frm_Tipo_Identificacion.resx">
+      <DependentUpon>Frm_Tipo_Identificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comerciante\Frm_Tipo_Ocupante.resx">
+      <DependentUpon>Frm_Tipo_Ocupante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mercado\Frm_Administracion_Zonal.resx">
       <DependentUpon>Frm_Administracion_Zonal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Asociacion.resx">
+    <EmbeddedResource Include="Mercado\Frm_Asociacion.resx">
       <DependentUpon>Frm_Asociacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Canton.resx">
+    <EmbeddedResource Include="Mercado\Frm_Canton.resx">
       <DependentUpon>Frm_Canton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Tipo_I_T_E.resx">
+    <EmbeddedResource Include="Mercado\Frm_Establecimiento.resx">
+      <DependentUpon>Frm_Establecimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mercado\Frm_Intervencion_Tecnica_E.resx">
+      <DependentUpon>Frm_Intervencion_Tecnica_E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mercado\Frm_Tipo_I_T_E.resx">
       <DependentUpon>Frm_Tipo_I_T_E.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Lote.resx">
+    <EmbeddedResource Include="Mercado\Frm_Lote.resx">
       <DependentUpon>Frm_Lote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Manzana.resx">
+    <EmbeddedResource Include="Mercado\Frm_Manzana.resx">
       <DependentUpon>Frm_Manzana.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Parroquia.resx">
+    <EmbeddedResource Include="Mercado\Frm_Parroquia.resx">
       <DependentUpon>Frm_Parroquia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Provincia.resx">
+    <EmbeddedResource Include="Mercado\Frm_Provincia.resx">
       <DependentUpon>Frm_Provincia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Tipos_Producto.resx">
-      <DependentUpon>Frm_Tipos_Producto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Tipo_Establecimiento.resx">
+    <EmbeddedResource Include="Mercado\Frm_Tipo_Establecimiento.resx">
       <DependentUpon>Frm_Tipo_Establecimiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Zona.resx">
+    <EmbeddedResource Include="Mercado\Frm_Zona.resx">
       <DependentUpon>Frm_Zona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">

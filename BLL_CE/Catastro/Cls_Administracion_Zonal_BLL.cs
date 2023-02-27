@@ -18,6 +18,12 @@ namespace BLL_CE.Catastro
             tabla = objdll.Consultar();
             return tabla;
         }
+        public DataTable Consultar_IdAdministracion_Zonal(string id)
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarId(Convert.ToInt32(id));
+            return tabla;
+        }
 
         public DataTable Listar_Administracion_Zonal()
         {

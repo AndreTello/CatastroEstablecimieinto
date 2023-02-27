@@ -19,12 +19,20 @@ namespace BLL_CE.Catastro
             return tabla;
         }
 
-        /*public DataTable Listar_Manzana()
+        public DataTable Consultar_IdLote(string id)
         {
             DataTable tabla = new DataTable();
-            tabla = objdll.Manzana();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
             return tabla;
-        }*/
+        }
+
+
+        public DataTable Listar_Lote()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objdll.Lote();
+            return tabla;
+        }
 
         public void Insertar_Lote(int manzana, string codigo, string nombre, string observacion, string estado)
         {

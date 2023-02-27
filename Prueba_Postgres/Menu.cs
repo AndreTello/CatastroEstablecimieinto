@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prueba_Postgres.Comerciante;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,16 +81,46 @@ namespace Prueba_Postgres
             this.Hide();
         }
 
-        private void Tipo_I_T_E_Click(object sender, EventArgs e)
+        private void Tipo_Intervencion_T_Click(object sender, EventArgs e)
         {
-            Frm_Tipo_Intervencion_Tecnica_E frm_Tipo_I_T_E = new Frm_Tipo_Intervencion_Tecnica_E();
-            frm_Tipo_I_T_E.Show();
-            this.Hide();    
+            Frm_Tipo_Intervencion_Tecnica_E frm_Tipo_Intervencion_Tecnica_E = new Frm_Tipo_Intervencion_Tecnica_E();
+            frm_Tipo_Intervencion_Tecnica_E.Show();
+            this.Hide();
         }
 
         private void Intervencion_Tecnica_E_Click(object sender, EventArgs e)
         {
+            Frm_Intervencion_Tecnica_E frm_Intervencion_Tecnica_E = new Frm_Intervencion_Tecnica_E();
+            frm_Intervencion_Tecnica_E.Show();
+            this.Hide();
+        }
 
+        private void Establecimiento_Click(object sender, EventArgs e)
+        {
+            Frm_Establecimiento frm_Establecimiento = new Frm_Establecimiento();
+            frm_Establecimiento.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Identificacion_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Identificacion tipo_Identificacion = new Frm_Tipo_Identificacion();
+            tipo_Identificacion.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Ocupante_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Ocupante frm_Tipo_Ocupante = new Frm_Tipo_Ocupante();
+            frm_Tipo_Ocupante.Show();
+            this.Hide();
+        }
+
+        private void Comerciante_Click(object sender, EventArgs e)
+        {
+            Frm_Comerciante frm_Comerciante = new Frm_Comerciante();
+            frm_Comerciante.Show();
+            this.Hide();
         }
     }
 }

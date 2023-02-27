@@ -65,6 +65,37 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
+
+        public DataTable ConsultarId(int id)
+        {
+            NpgsqlConnection con = null;
+            string query = "select administracion_zonal_id, administracion_zonal_nombre, administracion_zonal_detalle, administracion_zonal_telefono, administracion_zonal_celular, administracion_zonal_mail, administracion_zonal_pagina_web, administracion_zonal_representante, administracion_zonal_estado " +
+                "from catastroestablecimiento.cm_administracion_zonal where administracion_zonal_id = " + id + " order by administracion_zonal_id asc;";
+            NpgsqlCommand conector = null;
+            NpgsqlDataAdapter datos = null;
+            DataTable tabla = new DataTable();
+            try
+            {
+                con = conexion.EstablecerConexion();
+                conector = new NpgsqlCommand(query, con);
+                datos = new NpgsqlDataAdapter(conector);
+                tabla = new DataTable();
+                datos.Fill(tabla);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+            return tabla;
+        }
+
         public DataTable Administracion_Zonal()
         {
             NpgsqlConnection con = null;
