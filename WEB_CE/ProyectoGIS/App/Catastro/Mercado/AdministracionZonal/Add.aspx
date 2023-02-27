@@ -17,7 +17,7 @@
     <label>Representante</label>
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ADMINISTRACION_ZONAL_REPRESENTANTE" />
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="ADMINISTRACION_ZONAL_ESTADO" />
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ADMINISTRACION_ZONAL_ESTADO" />
     <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
     <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
 </asp:Content>

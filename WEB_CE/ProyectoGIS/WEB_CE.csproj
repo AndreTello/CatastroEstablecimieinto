@@ -266,30 +266,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\Catastro\AdministracionZonal\Add.aspx" />
-    <Content Include="App\Catastro\AdministracionZonal\Ficha.aspx" />
-    <Content Include="App\Catastro\Asociacion\Add.aspx" />
-    <Content Include="App\Catastro\Asociacion\Ficha.aspx" />
-    <Content Include="App\Catastro\Canton\Add.aspx" />
-    <Content Include="App\Catastro\Canton\Ficha.aspx" />
-    <Content Include="App\Catastro\Establecimiento\Add.aspx" />
-    <Content Include="App\Catastro\Establecimiento\Ficha.aspx" />
-    <Content Include="App\Catastro\Intervencion\Add.aspx" />
-    <Content Include="App\Catastro\Intervencion\Ficha.aspx" />
-    <Content Include="App\Catastro\Lote\Add.aspx" />
-    <Content Include="App\Catastro\Lote\Ficha.aspx" />
-    <Content Include="App\Catastro\Manzana\Add.aspx" />
-    <Content Include="App\Catastro\Manzana\Ficha.aspx" />
-    <Content Include="App\Catastro\Parroquia\Add.aspx" />
-    <Content Include="App\Catastro\Parroquia\Ficha.aspx" />
-    <Content Include="App\Catastro\Provincia\Add.aspx" />
-    <Content Include="App\Catastro\Provincia\Ficha.aspx" />
-    <Content Include="App\Catastro\TipoEstablecimiento\Add.aspx" />
-    <Content Include="App\Catastro\TipoEstablecimiento\Ficha.aspx" />
-    <Content Include="App\Catastro\TipoIntervencion\Add.aspx" />
-    <Content Include="App\Catastro\TipoIntervencion\Ficha.aspx" />
-    <Content Include="App\Catastro\Zona\Add.aspx" />
-    <Content Include="App\Catastro\Zona\Ficha.aspx" />
+    <Content Include="App\Catastro\Comerciante\Comerciante\Add.aspx" />
+    <Content Include="App\Catastro\Comerciante\Comerciante\Ficha.aspx" />
+    <Content Include="App\Catastro\Comerciante\TipoIdentificacion\Add.aspx" />
+    <Content Include="App\Catastro\Comerciante\TipoIdentificacion\Ficha.aspx" />
+    <Content Include="App\Catastro\Comerciante\TipoOcupante\Add.aspx" />
+    <Content Include="App\Catastro\Comerciante\TipoOcupante\Ficha.aspx" />
+    <Content Include="App\Catastro\EstatusLegal\EstatusLegal\Add.aspx" />
+    <Content Include="App\Catastro\EstatusLegal\EstatusLegal\Ficha.aspx" />
+    <Content Include="App\Catastro\GiroNegocio\GiroComercio\Add.aspx" />
+    <Content Include="App\Catastro\GiroNegocio\GiroComercio\Ficha.aspx" />
+    <Content Include="App\Catastro\GiroNegocio\TipoProducto\Add.aspx" />
+    <Content Include="App\Catastro\GiroNegocio\TipoProducto\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\AdministracionZonal\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\AdministracionZonal\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Asociacion\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Asociacion\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Canton\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Canton\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Establecimiento\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Establecimiento\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Intervencion\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Intervencion\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Lote\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Lote\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Manzana\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Manzana\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Parroquia\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Parroquia\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Provincia\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Provincia\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\TipoEstablecimiento\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\TipoEstablecimiento\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\TipoIntervencion\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\TipoIntervencion\Ficha.aspx" />
+    <Content Include="App\Catastro\Mercado\Zona\Add.aspx" />
+    <Content Include="App\Catastro\Mercado\Zona\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\Ayudante\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\Ayudante\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\Bloque\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\Bloque\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\Documento\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\Documento\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\Piso\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\Piso\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\Puesto\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\Puesto\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\Reemplazo\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\Reemplazo\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\TipoArea\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\TipoArea\Ficha.aspx" />
+    <Content Include="App\Catastro\Puesto\TipoDocumento\Add.aspx" />
+    <Content Include="App\Catastro\Puesto\TipoDocumento\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Discapacidad\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Discapacidad\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Educacion\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Educacion\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\EstadoCivil\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\EstadoCivil\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Etnia\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Etnia\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Genero\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Genero\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Ficha.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Add.aspx" />
+    <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Ficha.aspx" />
     <Content Include="App\GestionRoles.aspx" />
     <Content Include="App\GestionUsuario.aspx" />
     <Content Include="App\Home.aspx" />
@@ -422,172 +464,466 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\Catastro\AdministracionZonal\Add.aspx.cs">
+    <Compile Include="App\Catastro\Comerciante\Comerciante\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\AdministracionZonal\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Comerciante\Comerciante\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\AdministracionZonal\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Comerciante\Comerciante\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\AdministracionZonal\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Comerciante\Comerciante\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Asociacion\Add.aspx.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoIdentificacion\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Asociacion\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoIdentificacion\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Asociacion\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoIdentificacion\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Asociacion\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoIdentificacion\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Canton\Add.aspx.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoOcupante\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Canton\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoOcupante\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Canton\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoOcupante\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Canton\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Comerciante\TipoOcupante\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Establecimiento\Add.aspx.cs">
+    <Compile Include="App\Catastro\EstatusLegal\EstatusLegal\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Establecimiento\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\EstatusLegal\EstatusLegal\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Establecimiento\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\EstatusLegal\EstatusLegal\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Establecimiento\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\EstatusLegal\EstatusLegal\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Intervencion\Add.aspx.cs">
+    <Compile Include="App\Catastro\GiroNegocio\GiroComercio\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Intervencion\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\GiroNegocio\GiroComercio\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Intervencion\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\GiroNegocio\GiroComercio\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Intervencion\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\GiroNegocio\GiroComercio\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Lote\Add.aspx.cs">
+    <Compile Include="App\Catastro\GiroNegocio\TipoProducto\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Lote\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\GiroNegocio\TipoProducto\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Lote\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\GiroNegocio\TipoProducto\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Lote\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\GiroNegocio\TipoProducto\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Manzana\Add.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\AdministracionZonal\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Manzana\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\AdministracionZonal\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Manzana\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\AdministracionZonal\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Manzana\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\AdministracionZonal\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Parroquia\Add.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Asociacion\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Parroquia\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Asociacion\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Parroquia\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Asociacion\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Parroquia\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Asociacion\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Provincia\Add.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Canton\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Provincia\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Canton\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Provincia\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Canton\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Provincia\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Canton\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\TipoEstablecimiento\Add.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Establecimiento\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\TipoEstablecimiento\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Establecimiento\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\TipoEstablecimiento\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Establecimiento\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\TipoEstablecimiento\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Establecimiento\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\TipoIntervencion\Add.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Intervencion\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\TipoIntervencion\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Intervencion\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\TipoIntervencion\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Intervencion\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\TipoIntervencion\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Intervencion\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Zona\Add.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Lote\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Zona\Add.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Lote\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\Catastro\Zona\Ficha.aspx.cs">
+    <Compile Include="App\Catastro\Mercado\Lote\Ficha.aspx.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\Catastro\Zona\Ficha.aspx.designer.cs">
+    <Compile Include="App\Catastro\Mercado\Lote\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Manzana\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Manzana\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Manzana\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Manzana\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Parroquia\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Parroquia\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Parroquia\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Parroquia\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Provincia\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Provincia\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Provincia\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Provincia\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoEstablecimiento\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoEstablecimiento\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoEstablecimiento\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoEstablecimiento\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoIntervencion\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoIntervencion\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoIntervencion\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\TipoIntervencion\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Zona\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Zona\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Zona\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Mercado\Zona\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Ayudante\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Ayudante\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Ayudante\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Ayudante\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Bloque\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Bloque\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Bloque\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Bloque\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Documento\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Documento\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Documento\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Documento\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Piso\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Piso\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Piso\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Piso\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Puesto\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Puesto\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Puesto\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Puesto\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Reemplazo\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Reemplazo\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Reemplazo\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\Reemplazo\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoArea\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoArea\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoArea\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoArea\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoDocumento\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoDocumento\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoDocumento\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\Puesto\TipoDocumento\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Discapacidad\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Discapacidad\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Discapacidad\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Discapacidad\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Educacion\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Educacion\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Educacion\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Educacion\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\EstadoCivil\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\EstadoCivil\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\EstadoCivil\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\EstadoCivil\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Etnia\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Etnia\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Etnia\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Etnia\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Genero\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Genero\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Genero\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Genero\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Ficha.aspx.designer.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Ficha.aspx.cs">
+      <DependentUpon>Ficha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
     <Compile Include="App\GestionRoles.aspx.cs">
