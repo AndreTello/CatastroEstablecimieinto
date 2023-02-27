@@ -1,0 +1,11 @@
+*.log
+/.vs
+/.vscode
+/.vscode-test
+/temp
+/BLL_CE/.vs
+/BLL_CE/bin
+/BLL_CE/obj
+/WEB_CE/.vs
+/WEB_CE/ProyectoGIS/bin
+/WEB_CE/ProyectoGIS/obj
