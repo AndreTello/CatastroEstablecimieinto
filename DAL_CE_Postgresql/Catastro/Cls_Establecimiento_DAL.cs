@@ -93,7 +93,7 @@ namespace DAL_CE_Postgresql.Catastro
         {
             NpgsqlConnection con = null;
             string query = "select establecimiento_id, lote_nombre, administracion_zonal_nombre, tipo_establecimiento_nombre, asociacion_nombre, intervencion_tecnica_establecimiento_nombre, establecimiento_predio, establecimiento_clave_catastral, establecimiento_nomenclatura_vial, establecimiento_calle_principal, establecimiento_calle_secundaria, establecimiento_paqueadero, establecimiento_numero_parqueadero, establecimiento_dias_apertura, establecimiento_horario_atencion, establecimiento_estado " +
-                "from catastroestablecimiento.cm_establecimiento " +
+                "from catastroestablecimiento.cm_establecimiento" +
                 "join catastroestablecimiento.cm_lote " +
                 "on catastroestablecimiento.cm_lote.lote_id = catastroestablecimiento.cm_establecimiento.lote_id " +
                 "join catastroestablecimiento.cm_administracion_zonal " +

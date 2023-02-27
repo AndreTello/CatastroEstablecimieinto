@@ -28,6 +28,7 @@ namespace ProyectoGIS.App.Catastro.Zona
             
             objdll.Eliminar_Zona(zona_id);
             DataBind();
+            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
         }
     }
 }

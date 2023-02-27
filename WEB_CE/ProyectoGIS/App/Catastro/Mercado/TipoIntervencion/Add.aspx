@@ -10,6 +10,6 @@
     <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO" />
 
 
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
     <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
 </asp:Content>

@@ -3,15 +3,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <label>Lote</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="LOTE_ID" />
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="LOTE_ID" />
     <label>Administración Zonal</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="ADMINISTRACION_ZONAL_ID" />
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ADMINISTRACION_ZONAL_ID" />
     <label>Tipo de Establecimiento</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="TIPO_ESTABLECIMIENTO_ID" />
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="TIPO_ESTABLECIMIENTO_ID" />
     <label>Asociación</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="ASOCIACION_ID" />
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ASOCIACION_ID" />
     <label>Intervencion Técnica del Establecimiento</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ID" />
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ID" />
     <label>Predio</label>
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_PREDIO" />
     <label>Clave Catastral</label>
@@ -30,7 +30,9 @@
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_DIAS_APERTURA" />
     <label>Horario de Atención</label>
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ESTABLECIMIENTO_HORARIO_ATENCION" />
+    <label>Estado</label>
+    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ESTABLECIMIENTO_ESTADO" />
 
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
     <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
 </asp:Content>

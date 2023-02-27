@@ -5,7 +5,7 @@
          <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
             <Columns> 
                    
-                <asp:BoundField DataField="zona_id" HeaderText="Id" />
+                <asp:BoundField DataField="zona_nombre" HeaderText="Id" />
                 <asp:BoundField DataField="canton_nombre" HeaderText="Canton" />
                 <asp:BoundField DataField="zona_codigo" HeaderText="Codigo Zona" />
                 <asp:BoundField DataField="zona_nombre" HeaderText="Nombre" />
@@ -13,8 +13,8 @@
                 <asp:BoundField DataField="zona_observacion" HeaderText="Observaciones" />
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" CommandArgument='<%# Eval("canton_id") %>' />
-                        <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("canton_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
+                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                        <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("zona_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 

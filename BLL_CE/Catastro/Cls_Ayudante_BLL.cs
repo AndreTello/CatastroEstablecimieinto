@@ -33,8 +33,7 @@ namespace BLL_CE.Catastro
         public void Eliminar()
         {
             objdll.Eliminar_Ayudante();
-<<<<<<< HEAD
-        }*/
+        }
         /*
         private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
 
@@ -152,11 +151,11 @@ namespace BLL_CE.Catastro
                 }
             }
             return res;
-        }*/
-=======
         }
 
-        
->>>>>>> 415bf3cf339eac3f47e3828b19d402454e11addf
+        }*/
+
+
+
     }
 }

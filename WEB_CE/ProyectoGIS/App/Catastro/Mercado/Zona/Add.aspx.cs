@@ -26,5 +26,11 @@ namespace ProyectoGIS.App.Catastro.Zona
             ZONA_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));
 
         }
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            objdll.Insertar_Zona(Convert.ToInt32(CANTON_ID.SelectedValue), ZONA_CODIGO.Text, ZONA_NOMBRE.Text, ZONA_OBSERVACION.Text, ZONA_ESTADO.SelectedValue);
+            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+        }
     }
+
 }

@@ -32,6 +32,7 @@ namespace ProyectoGIS.App.Catastro.Canton
             
             objdll.Insertar_Canton(Convert.ToInt32(PROVINCIA_ID.SelectedValue), CANTON_CODIGO.Text, CANTON_NOMBRE.Text, CANTON_OBSERVACION.Text, CANTON_ESTADO.SelectedValue);
             Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            
         }
 
 

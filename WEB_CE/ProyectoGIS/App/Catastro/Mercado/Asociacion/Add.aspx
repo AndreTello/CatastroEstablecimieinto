@@ -17,6 +17,6 @@
     <label>Observación</label>
     <asp:TextBox CssClass="form-control flex-wrap mt-1" TextMode="MultiLine" Rows="4"  runat="server" ID="ASOCIACION_OBSERVACION" /> 
 
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
     <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
 </asp:Content>
