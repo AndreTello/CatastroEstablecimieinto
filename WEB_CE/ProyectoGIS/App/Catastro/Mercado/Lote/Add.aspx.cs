@@ -24,8 +24,13 @@ namespace ProyectoGIS.App.Catastro.Lote
         
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (MANZANA_ID.SelectedValue == "" || MANZANA_ID.SelectedValue == "-1" || LOTE_CODIGO.Text == String.Empty || LOTE_NOMBRE.Text == String.Empty || LOTE_ESTADO.SelectedValue == "" || LOTE_ESTADO.SelectedValue == "-1")
+            {
+                Response.Write("<script>alert('Debe llenar todos los campos')</script>");
+                return;
+            }
             objdll.Insertar_Lote(Convert.ToInt32(MANZANA_ID.SelectedValue), LOTE_CODIGO.Text, LOTE_NOMBRE.Text, LOTE_OBSERVACION.Text, LOTE_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
 
         }
 

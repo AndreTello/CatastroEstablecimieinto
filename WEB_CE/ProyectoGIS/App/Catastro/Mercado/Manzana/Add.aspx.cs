@@ -28,8 +28,14 @@ namespace ProyectoGIS.App.Catastro.Manzana
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(PARROQUIA_ID.SelectedValue == "" || PARROQUIA_ID.SelectedValue =="-1" || MANZANA_CODIGO.Text == String.Empty|| MANZANA_NOMBRE.Text == String.Empty || MANZANA_ESTADO.SelectedValue == "" || MANZANA_ESTADO.SelectedValue =="-1")
+            {
+                Response.Write("<script>alert('Debe llenar todos los campos')</script>");
+                return;
+            }
+           
             objdll.Insertar_Manzana(Convert.ToInt32(PARROQUIA_ID.SelectedValue), MANZANA_CODIGO.Text, MANZANA_NOMBRE.Text, MANZANA_OBSERVACION.Text, MANZANA_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
         }
 
     }

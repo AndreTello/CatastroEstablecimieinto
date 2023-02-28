@@ -9,3 +9,15 @@
 /WEB_CE/.vs
 /WEB_CE/ProyectoGIS/bin
 /WEB_CE/ProyectoGIS/obj
+/DAL_CE_Postgresql/.vs
+/DAL_CE_Postgresql/bin
+/DAL_CE_Postgresql/obj
+/DAL_CE_SQLLITE/.vs
+/DAL_CE_SQLLITE/bin
+/DAL_CE_SQLLITE/obj
+/DAL_ESTABLECIMIENTO_SQLLITE/.vs
+/DAL_ESTABLECIMIENTO_SQLLITE/bin
+/DAL_ESTABLECIMIENTO_SQLLITE/obj
+/Prueba_Postgres/.vs
+/Prueba_Postgres/bin
+/Prueba_Postgres/obj

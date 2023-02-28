@@ -22,11 +22,11 @@
         </asp:GridView>
 
         </div>
+    </div>
          <div class="text-end pt-4">
             <a class="btn btn-success end text-center" href="./Add"
                 data-bs-target="#exampleModal">
                 Agregar Zona
             </a>
         </div>
-    </div>
 </asp:Content>

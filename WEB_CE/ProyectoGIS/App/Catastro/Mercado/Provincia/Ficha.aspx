@@ -18,13 +18,13 @@
 
             </Columns>
         </asp:GridView>
+    </div>
         <div class="text-end pt-2">
             <a class="btn btn-success end text-center" href="./Add"
                 data-bs-target="#exampleModal">
                 Agregar Provincia
             </a>
         </div>
-    </div>
     
 
 

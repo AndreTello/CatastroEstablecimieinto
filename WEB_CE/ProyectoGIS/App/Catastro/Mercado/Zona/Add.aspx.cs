@@ -28,8 +28,12 @@ namespace ProyectoGIS.App.Catastro.Zona
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (ZONA_CODIGO.Text == "" || ZONA_NOMBRE.Text == "" || ZONA_ESTADO.SelectedValue == "" || ZONA_ESTADO.SelectedValue == "-1" || CANTON_ID.SelectedValue =="" || CANTON_ID.SelectedValue == "-1")
+            { 
+                return;
+            }
             objdll.Insertar_Zona(Convert.ToInt32(CANTON_ID.SelectedValue), ZONA_CODIGO.Text, ZONA_NOMBRE.Text, ZONA_OBSERVACION.Text, ZONA_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
         }
     }
 

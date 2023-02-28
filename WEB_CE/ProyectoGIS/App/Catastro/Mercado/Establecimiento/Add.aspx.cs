@@ -51,8 +51,18 @@ namespace ProyectoGIS.App.Catastro.Establecimiento
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(ESTABLECIMIENTO_PREDIO.Text == "" || ESTABLECIMIENTO_CLAVE_CATASTRAL.Text == "" || ESTABLECIMIENTO_NOMENCLATURA_VIAL.Text == "" || 
+                ESTABLECIMIENTO_CALLE_PRINCIPAL.Text == "" || ESTABLECIMIENTO_CALLE_SECUNDARIA.Text == "" || ESTABLECIMIENTO_PARQUEADERO.Text == "" || 
+                ESTABLECIMIENTO_NUMERO_PARQUEADERO.Text == "" || ESTABLECIMIENTO_DIAS_APERTURA.Text == "" || ESTABLECIMIENTO_HORARIO_ATENCION.Text == "" || 
+                ESTABLECIMIENTO_ESTADO.SelectedValue == "" || TIPO_ESTABLECIMIENTO_ID.SelectedValue =="" || TIPO_ESTABLECIMIENTO_ID.SelectedValue =="-1" ||
+                ASOCIACION_ID.SelectedValue == "" || ADMINISTRACION_ZONAL_ID.SelectedValue == "" || INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue == "" ||
+                LOTE_ID.SelectedValue == "")
+            {
+                Response.Write("<script>alert('Debe llenar todos los campos')</script>");
+            }
+            
             objdll.Insertar_Establecimiento(Convert.ToInt32(LOTE_ID.SelectedValue), Convert.ToInt32(ADMINISTRACION_ZONAL_ID.SelectedValue), Convert.ToInt32(TIPO_ESTABLECIMIENTO_ID.SelectedValue), Convert.ToInt32(ASOCIACION_ID.SelectedValue), Convert.ToInt32(INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue), ESTABLECIMIENTO_PREDIO.Text, ESTABLECIMIENTO_CLAVE_CATASTRAL.Text, ESTABLECIMIENTO_NOMENCLATURA_VIAL.Text, ESTABLECIMIENTO_CALLE_PRINCIPAL.Text, ESTABLECIMIENTO_CALLE_SECUNDARIA.Text, ESTABLECIMIENTO_PARQUEADERO.Text, ESTABLECIMIENTO_NUMERO_PARQUEADERO.Text, ESTABLECIMIENTO_DIAS_APERTURA.Text, ESTABLECIMIENTO_HORARIO_ATENCION.Text, ESTABLECIMIENTO_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha.aspx");
         }
     }
 }

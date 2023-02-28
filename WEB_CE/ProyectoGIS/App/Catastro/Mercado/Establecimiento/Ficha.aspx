@@ -17,7 +17,7 @@
                     <asp:BoundField DataField="establecimiento_calle_secundaria" HeaderText="Calle Secundaria" />
                     <asp:BoundField DataField="establecimiento_paqueadero" HeaderText="Parqueadero" />
                     <asp:BoundField DataField="establecimiento_numero_parqueadero" HeaderText="Numero de Parqueadero" />
-                    <asp:BoundField DataField="establecimiento_dias_apertura" HeaderText="Días de Apertura" />
+                    <asp:BoundField DataField="establecimiento_dias_apertura"  HeaderText="Días de Apertura" />
                     <asp:BoundField DataField="establecimiento_horario_atencion" HeaderText="Horario de Atencion" />
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>

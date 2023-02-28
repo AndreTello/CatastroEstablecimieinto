@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using BLL_CE.Catastro;
+using System;
 using System.Web.UI.WebControls;
-using BLL_CE.Catastro;
 namespace ProyectoGIS.App.Catastro.Provincia
 {
     public partial class Add : System.Web.UI.Page
@@ -21,19 +17,13 @@ namespace ProyectoGIS.App.Catastro.Provincia
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if(PROVINCIA_CODIGO.Text == "" || PROVINCIA_NOMBRE.Text == "" || PROVINCIA_ESTADO.SelectedValue == "" || PROVINCIA_ESTADO.SelectedValue == "-1")
             {
-
-                objdll.Insertar_Provincia(PROVINCIA_CODIGO.Text, PROVINCIA_NOMBRE.Text, PROVINCIA_OBSERVACION.Text, PROVINCIA_ESTADO.SelectedValue);
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Los datos se han guardado correctamente');", true);
-                Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
-
+                return;
             }
-            catch (Exception ex)
-            {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Los datos no se han guardado correctamente');", true);
+            objdll.Insertar_Provincia(PROVINCIA_CODIGO.Text, PROVINCIA_NOMBRE.Text, PROVINCIA_OBSERVACION.Text, PROVINCIA_ESTADO.SelectedValue);
 
-            }
+            Response.Redirect("./Ficha");
 
         }
     }

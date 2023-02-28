@@ -18,8 +18,13 @@ namespace ProyectoGIS.App.Catastro.TipoIntervencion
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text == String.Empty || TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE.Text == String.Empty || TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue == "" || TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue == "-1")
+            {
+                Response.Write("<script>alert('Debe llenar todos los campos')</script>");
+                return;
+            }
             objdll.Insertar_Tipo_Intervencion_Tecnica(TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text, TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE.Text, TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
         }
     }
 }

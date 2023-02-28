@@ -28,8 +28,12 @@ namespace ProyectoGIS.App.Catastro.Parroquia
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (PARROQUIA_CODIGO.Text == "" || PARROQUIA_NOMBRE.Text == "" || PARROQUIA_ESTADO.SelectedValue == "" || PARROQUIA_ESTADO.SelectedValue == "-1" || ZONA_ID.SelectedValue == "" || ZONA_ID.SelectedValue == "-1")
+            {
+                return;
+            }
             objdll.Insertar_Parroquia(Convert.ToInt32(ZONA_ID.SelectedValue), PARROQUIA_CODIGO.Text, PARROQUIA_NOMBRE.Text, PARROQUIA_OBSERVACION.Text, PARROQUIA_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
         }
     }
 }

@@ -25,8 +25,16 @@ namespace ProyectoGIS.App.Catastro.Intervencion
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue == "" || TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue == "-1" || 
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue =="" || INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue == "-1" || 
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO.SelectedDate == null || INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN == null || 
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text == String.Empty )
+            {
+                Response.Write("<script>alert('Debe llenar todos los campos')</script>");
+                return;
+            }
             objdll.Insertar_Intervencion_Tecnica_Establecimiento(Convert.ToInt32(TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue), INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text, INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO.SelectedDate.ToString("dd/MM/yyyy"), INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN.SelectedDate.ToString("dd/MM/yyyy"),INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
         }
     }
 }

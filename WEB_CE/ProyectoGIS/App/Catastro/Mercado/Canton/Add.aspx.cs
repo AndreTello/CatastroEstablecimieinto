@@ -30,10 +30,38 @@ namespace ProyectoGIS.App.Catastro.Canton
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             
+           
+            if (PROVINCIA_ID.SelectedValue == "-1" || PROVINCIA_ID.SelectedValue == "")
+            {
+                
+                return;
+            }
+
+            // Validación del campo CANTON_CODIGO
+            if (string.IsNullOrEmpty(CANTON_CODIGO.Text))
+            {
+                
+                return;
+            }
+
+            // Validación del campo CANTON_NOMBRE
+            if (string.IsNullOrEmpty(CANTON_NOMBRE.Text))
+            {
+               
+                return;
+            }
+
+            // Validación del campo CANTON_ESTADO
+            if (CANTON_ESTADO.SelectedValue == "-1" || CANTON_ESTADO.SelectedValue =="")
+            {
+               
+                return;
+            }
             objdll.Insertar_Canton(Convert.ToInt32(PROVINCIA_ID.SelectedValue), CANTON_CODIGO.Text, CANTON_NOMBRE.Text, CANTON_OBSERVACION.Text, CANTON_ESTADO.SelectedValue);
-            Response.AddHeader("REFRESH", "1;URL=./Ficha.aspx");
+            Response.Redirect("./Ficha");
             
         }
+
 
 
     }
