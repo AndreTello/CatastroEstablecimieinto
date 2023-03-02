@@ -45,12 +45,20 @@
             this.Tipo_Intervencion_T = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.Discapacidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Provincia
             // 
             this.Provincia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Provincia.Location = new System.Drawing.Point(38, 47);
+            this.Provincia.Location = new System.Drawing.Point(15, 47);
             this.Provincia.Name = "Provincia";
             this.Provincia.Size = new System.Drawing.Size(188, 32);
             this.Provincia.TabIndex = 0;
@@ -61,7 +69,7 @@
             // Canton
             // 
             this.Canton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Canton.Location = new System.Drawing.Point(244, 47);
+            this.Canton.Location = new System.Drawing.Point(221, 47);
             this.Canton.Name = "Canton";
             this.Canton.Size = new System.Drawing.Size(188, 32);
             this.Canton.TabIndex = 1;
@@ -72,7 +80,7 @@
             // Zona
             // 
             this.Zona.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Zona.Location = new System.Drawing.Point(449, 47);
+            this.Zona.Location = new System.Drawing.Point(426, 47);
             this.Zona.Name = "Zona";
             this.Zona.Size = new System.Drawing.Size(188, 32);
             this.Zona.TabIndex = 2;
@@ -83,7 +91,7 @@
             // Parroquia
             // 
             this.Parroquia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parroquia.Location = new System.Drawing.Point(658, 47);
+            this.Parroquia.Location = new System.Drawing.Point(635, 47);
             this.Parroquia.Name = "Parroquia";
             this.Parroquia.Size = new System.Drawing.Size(188, 32);
             this.Parroquia.TabIndex = 5;
@@ -94,7 +102,7 @@
             // Manzana
             // 
             this.Manzana.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manzana.Location = new System.Drawing.Point(38, 95);
+            this.Manzana.Location = new System.Drawing.Point(841, 47);
             this.Manzana.Name = "Manzana";
             this.Manzana.Size = new System.Drawing.Size(188, 32);
             this.Manzana.TabIndex = 6;
@@ -105,7 +113,7 @@
             // Tipo_Establecimiento
             // 
             this.Tipo_Establecimiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Establecimiento.Location = new System.Drawing.Point(38, 144);
+            this.Tipo_Establecimiento.Location = new System.Drawing.Point(426, 96);
             this.Tipo_Establecimiento.Name = "Tipo_Establecimiento";
             this.Tipo_Establecimiento.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Establecimiento.TabIndex = 10;
@@ -116,7 +124,7 @@
             // Asociacion
             // 
             this.Asociacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Asociacion.Location = new System.Drawing.Point(658, 95);
+            this.Asociacion.Location = new System.Drawing.Point(221, 96);
             this.Asociacion.Name = "Asociacion";
             this.Asociacion.Size = new System.Drawing.Size(188, 32);
             this.Asociacion.TabIndex = 9;
@@ -127,7 +135,7 @@
             // Administracion_Zonal
             // 
             this.Administracion_Zonal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Administracion_Zonal.Location = new System.Drawing.Point(449, 95);
+            this.Administracion_Zonal.Location = new System.Drawing.Point(15, 96);
             this.Administracion_Zonal.Name = "Administracion_Zonal";
             this.Administracion_Zonal.Size = new System.Drawing.Size(188, 32);
             this.Administracion_Zonal.TabIndex = 8;
@@ -138,7 +146,7 @@
             // Lote
             // 
             this.Lote.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lote.Location = new System.Drawing.Point(244, 95);
+            this.Lote.Location = new System.Drawing.Point(1047, 47);
             this.Lote.Name = "Lote";
             this.Lote.Size = new System.Drawing.Size(188, 32);
             this.Lote.TabIndex = 7;
@@ -149,7 +157,7 @@
             // Comerciante
             // 
             this.Comerciante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Comerciante.Location = new System.Drawing.Point(449, 230);
+            this.Comerciante.Location = new System.Drawing.Point(426, 180);
             this.Comerciante.Name = "Comerciante";
             this.Comerciante.Size = new System.Drawing.Size(188, 32);
             this.Comerciante.TabIndex = 20;
@@ -160,7 +168,7 @@
             // Tipo_Ocupante
             // 
             this.Tipo_Ocupante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Ocupante.Location = new System.Drawing.Point(244, 230);
+            this.Tipo_Ocupante.Location = new System.Drawing.Point(221, 180);
             this.Tipo_Ocupante.Name = "Tipo_Ocupante";
             this.Tipo_Ocupante.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Ocupante.TabIndex = 19;
@@ -171,7 +179,7 @@
             // Tipo_Identificacion
             // 
             this.Tipo_Identificacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Identificacion.Location = new System.Drawing.Point(38, 230);
+            this.Tipo_Identificacion.Location = new System.Drawing.Point(15, 180);
             this.Tipo_Identificacion.Name = "Tipo_Identificacion";
             this.Tipo_Identificacion.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Identificacion.TabIndex = 18;
@@ -182,7 +190,7 @@
             // Establecimiento
             // 
             this.Establecimiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Establecimiento.Location = new System.Drawing.Point(658, 144);
+            this.Establecimiento.Location = new System.Drawing.Point(1046, 96);
             this.Establecimiento.Name = "Establecimiento";
             this.Establecimiento.Size = new System.Drawing.Size(188, 32);
             this.Establecimiento.TabIndex = 14;
@@ -193,7 +201,7 @@
             // Intervencion_Tecnica_E
             // 
             this.Intervencion_Tecnica_E.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intervencion_Tecnica_E.Location = new System.Drawing.Point(449, 144);
+            this.Intervencion_Tecnica_E.Location = new System.Drawing.Point(841, 96);
             this.Intervencion_Tecnica_E.Name = "Intervencion_Tecnica_E";
             this.Intervencion_Tecnica_E.Size = new System.Drawing.Size(188, 32);
             this.Intervencion_Tecnica_E.TabIndex = 27;
@@ -204,7 +212,7 @@
             // Tipo_Intervencion_T
             // 
             this.Tipo_Intervencion_T.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Intervencion_T.Location = new System.Drawing.Point(244, 144);
+            this.Tipo_Intervencion_T.Location = new System.Drawing.Point(635, 96);
             this.Tipo_Intervencion_T.Name = "Tipo_Intervencion_T";
             this.Tipo_Intervencion_T.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Intervencion_T.TabIndex = 22;
@@ -228,17 +236,107 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 192);
+            this.label2.Location = new System.Drawing.Point(12, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 24);
             this.label2.TabIndex = 43;
             this.label2.Text = "Comerciante";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(333, 24);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "RazonSocioEconomicaDelComerciante";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(15, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 32);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1047, 269);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 32);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(841, 269);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(188, 32);
+            this.button3.TabIndex = 49;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(635, 269);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(188, 32);
+            this.button4.TabIndex = 48;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(426, 269);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(188, 32);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(221, 269);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(188, 32);
+            this.button6.TabIndex = 46;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // Discapacidad
+            // 
+            this.Discapacidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discapacidad.Location = new System.Drawing.Point(15, 269);
+            this.Discapacidad.Name = "Discapacidad";
+            this.Discapacidad.Size = new System.Drawing.Size(188, 32);
+            this.Discapacidad.TabIndex = 45;
+            this.Discapacidad.Text = "Discapacidad";
+            this.Discapacidad.UseVisualStyleBackColor = true;
+            this.Discapacidad.Click += new System.EventHandler(this.Discapacidad_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 277);
+            this.ClientSize = new System.Drawing.Size(1245, 404);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.Discapacidad);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Intervencion_Tecnica_E);
@@ -282,5 +380,13 @@
         private System.Windows.Forms.Button Tipo_Intervencion_T;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Discapacidad;
     }
 }

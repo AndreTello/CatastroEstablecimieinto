@@ -1,6 +1,8 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +13,42 @@ namespace BLL_CE.Catastro
     {
         Cls_Discapacidad_DAL objdll = new Cls_Discapacidad_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Discapacidad()
         {
-            objdll.Consultar_Discapacidad();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Consultar_IdDiscapacidad(string id)
         {
-            objdll.Ingresar_Discapacidad();
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
         }
 
-        public void Editar()
+        public DataTable Listar_Discapacidad()
         {
-            objdll.Modificar_Discapacidad();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Discapacidad();
+            return tabla;
         }
 
-        public void Eliminar()
+
+
+        public void Insertar_Discapacidad(string carnet, string nombre, decimal porcentaje, string estado)
         {
-            objdll.Eliminar_Discapacidad();
+            objdll.Insertar(carnet, nombre, porcentaje, Convert.ToInt32(estado));
+        }
+
+        public void Editar_Discapacidad(string carnet, string nombre, decimal porcentaje, string estado, string id)
+        {
+            objdll.Editar(carnet, nombre, porcentaje, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Discapacidad(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

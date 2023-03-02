@@ -17,24 +17,24 @@ namespace BLL_CE.Catastro
 
         public void Consultar()
         {
-            objdll.Consultar_Ayudante();
+            //objdll.Consultar_Ayudante();
         }
 
         public void Insertar()
         {
-            objdll.Ingresar_Ayudante();
+            //objdll.Ingresar_Ayudante();
         }
 
         public void Editar()
         {
-            objdll.Modificar_Ayudante();
+           // objdll.Modificar_Ayudante();
         }
 
         public void Eliminar()
         {
-            objdll.Eliminar_Ayudante();
+            //objdll.Eliminar_Ayudante();
         }
 
         
-    }
+    } 
 }
