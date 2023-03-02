@@ -33,13 +33,31 @@ namespace ProyectoGIS.App.Catastro.Intervencion
         protected global::System.Web.UI.WebControls.TextBox INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE;
 
         /// <summary>
+        /// Control UpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+
+        /// <summary>
         /// Control INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO;
+        protected global::System.Web.UI.WebControls.Calendar INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO;
+
+        /// <summary>
+        /// Control UpdatePanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
         /// Control INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN.
@@ -48,7 +66,16 @@ namespace ProyectoGIS.App.Catastro.Intervencion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN;
+        protected global::System.Web.UI.WebControls.Calendar INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN;
+
+        /// <summary>
+        /// Control INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO;
 
         /// <summary>
         /// Control btnGuardar.

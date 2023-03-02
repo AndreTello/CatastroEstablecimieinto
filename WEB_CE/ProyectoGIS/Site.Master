@@ -461,8 +461,8 @@
 
     </form>
     <script>
-        
-        
+
+       
         const menuItems = document.querySelectorAll(".vertical-menu li > a");
 
         for (let i = 0; i < menuItems.length; i++) {

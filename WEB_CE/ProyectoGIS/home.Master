@@ -52,21 +52,21 @@
                     <form action="#" method="post" id="formulario" runat="server">
                         <asp:ContentPlaceHolder ID="home" runat="server">
                         </asp:ContentPlaceHolder>
-                        <div class="backQ p-3 px-5 rounded shadow-lg border borderQ">
+                        <div class="backQ p-3 px-5  rounded shadow-lg border borderQ">
                             <h3 class="text-center mb-4">Login</h3>
                                <asp:Label Text="text" ID="errorLabel" name="errorLabel" class="alert alert-danger mt-5 mb-5" role="alert" Visible="false" runat="server" />
                             <hr />
                             <div class="mb-3">
                                 <label for="usuario_login" class="form-label fw-bold">Usuario</label>
-                                <asp:TextBox class="form-control fw-bold" id="usuario_login" name="usuario_login"
+                                <asp:TextBox class="form-control text-center fw-bold" id="usuario_login" name="usuario_login"
                                     aria-describedby="loginHelp" runat="server" />
                                 <div id="loginHelp" class="form-text text-center text-danger fw-bold">
                                     No compartas tus credenciales.
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="usuario_clave" class="form-label fw-bold">Clave</label>
-                                <asp:TextBox TextMode="Password" runat="server" class="form-control" id="usuario_clave"
+                                <label for="usuario_clave" class="form-label  fw-bold">Clave</label>
+                                <asp:TextBox TextMode="Password" runat="server" class="text-center form-control" id="usuario_clave"
                                     name="usuario_clave" />
                             </div>
                             <asp:Button ID="Btn_Login" runat="server" Text="Iniciar Sesión" OnClick="btnLogin_Click"
