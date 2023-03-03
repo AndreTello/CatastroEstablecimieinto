@@ -130,5 +130,47 @@ namespace Prueba_Postgres
             frm_Discapacidad.Show();
             this.Hide();
         }
+
+        private void Educacion_Click(object sender, EventArgs e)
+        {
+            Frm_Educacion frm_Educacion = new Frm_Educacion();  
+            frm_Educacion.Show();
+            this.Hide();
+        }
+
+        private void Estado_Civil_Click(object sender, EventArgs e)
+        {
+            Frm_EstadoCivil frm_EstadoCivil = new Frm_EstadoCivil();
+            frm_EstadoCivil.Show();
+            this.Hide();
+        }
+
+        private void Etnia_Click(object sender, EventArgs e)
+        {
+            Frm_Etnia frm_Etnia = new Frm_Etnia();
+            frm_Etnia.Show();
+            this.Hide();
+        }
+
+        private void Genero_Click(object sender, EventArgs e)
+        {
+            Frm_Genero frm_Genero = new Frm_Genero();
+            frm_Genero.Show();
+            this.Hide();
+        }
+
+        private void Nacionalidad_Click(object sender, EventArgs e)
+        {
+            Frm_Nacionalidad frm_Nacionalidad = new Frm_Nacionalidad();
+            frm_Nacionalidad.Show();
+            this.Hide();
+        }
+
+        private void Razon_Social_Click(object sender, EventArgs e)
+        {
+            Frm_Razon_Social frm_Razon_Social = new Frm_Razon_Social();
+            frm_Razon_Social.Show();
+            this.Hide();
+        }
     }
 }

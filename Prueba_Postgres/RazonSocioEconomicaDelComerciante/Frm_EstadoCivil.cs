@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
 {
-    public partial class Frm_Discapacidad : Form
+    public partial class Frm_EstadoCivil : Form
     {
-        public Frm_Discapacidad()
+        public Frm_EstadoCivil()
         {
             InitializeComponent();
         }
@@ -26,12 +25,7 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             this.Hide();
         }
 
-        Cls_Discapacidad_BLL objbll = new Cls_Discapacidad_BLL();
-
-        private string id = null;
-        private bool editar = false;
-
-        private void Frm_Discapacidad_Load(object sender, EventArgs e)
+        private void Frm_EstadoCivil_Load(object sender, EventArgs e)
         {
             cmbestado.Items.Add("0");
             cmbestado.Items.Add("1");
@@ -39,19 +33,23 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             Mostrar_Datos();
         }
 
+        Cls_Estado_Civil_BLL objbll = new Cls_Estado_Civil_BLL();
+
+        private string id = null;
+        private bool editar = false;
+
         public void Mostrar_Datos()
         {
-            Cls_Discapacidad_BLL objnew = new Cls_Discapacidad_BLL();
-            datos.DataSource = objnew.Consultar_Discapacidad();
+            Cls_Estado_Civil_BLL objnew = new Cls_Estado_Civil_BLL();
+            datos.DataSource = objnew.Consultar_Estado_Civil();
         }
 
         public void Limpiar()
         {
             txtnombre.Text = string.Empty;
-            txtcarnet.Text = string.Empty;
+            txtdetalle.Text = string.Empty;
             cmbestado.SelectedIndex = 0;
         }
-
 
         private void Mostrar_Click(object sender, EventArgs e)
         {
@@ -63,15 +61,15 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             if (editar == false)
             {
 
-                objbll.Insertar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text);
+                objbll.Insertar_Estado_Civil(txtnombre.Text, txtdetalle.Text, cmbestado.Text);
                 MessageBox.Show("REGISTRADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
-                
+
             }
             if (editar == true)
             {
-                objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text, id);
+                objbll.Editar_Estado_Civil(txtnombre.Text, txtdetalle.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -84,14 +82,30 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
-                txtcarnet.Text = datos.CurrentRow.Cells["discapacidad_carnet"].Value.ToString();
-                txtnombre.Text = datos.CurrentRow.Cells["discapacidad_nombre"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["discapacidad_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["discapacidad_id"].Value.ToString();
+                txtnombre.Text = datos.CurrentRow.Cells["estado_civil_nombre"].Value.ToString();
+                txtdetalle.Text = datos.CurrentRow.Cells["estado_civil_detalle"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["estado_civil_estado"].Value.ToString();
+                id = datos.CurrentRow.Cells["estado_civil_id"].Value.ToString();
             }
             else
             {
                 MessageBox.Show("SELECCIONE LA FILA A MODIFICAR");
+            }
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            if (datos.SelectedRows.Count > 0)
+            {
+                id = datos.CurrentRow.Cells["estado_civil_id"].Value.ToString();
+                objbll.Eliminar_Estado_Civil(id);
+                MessageBox.Show("ELIMINADO CORRECTAMENTE");
+                Mostrar_Datos();
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show("SELECCIONE LA FILA A ELIMINAR");
             }
         }
 
@@ -103,25 +117,9 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             }
             else
             {
-                Cls_Discapacidad_BLL objnew = new Cls_Discapacidad_BLL();
-                datos.DataSource = objnew.Consultar_IdDiscapacidad(txtid.Text);
+                Cls_Estado_Civil_BLL objnew = new Cls_Estado_Civil_BLL();
+                datos.DataSource = objnew.Consultar_IdEstado_Civil(txtid.Text);
                 txtid.Text = string.Empty;
-            }
-        }
-
-        private void Eliminar_Click(object sender, EventArgs e)
-        {
-            if (datos.SelectedRows.Count > 0)
-            {
-                id = datos.CurrentRow.Cells["discapacidad_id"].Value.ToString();
-                objbll.Eliminar_Discapacidad(id);
-                MessageBox.Show("ELIMINADO CORRECTAMENTE");
-                Mostrar_Datos();
-                Limpiar();
-            }
-            else
-            {
-                MessageBox.Show("SELECCIONE LA FILA A ELIMINAR");
             }
         }
     }

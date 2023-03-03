@@ -167,7 +167,7 @@ namespace DAL_CE_Postgresql.Catastro
                 con = conexion.EstablecerConexion();
                 string query =
                 "Insert into catastroestablecimiento.cm_establecimiento (lote_id, administracion_zonal_id, tipo_establecimiento_id, asociacion_id, intervencion_tecnica_establecimiento_id, establecimiento_predio, establecimiento_clave_catastral, establecimiento_nomenclatura_vial, establecimiento_calle_principal, establecimiento_calle_secundaria, establecimiento_paqueadero, establecimiento_numero_parqueadero, establecimiento_dias_apertura, establecimiento_horario_atencion, establecimiento_estado) " +
-                "values (" + lote + "," + admnistracion + "," + tipo + "," + asociacion + "," + intervencion + ",'" + predio + "','" + clave_catastral + "','" + nomenclatura_vial + "','" + calle_principal + "','" + calle_secundaria + "','" +paqueadero+ "'," +numero_parqueadero+ ",'" +dias_apertura+ "','" +horario_atencion+ "'," + estado + ")";
+                "values (" + lote + "," + admnistracion + "," + tipo + "," + asociacion + "," + intervencion + ",'" + predio + "','" + clave_catastral + "','" + nomenclatura_vial + "','" + calle_principal + "','" + calle_secundaria + "','" + paqueadero + "'," + numero_parqueadero + ",'" + dias_apertura + "','" + horario_atencion + "'," + estado + ")";
                 NpgsqlCommand insert = new NpgsqlCommand(query, con);
                 insert.ExecuteNonQuery();
             }
@@ -246,6 +246,7 @@ namespace DAL_CE_Postgresql.Catastro
                 }
             }
         }
+
 
     }
 }

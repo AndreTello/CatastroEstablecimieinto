@@ -157,10 +157,10 @@ namespace BLL_CE.Catastro
 
 
 
-<<<<<<< HEAD
+
         
     } 
-=======
-    }
->>>>>>> a35f83487783811f15452187e2f8c61a4f7ce41b
+
+    
+
 }

@@ -122,7 +122,7 @@ namespace DAL_CE_Postgresql.Catastro
         public DataTable Comerciante()
         {
             NpgsqlConnection con = null;
-            string query = "select comerciante_id, comerciante_apellidos_razon_social from catastroestablecimiento.cm_comerciante order by comerciante_id asc";
+            string query = "select comerciante_id, comerciante_nombres_representante_legal from catastroestablecimiento.cm_comerciante order by comerciante_id asc";
             NpgsqlCommand conector = null;
             NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
