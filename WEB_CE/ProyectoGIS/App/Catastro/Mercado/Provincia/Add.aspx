@@ -13,9 +13,9 @@
     <asp:TextBox CssClass="form-control flex-wrap mb-3 mt-2" TextMode="MultiLine" Rows="4"  runat="server" ID="PROVINCIA_OBSERVACION" />
     <asp:UpdatePanel runat="server">
          <ContentTemplate>
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
+            <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
+            <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
              </ContentTemplate>
         </asp:UpdatePanel>
 
-    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
 </asp:Content>
