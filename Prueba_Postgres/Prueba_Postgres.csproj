@@ -204,6 +204,42 @@
     <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.Designer.cs">
       <DependentUpon>Frm_Discapacidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Educacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Educacion.Designer.cs">
+      <DependentUpon>Frm_Educacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_EstadoCivil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_EstadoCivil.Designer.cs">
+      <DependentUpon>Frm_EstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Etnia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Etnia.Designer.cs">
+      <DependentUpon>Frm_Etnia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Genero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Genero.Designer.cs">
+      <DependentUpon>Frm_Genero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Nacionalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Nacionalidad.Designer.cs">
+      <DependentUpon>Frm_Nacionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Razon_Social.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Razon_Social.Designer.cs">
+      <DependentUpon>Frm_Razon_Social.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Comerciante\Frm_Comerciante.resx">
       <DependentUpon>Frm_Comerciante.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +302,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.resx">
       <DependentUpon>Frm_Discapacidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Educacion.resx">
+      <DependentUpon>Frm_Educacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_EstadoCivil.resx">
+      <DependentUpon>Frm_EstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Etnia.resx">
+      <DependentUpon>Frm_Etnia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Genero.resx">
+      <DependentUpon>Frm_Genero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Nacionalidad.resx">
+      <DependentUpon>Frm_Nacionalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Razon_Social.resx">
+      <DependentUpon>Frm_Razon_Social.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

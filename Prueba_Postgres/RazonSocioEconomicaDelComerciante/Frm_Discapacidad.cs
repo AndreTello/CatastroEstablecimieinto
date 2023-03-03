@@ -51,7 +51,6 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             txtnombre.Text = string.Empty;
             txtcarnet.Text = string.Empty;
             cmbestado.SelectedIndex = 0;
-            txtporcentaje.Text = string.Empty;
         }
 
 
@@ -64,7 +63,8 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
         {
             if (editar == false)
             {
-                objbll.Insertar_Discapacidad(txtcarnet.Text, txtnombre.Text, Convert.ToDecimal(txtporcentaje.Text), cmbestado.Text);
+
+                objbll.Insertar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text);
                 MessageBox.Show("REGISTRADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
@@ -72,6 +72,7 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             }
             if (editar == true)
             {
+<<<<<<< HEAD
                 CultureInfo originalCulture = Thread.CurrentThread.CurrentCulture;
 
                 CultureInfo englishCulture = new CultureInfo("en-US");
@@ -82,6 +83,9 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
                 englishCulture.NumberFormat.NumberGroupSeparator = ",";
 
                 objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, decimal.Parse(txtporcentaje.Text, englishCulture), cmbestado.Text, id);
+=======
+                objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text, id);
+>>>>>>> a344cfe442994edbc64e89965adb0366e6451e1b
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 MessageBox.Show("" + Convert.ToDecimal(txtporcentaje.Text));
                 Mostrar_Datos();
@@ -97,7 +101,6 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
                 editar = true;
                 txtcarnet.Text = datos.CurrentRow.Cells["discapacidad_carnet"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["discapacidad_nombre"].Value.ToString();
-                txtporcentaje.Text = datos.CurrentRow.Cells["discapacidad_porcentaje"].Value.ToString();
                 cmbestado.Text = datos.CurrentRow.Cells["discapacidad_estado"].Value.ToString();
                 id = datos.CurrentRow.Cells["discapacidad_id"].Value.ToString();
             }

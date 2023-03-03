@@ -34,16 +34,14 @@ namespace BLL_CE.Catastro
             return tabla;
         }
 
-
-
-        public void Insertar_Discapacidad(string carnet, string nombre, decimal porcentaje, string estado)
-        {
-            objdll.Insertar(carnet, nombre, porcentaje, Convert.ToInt32(estado));
+        public void Insertar_Discapacidad(string carnet, string nombre, string estado)
+        {            
+            objdll.Insertar(carnet, nombre, Convert.ToInt32(estado));
         }
 
-        public void Editar_Discapacidad(string carnet, string nombre, decimal porcentaje, string estado, string id)
+        public void Editar_Discapacidad(string carnet, string nombre, string estado, string id)
         {
-            objdll.Editar(carnet, nombre, porcentaje, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(carnet, nombre, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
         public void Eliminar_Discapacidad(string id)

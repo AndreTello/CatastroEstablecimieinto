@@ -46,12 +46,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Razon_Social = new System.Windows.Forms.Button();
+            this.Nacionalidad = new System.Windows.Forms.Button();
+            this.Genero = new System.Windows.Forms.Button();
+            this.Etnia = new System.Windows.Forms.Button();
+            this.Estado_Civil = new System.Windows.Forms.Button();
+            this.Educacion = new System.Windows.Forms.Button();
             this.Discapacidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -113,7 +113,7 @@
             // Tipo_Establecimiento
             // 
             this.Tipo_Establecimiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Establecimiento.Location = new System.Drawing.Point(426, 96);
+            this.Tipo_Establecimiento.Location = new System.Drawing.Point(635, 95);
             this.Tipo_Establecimiento.Name = "Tipo_Establecimiento";
             this.Tipo_Establecimiento.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Establecimiento.TabIndex = 10;
@@ -124,7 +124,7 @@
             // Asociacion
             // 
             this.Asociacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Asociacion.Location = new System.Drawing.Point(221, 96);
+            this.Asociacion.Location = new System.Drawing.Point(426, 95);
             this.Asociacion.Name = "Asociacion";
             this.Asociacion.Size = new System.Drawing.Size(188, 32);
             this.Asociacion.TabIndex = 9;
@@ -135,7 +135,7 @@
             // Administracion_Zonal
             // 
             this.Administracion_Zonal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Administracion_Zonal.Location = new System.Drawing.Point(15, 96);
+            this.Administracion_Zonal.Location = new System.Drawing.Point(221, 95);
             this.Administracion_Zonal.Name = "Administracion_Zonal";
             this.Administracion_Zonal.Size = new System.Drawing.Size(188, 32);
             this.Administracion_Zonal.TabIndex = 8;
@@ -146,7 +146,7 @@
             // Lote
             // 
             this.Lote.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lote.Location = new System.Drawing.Point(1047, 47);
+            this.Lote.Location = new System.Drawing.Point(13, 95);
             this.Lote.Name = "Lote";
             this.Lote.Size = new System.Drawing.Size(188, 32);
             this.Lote.TabIndex = 7;
@@ -157,7 +157,7 @@
             // Comerciante
             // 
             this.Comerciante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Comerciante.Location = new System.Drawing.Point(426, 180);
+            this.Comerciante.Location = new System.Drawing.Point(426, 224);
             this.Comerciante.Name = "Comerciante";
             this.Comerciante.Size = new System.Drawing.Size(188, 32);
             this.Comerciante.TabIndex = 20;
@@ -168,7 +168,7 @@
             // Tipo_Ocupante
             // 
             this.Tipo_Ocupante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Ocupante.Location = new System.Drawing.Point(221, 180);
+            this.Tipo_Ocupante.Location = new System.Drawing.Point(221, 224);
             this.Tipo_Ocupante.Name = "Tipo_Ocupante";
             this.Tipo_Ocupante.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Ocupante.TabIndex = 19;
@@ -179,7 +179,7 @@
             // Tipo_Identificacion
             // 
             this.Tipo_Identificacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Identificacion.Location = new System.Drawing.Point(15, 180);
+            this.Tipo_Identificacion.Location = new System.Drawing.Point(15, 224);
             this.Tipo_Identificacion.Name = "Tipo_Identificacion";
             this.Tipo_Identificacion.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Identificacion.TabIndex = 18;
@@ -190,7 +190,7 @@
             // Establecimiento
             // 
             this.Establecimiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Establecimiento.Location = new System.Drawing.Point(1046, 96);
+            this.Establecimiento.Location = new System.Drawing.Point(221, 144);
             this.Establecimiento.Name = "Establecimiento";
             this.Establecimiento.Size = new System.Drawing.Size(188, 32);
             this.Establecimiento.TabIndex = 14;
@@ -201,7 +201,7 @@
             // Intervencion_Tecnica_E
             // 
             this.Intervencion_Tecnica_E.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intervencion_Tecnica_E.Location = new System.Drawing.Point(841, 96);
+            this.Intervencion_Tecnica_E.Location = new System.Drawing.Point(15, 144);
             this.Intervencion_Tecnica_E.Name = "Intervencion_Tecnica_E";
             this.Intervencion_Tecnica_E.Size = new System.Drawing.Size(188, 32);
             this.Intervencion_Tecnica_E.TabIndex = 27;
@@ -212,7 +212,7 @@
             // Tipo_Intervencion_T
             // 
             this.Tipo_Intervencion_T.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Intervencion_T.Location = new System.Drawing.Point(635, 96);
+            this.Tipo_Intervencion_T.Location = new System.Drawing.Point(841, 95);
             this.Tipo_Intervencion_T.Name = "Tipo_Intervencion_T";
             this.Tipo_Intervencion_T.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Intervencion_T.TabIndex = 22;
@@ -236,7 +236,7 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 143);
+            this.label2.Location = new System.Drawing.Point(12, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 24);
             this.label2.TabIndex = 43;
@@ -247,76 +247,82 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 229);
+            this.label3.Location = new System.Drawing.Point(15, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(333, 24);
             this.label3.TabIndex = 44;
             this.label3.Text = "RazonSocioEconomicaDelComerciante";
             // 
-            // button1
+            // Razon_Social
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(15, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 32);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Razon_Social.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Razon_Social.Location = new System.Drawing.Point(221, 362);
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.Size = new System.Drawing.Size(188, 32);
+            this.Razon_Social.TabIndex = 51;
+            this.Razon_Social.Text = "Razon_Social";
+            this.Razon_Social.UseVisualStyleBackColor = true;
+            this.Razon_Social.Click += new System.EventHandler(this.Razon_Social_Click);
             // 
-            // button2
+            // Nacionalidad
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1047, 269);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 32);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Nacionalidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nacionalidad.Location = new System.Drawing.Point(15, 362);
+            this.Nacionalidad.Name = "Nacionalidad";
+            this.Nacionalidad.Size = new System.Drawing.Size(188, 32);
+            this.Nacionalidad.TabIndex = 50;
+            this.Nacionalidad.Text = "Nacionalidad";
+            this.Nacionalidad.UseVisualStyleBackColor = true;
+            this.Nacionalidad.Click += new System.EventHandler(this.Nacionalidad_Click);
             // 
-            // button3
+            // Genero
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(841, 269);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 32);
-            this.button3.TabIndex = 49;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Genero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Genero.Location = new System.Drawing.Point(841, 314);
+            this.Genero.Name = "Genero";
+            this.Genero.Size = new System.Drawing.Size(188, 32);
+            this.Genero.TabIndex = 49;
+            this.Genero.Text = "Genero";
+            this.Genero.UseVisualStyleBackColor = true;
+            this.Genero.Click += new System.EventHandler(this.Genero_Click);
             // 
-            // button4
+            // Etnia
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(635, 269);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 32);
-            this.button4.TabIndex = 48;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Etnia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Etnia.Location = new System.Drawing.Point(635, 314);
+            this.Etnia.Name = "Etnia";
+            this.Etnia.Size = new System.Drawing.Size(188, 32);
+            this.Etnia.TabIndex = 48;
+            this.Etnia.Text = "Etnia";
+            this.Etnia.UseVisualStyleBackColor = true;
+            this.Etnia.Click += new System.EventHandler(this.Etnia_Click);
             // 
-            // button5
+            // Estado_Civil
             // 
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(426, 269);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(188, 32);
-            this.button5.TabIndex = 47;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Estado_Civil.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado_Civil.Location = new System.Drawing.Point(426, 314);
+            this.Estado_Civil.Name = "Estado_Civil";
+            this.Estado_Civil.Size = new System.Drawing.Size(188, 32);
+            this.Estado_Civil.TabIndex = 47;
+            this.Estado_Civil.Text = "Estado_Civil";
+            this.Estado_Civil.UseVisualStyleBackColor = true;
+            this.Estado_Civil.Click += new System.EventHandler(this.Estado_Civil_Click);
             // 
-            // button6
+            // Educacion
             // 
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(221, 269);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(188, 32);
-            this.button6.TabIndex = 46;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Educacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Educacion.Location = new System.Drawing.Point(221, 314);
+            this.Educacion.Name = "Educacion";
+            this.Educacion.Size = new System.Drawing.Size(188, 32);
+            this.Educacion.TabIndex = 46;
+            this.Educacion.Text = "Educacion";
+            this.Educacion.UseVisualStyleBackColor = true;
+            this.Educacion.Click += new System.EventHandler(this.Educacion_Click);
             // 
             // Discapacidad
             // 
             this.Discapacidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discapacidad.Location = new System.Drawing.Point(15, 269);
+            this.Discapacidad.Location = new System.Drawing.Point(15, 314);
             this.Discapacidad.Name = "Discapacidad";
             this.Discapacidad.Size = new System.Drawing.Size(188, 32);
             this.Discapacidad.TabIndex = 45;
@@ -328,13 +334,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 404);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.Controls.Add(this.Razon_Social);
+            this.Controls.Add(this.Nacionalidad);
+            this.Controls.Add(this.Genero);
+            this.Controls.Add(this.Etnia);
+            this.Controls.Add(this.Estado_Civil);
+            this.Controls.Add(this.Educacion);
             this.Controls.Add(this.Discapacidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -381,12 +387,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Razon_Social;
+        private System.Windows.Forms.Button Nacionalidad;
+        private System.Windows.Forms.Button Genero;
+        private System.Windows.Forms.Button Etnia;
+        private System.Windows.Forms.Button Estado_Civil;
+        private System.Windows.Forms.Button Educacion;
         private System.Windows.Forms.Button Discapacidad;
     }
 }
