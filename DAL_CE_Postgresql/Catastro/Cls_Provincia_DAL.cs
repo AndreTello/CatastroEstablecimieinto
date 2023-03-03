@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace DAL_CE_Postgresql.Catastro
 {
@@ -42,7 +42,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex )
             {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString() );
             }
             finally
             {
@@ -71,7 +70,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -100,7 +98,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -126,7 +123,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -151,7 +147,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -175,7 +170,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {

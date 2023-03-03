@@ -1,9 +1,6 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 
 namespace BLL_CE.Catastro
 {
@@ -11,14 +8,16 @@ namespace BLL_CE.Catastro
     {
         Cls_Tipo_Documento_Puesto_DAL objdll = new Cls_Tipo_Documento_Puesto_DAL();
 
-        public void Consultar()
+        public DataTable Consultar()
         {
-            objdll.Consultar_Tipo_Documento_Puesto();
+            DataTable dt = new DataTable();
+            dt = objdll.Consultar_Tipo_Documento_Puesto();
+            return dt;
         }
 
-        public void Insertar()
+        public void Insertar(string nombre, string estado)
         {
-            objdll.Ingresar_Tipo_Documento_Puesto();
+            objdll.Ingresar_Tipo_Documento_Puesto(nombre, Convert.ToInt32(estado));
         }
 
         public void Editar()
