@@ -132,6 +132,7 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Raz
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Genero.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Nacionalidad.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources
+<<<<<<< HEAD
 E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Ayudante.resources
 E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Discapacidad.resources
 E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Educacion.resources
@@ -140,3 +141,11 @@ E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Po
 E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Genero.resources
 E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Nacionalidad.resources
 E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources
+=======
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Bloque.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Area.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Documento.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Reemplazo.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Piso.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento.resources
+>>>>>>> 46f9a24419873e2cfead247654ddd3c12e65a5a8

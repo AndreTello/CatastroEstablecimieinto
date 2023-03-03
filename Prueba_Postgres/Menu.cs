@@ -180,5 +180,47 @@ namespace Prueba_Postgres
             frm_Ayudante.Show();
             this.Hide();
         }
+
+        private void Bloque_Click(object sender, EventArgs e)
+        {
+            Frm_Bloque frm_Bloque = new Frm_Bloque();
+            frm_Bloque.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Area_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Area frm_Tipo_Area = new Frm_Tipo_Area();
+            frm_Tipo_Area.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Documento_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Documento frm_Tipo_Documento = new Frm_Tipo_Documento();
+            frm_Tipo_Documento.Show();
+            this.Hide();
+        }
+
+        private void Reemplazo_Click(object sender, EventArgs e)
+        {
+            Frm_Reemplazo frm_Reemplazo = new Frm_Reemplazo();
+            frm_Reemplazo.Show();
+            this.Hide();
+        }
+
+        private void Piso_Click(object sender, EventArgs e)
+        {
+            Frm_Piso frm_Piso = new Frm_Piso();
+            frm_Piso.Show();
+            this.Hide();
+        }
+
+        private void Documento_Click(object sender, EventArgs e)
+        {
+            Frm_Documento frm_Documento = new Frm_Documento();
+            frm_Documento.Show();
+            this.Hide();
+        }
     }
 }

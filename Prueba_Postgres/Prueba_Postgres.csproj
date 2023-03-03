@@ -198,6 +198,42 @@
     <Compile Include="Puesto\Frm_Ayudante.Designer.cs">
       <DependentUpon>Frm_Ayudante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Puesto\Frm_Bloque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Bloque.Designer.cs">
+      <DependentUpon>Frm_Bloque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Documento.Designer.cs">
+      <DependentUpon>Frm_Documento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Piso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Piso.Designer.cs">
+      <DependentUpon>Frm_Piso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Reemplazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Reemplazo.Designer.cs">
+      <DependentUpon>Frm_Reemplazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Area.Designer.cs">
+      <DependentUpon>Frm_Tipo_Area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Documento.Designer.cs">
+      <DependentUpon>Frm_Tipo_Documento.cs</DependentUpon>
+    </Compile>
     <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +335,24 @@
     </Compile>
     <EmbeddedResource Include="Puesto\Frm_Ayudante.resx">
       <DependentUpon>Frm_Ayudante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Bloque.resx">
+      <DependentUpon>Frm_Bloque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Documento.resx">
+      <DependentUpon>Frm_Documento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Piso.resx">
+      <DependentUpon>Frm_Piso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Reemplazo.resx">
+      <DependentUpon>Frm_Reemplazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Area.resx">
+      <DependentUpon>Frm_Tipo_Area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Documento.resx">
+      <DependentUpon>Frm_Tipo_Documento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.resx">
       <DependentUpon>Frm_Discapacidad.cs</DependentUpon>
