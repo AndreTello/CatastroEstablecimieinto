@@ -1,4 +1,5 @@
 ﻿using Prueba_Postgres.Comerciante;
+using Prueba_Postgres.Puesto;
 using Prueba_Postgres.RazonSocioEconomicaDelComerciante;
 using System;
 using System.Collections.Generic;
@@ -170,6 +171,13 @@ namespace Prueba_Postgres
         {
             Frm_Razon_Social frm_Razon_Social = new Frm_Razon_Social();
             frm_Razon_Social.Show();
+            this.Hide();
+        }
+
+        private void Ayudante_Click(object sender, EventArgs e)
+        {
+            Frm_Ayudante frm_Ayudante = new Frm_Ayudante();
+            frm_Ayudante.Show();
             this.Hide();
         }
     }
