@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Catastro;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,40 @@ namespace BLL_CE.Catastro
     {
         Cls_Bloque_DAL objdll = new Cls_Bloque_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Bloque()
         {
-            objdll.Consultar_Bloque();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Consultar_IdBloque(string id)
         {
-            objdll.Ingresar_Bloque();
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
         }
 
-        public void Editar()
+        public DataTable Listar_Bloque()
         {
-            objdll.Modificar_Bloque();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Bloque();
+            return tabla;
         }
 
-        public void Eliminar()
+        public void Insertar_Bloque(int establecimiento, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Eliminar_Bloque();
+            objdll.Insertar(establecimiento, codigo, nombre, observacion, Convert.ToInt32(estado));
+        }
+
+        public void Editar_Bloque(int establecimiento, string codigo, string nombre, string observacion, string estado, string id)
+        {
+            objdll.Editar(establecimiento, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Bloque(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

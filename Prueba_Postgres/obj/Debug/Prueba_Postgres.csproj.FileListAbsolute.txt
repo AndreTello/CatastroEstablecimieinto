@@ -132,3 +132,9 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Raz
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Genero.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Nacionalidad.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Bloque.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Area.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Documento.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Reemplazo.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Piso.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento.resources
