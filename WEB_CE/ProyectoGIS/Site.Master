@@ -317,7 +317,7 @@
                                         </ul>
                                    </li>
                                   <li>
-                                        <a href="#"  class="a fw-bold">Razón Social</a>
+                                        <a href="#"  class="a fw-bold">Giro de Negocio</a>
                                         <ul class="sub-menu">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="/App/Catastro/GiroNegocio/TipoProducto/Ficha">

@@ -132,3 +132,11 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Raz
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Genero.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Nacionalidad.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Ayudante.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Discapacidad.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Educacion.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_EstadoCivil.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Etnia.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Genero.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Nacionalidad.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources

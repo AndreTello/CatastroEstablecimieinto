@@ -24,13 +24,13 @@ namespace ProyectoGIS.App.Catastro.RazonSocioEconomicaDelComerciante.EstadoCivil
         protected global::System.Web.UI.WebControls.TextBox ESTADO_CIVIL_NOMBRE;
 
         /// <summary>
-        /// Control ESTADO_CIVIL_PORCENTAJE.
+        /// Control ESTADO_CIVIL_DETALLE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ESTADO_CIVIL_PORCENTAJE;
+        protected global::System.Web.UI.WebControls.TextBox ESTADO_CIVIL_DETALLE;
 
         /// <summary>
         /// Control ESTADO_CIVIL_ESTADO.

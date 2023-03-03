@@ -5,10 +5,13 @@
      <label>Nombre</label>
     <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ETNIA_NOMBRE" />
     <label>Detalle</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ETNIA_PORCENTAJE" />
+    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="ETNIA_DETALLE" />
     <label>Estado</label>
     <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="ETNIA_ESTADO" />
-    
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
-    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+    <asp:UpdatePanel runat="server">
+         <ContentTemplate>    
+            <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
+            <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>

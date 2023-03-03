@@ -72,8 +72,8 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             }
             if (editar == true)
             {
-<<<<<<< HEAD
-                CultureInfo originalCulture = Thread.CurrentThread.CurrentCulture;
+
+               /* CultureInfo originalCulture = Thread.CurrentThread.CurrentCulture;
 
                 CultureInfo englishCulture = new CultureInfo("en-US");
 
@@ -83,14 +83,14 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
                 englishCulture.NumberFormat.NumberGroupSeparator = ",";
 
                 objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, decimal.Parse(txtporcentaje.Text, englishCulture), cmbestado.Text, id);
-=======
+
                 objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text, id);
->>>>>>> a344cfe442994edbc64e89965adb0366e6451e1b
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 MessageBox.Show("" + Convert.ToDecimal(txtporcentaje.Text));
                 Mostrar_Datos();
                 editar = false;
                 Limpiar();
+               */
             }
         }
 

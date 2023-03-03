@@ -14,10 +14,13 @@ namespace ProyectoGIS.App.Catastro.Intervencion
         protected void Page_Load(object sender, EventArgs e)
         {
             TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.Items.Insert(0, new ListItem("-- Seleccione un Tipo de Intervención --", ""));
-            TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = objdll2.Listar_Tipo_Intervencion_Tecnica();
-            TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataTextField = "TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE";
-            TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataValueField = "TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID";
-            TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataBind();
+            if (!IsPostBack)
+            {
+                TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = objdll2.Listar_Tipo_Intervencion_Tecnica();
+                TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataTextField = "TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE";
+                TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataValueField = "TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID";
+                TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataBind();
+            }
             INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.Items.Insert(0, new ListItem("-- Seleccione un Estado --", ""));
             INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.Items.Insert(1, new ListItem("Activo", "1"));
             INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));

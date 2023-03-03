@@ -20,32 +20,33 @@ namespace ProyectoGIS.App.Catastro.Establecimiento
             ESTABLECIMIENTO_ESTADO.Items.Insert(0, new ListItem("--Seleccione un Estado--", ""));
             ESTABLECIMIENTO_ESTADO.Items.Insert(1, new ListItem("Activo", "1"));
             ESTABLECIMIENTO_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));
-            
-            ASOCIACION_ID.DataSource = obj_aso.Consultar_Asociacion();
-            ASOCIACION_ID.DataTextField = "ASOCIACION_NOMBRE";
-            ASOCIACION_ID.DataValueField = "ASOCIACION_ID";
-            ASOCIACION_ID.DataBind();
+            if (!IsPostBack)
+            {
+                ASOCIACION_ID.DataSource = obj_aso.Consultar_Asociacion();
+                ASOCIACION_ID.DataTextField = "ASOCIACION_NOMBRE";
+                ASOCIACION_ID.DataValueField = "ASOCIACION_ID";
+                ASOCIACION_ID.DataBind();
 
-            LOTE_ID.DataSource = obj_lot.Consultar_Lote();
-            LOTE_ID.DataTextField = "LOTE_NOMBRE";
-            LOTE_ID.DataValueField = "LOTE_ID";
-            LOTE_ID.DataBind();
+                LOTE_ID.DataSource = obj_lot.Consultar_Lote();
+                LOTE_ID.DataTextField = "LOTE_NOMBRE";
+                LOTE_ID.DataValueField = "LOTE_ID";
+                LOTE_ID.DataBind();
 
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = obj_int.Consultar_Intervencion_Tecnica_Establecimiento();
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataTextField = "INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE";
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataValueField = "INTERVENCION_TECNICA_ESTABLECIMIENTO_ID";
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataBind();
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = obj_int.Consultar_Intervencion_Tecnica_Establecimiento();
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataTextField = "INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE";
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataValueField = "INTERVENCION_TECNICA_ESTABLECIMIENTO_ID";
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataBind();
 
-            ADMINISTRACION_ZONAL_ID.DataSource = obj_adm.Consultar_Administracion_Zonal();
-            ADMINISTRACION_ZONAL_ID.DataTextField = "ADMINISTRACION_ZONAL_NOMBRE";
-            ADMINISTRACION_ZONAL_ID.DataValueField = "ADMINISTRACION_ZONAL_ID";
-            ADMINISTRACION_ZONAL_ID.DataBind();
+                ADMINISTRACION_ZONAL_ID.DataSource = obj_adm.Consultar_Administracion_Zonal();
+                ADMINISTRACION_ZONAL_ID.DataTextField = "ADMINISTRACION_ZONAL_NOMBRE";
+                ADMINISTRACION_ZONAL_ID.DataValueField = "ADMINISTRACION_ZONAL_ID";
+                ADMINISTRACION_ZONAL_ID.DataBind();
 
-            TIPO_ESTABLECIMIENTO_ID.DataSource = obj_tip.Consultar_Tipo_Establecimiento();
-            TIPO_ESTABLECIMIENTO_ID.DataTextField = "TIPO_ESTABLECIMIENTO_NOMBRE";
-            TIPO_ESTABLECIMIENTO_ID.DataValueField = "TIPO_ESTABLECIMIENTO_ID";
-            TIPO_ESTABLECIMIENTO_ID.DataBind();
-
+                TIPO_ESTABLECIMIENTO_ID.DataSource = obj_tip.Consultar_Tipo_Establecimiento();
+                TIPO_ESTABLECIMIENTO_ID.DataTextField = "TIPO_ESTABLECIMIENTO_NOMBRE";
+                TIPO_ESTABLECIMIENTO_ID.DataValueField = "TIPO_ESTABLECIMIENTO_ID";
+                TIPO_ESTABLECIMIENTO_ID.DataBind();
+            }
 
         }
 

@@ -114,6 +114,15 @@ namespace ProyectoGIS.App.Catastro.RazonSocioEconomicaDelComerciante.RazonSocial
         protected global::System.Web.UI.WebControls.TextBox IDENTIFICACION_SOCIO_ECONOMICA_PARENTESCO;
 
         /// <summary>
+        /// Control IDENTIFICACION_SOCIO_ECONOMICA_ESTADO.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList IDENTIFICACION_SOCIO_ECONOMICA_ESTADO;
+
+        /// <summary>
         /// Control btnGuardar.
         /// </summary>
         /// <remarks>
