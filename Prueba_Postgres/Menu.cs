@@ -1,4 +1,5 @@
 ﻿using Prueba_Postgres.Comerciante;
+using Prueba_Postgres.GiroNegocio;
 using Prueba_Postgres.Puesto;
 using Prueba_Postgres.RazonSocioEconomicaDelComerciante;
 using System;
@@ -29,7 +30,7 @@ namespace Prueba_Postgres
 
         private void Canton_Click(object sender, EventArgs e)
         {
-            Frm_Canton frm_Canton= new Frm_Canton();
+            Frm_Canton frm_Canton = new Frm_Canton();
             frm_Canton.Show();
             this.Hide();
         }
@@ -52,7 +53,7 @@ namespace Prueba_Postgres
         {
             Frm_Manzana frm_Manzana = new Frm_Manzana();
             frm_Manzana.Show();
-            this.Hide();                
+            this.Hide();
         }
 
         private void Lote_Click(object sender, EventArgs e)
@@ -134,7 +135,7 @@ namespace Prueba_Postgres
 
         private void Educacion_Click(object sender, EventArgs e)
         {
-            Frm_Educacion frm_Educacion = new Frm_Educacion();  
+            Frm_Educacion frm_Educacion = new Frm_Educacion();
             frm_Educacion.Show();
             this.Hide();
         }
@@ -197,7 +198,7 @@ namespace Prueba_Postgres
 
         private void Tipo_Documento_Click(object sender, EventArgs e)
         {
-            Frm_Tipo_Documento frm_Tipo_Documento = new Frm_Tipo_Documento();
+            Frm_Tipo_Doc_Comerciante frm_Tipo_Documento = new Frm_Tipo_Doc_Comerciante();
             frm_Tipo_Documento.Show();
             this.Hide();
         }
@@ -218,8 +219,43 @@ namespace Prueba_Postgres
 
         private void Documento_Click(object sender, EventArgs e)
         {
-            Frm_Documento frm_Documento = new Frm_Documento();
+            Frm_Documento_Comerciante frm_Documento = new Frm_Documento_Comerciante();
             frm_Documento.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Doc_Puesto_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Doc_Puesto frm_Tipo_Doc_Puesto = new Frm_Tipo_Doc_Puesto();
+            frm_Tipo_Doc_Puesto.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Familiar_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Familiar frm_Tipo_Familiar = new Frm_Tipo_Familiar();
+            frm_Tipo_Familiar.Show();
+            this.Hide();
+        }
+
+        private void Familiar_Click(object sender, EventArgs e)
+        {
+            Frm_Familiar frm_Familiar = new Frm_Familiar();
+            frm_Familiar.Show();
+            this.Hide();
+        }
+
+        private void Tipo_Producto_Click(object sender, EventArgs e)
+        {
+            Frm_Tipo_Producto frm_Tipo_Producto = new Frm_Tipo_Producto();
+            frm_Tipo_Producto.Show();
+            this.Hide();
+        }
+
+        private void Giro_Negocio_Click(object sender, EventArgs e)
+        {
+            Frm_Giro_Negocio frm_Giro_Negocio = new Frm_Giro_Negocio();
+            frm_Giro_Negocio.Show();
             this.Hide();
         }
     }

@@ -20,8 +20,8 @@ namespace DAL_CE_Postgresql.Catastro
         private string REEMPLAZO_AUTORIZACION;
         private string REEMPLAZO_NUMERO_OFICIO;
         //private int REEMPLAZO_OFICIO_ARCHIVO;
-		private DateTime REEMPLAZO_FECHA_INICIO;
-        private DateTime REEMPLAZO_FECHA_FIN;
+		private string REEMPLAZO_FECHA_INICIO;
+        private string REEMPLAZO_FECHA_FIN;
         private int REEMPLAZO_ESTADO;
 
         public int REEMPLAZO_ID1 { get => REEMPLAZO_ID; set => REEMPLAZO_ID = value; }
@@ -31,8 +31,8 @@ namespace DAL_CE_Postgresql.Catastro
         public string REEMPLAZO_AUTORIZACION1 { get => REEMPLAZO_AUTORIZACION; set => REEMPLAZO_AUTORIZACION = value; }
         public string REEMPLAZO_NUMERO_OFICIO1 { get => REEMPLAZO_NUMERO_OFICIO; set => REEMPLAZO_NUMERO_OFICIO = value; }
         //public int REEMPLAZO_OFICIO_ARCHIVO1 { get => REEMPLAZO_OFICIO_ARCHIVO; set => REEMPLAZO_OFICIO_ARCHIVO = value; }
-        public DateTime REEMPLAZO_FECHA_INICIO1 { get => REEMPLAZO_FECHA_INICIO; set => REEMPLAZO_FECHA_INICIO = value; }
-        public DateTime REEMPLAZO_FECHA_FIN1 { get => REEMPLAZO_FECHA_FIN; set => REEMPLAZO_FECHA_FIN = value; }
+        public string REEMPLAZO_FECHA_INICIO1 { get => REEMPLAZO_FECHA_INICIO; set => REEMPLAZO_FECHA_INICIO = value; }
+        public string REEMPLAZO_FECHA_FIN1 { get => REEMPLAZO_FECHA_FIN; set => REEMPLAZO_FECHA_FIN = value; }
         public int REEMPLAZO_ESTADO1 { get => REEMPLAZO_ESTADO; set => REEMPLAZO_ESTADO = value; }
 
         public DataTable Consultar()
@@ -126,7 +126,7 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
 
-        public void Insertar(string cedula, string apellidos, string nombres, string autorizacion, string numero, DateTime fechainicio, DateTime fechafin, int estado)
+        public void Insertar(string cedula, string apellidos, string nombres, string autorizacion, string numero, string fechainicio, string fechafin, int estado)
         {
             NpgsqlConnection con = null;
             try
@@ -151,7 +151,7 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-        public void Editar(string cedula, string apellidos, string nombres, string autorizacion, string numero, DateTime fechainicio, DateTime fechafin, int estado, int id)
+        public void Editar(string cedula, string apellidos, string nombres, string autorizacion, string numero, string fechainicio, string fechafin, int estado, int id)
         {
             NpgsqlConnection con = null;
             try

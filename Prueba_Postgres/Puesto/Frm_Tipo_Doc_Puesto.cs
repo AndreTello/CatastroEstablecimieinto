@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Prueba_Postgres.Puesto
 {
-    public partial class Frm_Reemplazo : Form
+    public partial class Frm_Tipo_Doc_Puesto : Form
     {
-        public Frm_Reemplazo()
+        public Frm_Tipo_Doc_Puesto()
         {
             InitializeComponent();
         }
 
-        private void Frm_Reemplazo_Load(object sender, EventArgs e)
+        private void Frm_Tipo_Doc_Puesto_Load(object sender, EventArgs e)
         {
             cmbestado.Items.Add("0");
             cmbestado.Items.Add("1");
@@ -26,26 +26,20 @@ namespace Prueba_Postgres.Puesto
             Mostrar_Datos();
         }
 
-        Cls_Reemplazo_BLL objbll = new Cls_Reemplazo_BLL();
+        Cls_Tipo_Documento_Puesto_BLL objbll = new Cls_Tipo_Documento_Puesto_BLL();
 
         private string id = null;
         private bool editar = false;
 
         public void Mostrar_Datos()
         {
-            Cls_Reemplazo_BLL objnew = new Cls_Reemplazo_BLL();
-            datos.DataSource = objnew.Consultar_Reemplazo();
+            Cls_Tipo_Documento_Puesto_BLL objnew = new Cls_Tipo_Documento_Puesto_BLL();
+            datos.DataSource = objnew.Consultar_Tipo_Documento_Puesto();
         }
 
         public void Limpiar()
         {
-            txtcedula.Text = string.Empty;
-            txtapellidos.Text = string.Empty;
-            txtnombres.Text = string.Empty;
-            txtautorizacion.Text = string.Empty;
-            txtnoficio.Text = string.Empty;
-            txtfechai.Text = string.Empty;
-            txtfechaf.Text = string.Empty;
+            txtnombre.Text = string.Empty;
             cmbestado.SelectedIndex = 0;
         }
 
@@ -58,14 +52,14 @@ namespace Prueba_Postgres.Puesto
         {
             if (editar == false)
             {
-                objbll.Insertar_Reemplazo(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtautorizacion.Text, txtnoficio.Text, txtfechai.Text, txtfechaf.Text, cmbestado.Text);
+                objbll.Insertar_Tipo_Documento_Puesto(txtnombre.Text, cmbestado.Text);
                 MessageBox.Show("REGISTRADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
             }
             if (editar == true)
             {
-                objbll.Editar_Reemplazo(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtautorizacion.Text, txtnoficio.Text, txtfechai.Text, txtfechaf.Text, cmbestado.Text, id);
+                objbll.Editar_Tipo_Documento_Puesto(txtnombre.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -78,15 +72,9 @@ namespace Prueba_Postgres.Puesto
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
-                txtcedula.Text = datos.CurrentRow.Cells["reemplazo_cedula"].Value.ToString();
-                txtapellidos.Text = datos.CurrentRow.Cells["reemplazo_apellidos"].Value.ToString();
-                txtnombres.Text = datos.CurrentRow.Cells["reemplazo_nombres"].Value.ToString();
-                txtautorizacion.Text = datos.CurrentRow.Cells["reemplazo_autorizacion"].Value.ToString();
-                txtnoficio.Text = datos.CurrentRow.Cells["reemplazo_numero_oficio"].Value.ToString();
-                txtfechai.Text = datos.CurrentRow.Cells["reemplazo_fecha_inicio"].Value.ToString();
-                txtfechaf.Text = datos.CurrentRow.Cells["reemplazo_fecha_fin"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["reemplazo_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["reemplazo_id"].Value.ToString();
+                txtnombre.Text = datos.CurrentRow.Cells["tipo_documento_puesto_nombre"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["tipo_documento_puesto_estado"].Value.ToString();
+                id = datos.CurrentRow.Cells["tipo_documento_puesto_id"].Value.ToString();
             }
             else
             {
@@ -98,8 +86,8 @@ namespace Prueba_Postgres.Puesto
         {
             if (datos.SelectedRows.Count > 0)
             {
-                id = datos.CurrentRow.Cells["reemplazo_id"].Value.ToString();
-                objbll.Eliminar_Reemplazo(id);
+                id = datos.CurrentRow.Cells["tipo_documento_puesto_id"].Value.ToString();
+                objbll.Eliminar_Tipo_Documento_Puesto(id);
                 MessageBox.Show("ELIMINADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
@@ -118,8 +106,8 @@ namespace Prueba_Postgres.Puesto
             }
             else
             {
-                Cls_Reemplazo_BLL objnew = new Cls_Reemplazo_BLL();
-                datos.DataSource = objnew.Consultar_IdReemplazo(txtid.Text);
+                Cls_Tipo_Documento_Puesto_BLL objnew = new Cls_Tipo_Documento_Puesto_BLL();
+                datos.DataSource = objnew.Consultar_IdTipo_Documento_Puesto(txtid.Text);
                 txtid.Text = string.Empty;
             }
         }

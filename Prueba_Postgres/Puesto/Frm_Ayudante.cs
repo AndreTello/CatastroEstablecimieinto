@@ -45,7 +45,7 @@ namespace Prueba_Postgres.Puesto
             txtparentezco.Text = string.Empty;
             txtautorizacion.Text = string.Empty;
             txtnoficio.Text = string.Empty;
-            date.Text = string.Empty;
+            txtfecha.Text = string.Empty;
             cmbestado.SelectedIndex = 0;
         }
 
@@ -58,14 +58,14 @@ namespace Prueba_Postgres.Puesto
         {
             if (editar == false)
             {
-                objbll.Insertar_Ayudante(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtparentezco.Text, txtautorizacion.Text, txtnoficio.Text, date.Text, cmbestado.Text);
+                objbll.Insertar_Ayudante(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtparentezco.Text, txtautorizacion.Text, txtnoficio.Text, txtfecha.Text, cmbestado.Text);
                 MessageBox.Show("REGISTRADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
             }
             if (editar == true)
             {
-                objbll.Editar_Ayudante(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtparentezco.Text, txtautorizacion.Text, txtnoficio.Text, date.Text, cmbestado.Text, id);
+                objbll.Editar_Ayudante(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtparentezco.Text, txtautorizacion.Text, txtnoficio.Text, txtfecha.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -84,7 +84,7 @@ namespace Prueba_Postgres.Puesto
                 txtparentezco.Text = datos.CurrentRow.Cells["ayudante_parentezco"].Value.ToString();
                 txtautorizacion.Text = datos.CurrentRow.Cells["ayudante_autorizacion"].Value.ToString();
                 txtnoficio.Text = datos.CurrentRow.Cells["ayudante_numero_oficio"].Value.ToString();
-                date.Text = datos.CurrentRow.Cells["ayudante_fecha_oficio"].Value.ToString();
+                txtfecha.Text = datos.CurrentRow.Cells["ayudante_fecha_oficio"].Value.ToString();
                 cmbestado.Text = datos.CurrentRow.Cells["ayudante_estado"].Value.ToString();
                 id = datos.CurrentRow.Cells["ayudante_id"].Value.ToString();
             }

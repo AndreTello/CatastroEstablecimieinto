@@ -51,7 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.DateTimePicker();
+            this.txtfecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,21 +286,21 @@
             this.label8.TabIndex = 159;
             this.label8.Text = "Estado";
             // 
-            // date
+            // txtfecha
             // 
-            this.date.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date.Location = new System.Drawing.Point(411, 98);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(166, 25);
-            this.date.TabIndex = 187;
+            this.txtfecha.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Location = new System.Drawing.Point(411, 97);
+            this.txtfecha.MaxLength = 20;
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.Size = new System.Drawing.Size(166, 25);
+            this.txtfecha.TabIndex = 187;
             // 
             // Frm_Ayudante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 409);
-            this.Controls.Add(this.date);
+            this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.Mostrar);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.Volver);
@@ -358,6 +358,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker date;
+        private System.Windows.Forms.TextBox txtfecha;
     }
 }

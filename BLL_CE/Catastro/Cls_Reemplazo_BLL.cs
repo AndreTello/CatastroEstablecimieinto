@@ -35,12 +35,12 @@ namespace BLL_CE.Catastro
 
         public void Insertar_Reemplazo(string cedula, string apellidos, string nombres, string autorizacion, string numero, string fechainicio, string fechafin, string estado)
         {
-            objdll.Insertar(cedula, apellidos, nombres, autorizacion, numero, Convert.ToDateTime(fechainicio), Convert.ToDateTime(fechafin), Convert.ToInt32(estado));
+            objdll.Insertar(cedula, apellidos, nombres, autorizacion, numero, fechainicio, fechafin, Convert.ToInt32(estado));
         }
 
         public void Editar_Reemplazo(string cedula, string apellidos, string nombres, string autorizacion, string numero, string fechainicio, string fechafin, string estado, string id)
         {
-            objdll.Editar(cedula, apellidos, nombres, autorizacion, numero, Convert.ToDateTime(fechainicio), Convert.ToDateTime(fechafin), Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(cedula, apellidos, nombres, autorizacion, numero, fechainicio,fechafin, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
         public void Eliminar_Reemplazo(string id)

@@ -1,6 +1,6 @@
 ﻿namespace Prueba_Postgres.Puesto
 {
-    partial class Frm_Documento
+    partial class Frm_Documento_Comerciante
     {
         /// <summary>
         /// Required designer variable.
@@ -48,8 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbcomerciante = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
+            this.txtfecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,15 +255,6 @@
             this.label5.TabIndex = 111;
             this.label5.Text = "Comerciante";
             // 
-            // date
-            // 
-            this.date.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date.Location = new System.Drawing.Point(577, 34);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(166, 25);
-            this.date.TabIndex = 213;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -274,12 +265,21 @@
             this.label14.TabIndex = 212;
             this.label14.Text = "Fecha";
             // 
-            // Frm_Documento
+            // txtfecha
+            // 
+            this.txtfecha.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Location = new System.Drawing.Point(577, 34);
+            this.txtfecha.MaxLength = 20;
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.Size = new System.Drawing.Size(166, 25);
+            this.txtfecha.TabIndex = 213;
+            // 
+            // Frm_Documento_Comerciante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 405);
-            this.Controls.Add(this.date);
+            this.ClientSize = new System.Drawing.Size(764, 405);
+            this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbcomerciante);
             this.Controls.Add(this.label5);
@@ -301,7 +301,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Frm_Documento";
+            this.Name = "Frm_Documento_Comerciante";
             this.Text = "Frm_Documento";
             this.Load += new System.EventHandler(this.Frm_Documento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datos)).EndInit();
@@ -332,7 +332,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbcomerciante;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtfecha;
     }
 }

@@ -134,7 +134,12 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Raz
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Bloque.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Area.resources
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Documento.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Reemplazo.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Piso.resources
-C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento_Comerciante.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Doc_Comerciante.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Doc_Puesto.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Familiar.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Familiar.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.GiroNegocio.Frm_Tipo_Producto.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.GiroNegocio.Frm_Giro_Negocio.resources

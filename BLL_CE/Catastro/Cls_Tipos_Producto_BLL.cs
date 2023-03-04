@@ -13,31 +13,41 @@ namespace BLL_CE.Catastro
     {
         Cls_Tipos_Producto_DAL objdll = new Cls_Tipos_Producto_DAL();
 
-        public void Consultar()
-        {
-            objdll.Consultar_Tipos_Producto();
-        }
-
-        /*public DataTable Consultar()
+        public DataTable Consultar_Tipo_Producto()
         {
             DataTable tabla = new DataTable();
-            tabla = objdll.Consultar_Tipos_Producto();
+            tabla = objdll.Consultar();
             return tabla;
-        }*/
-
-        public void Insertar()
-        {
-            objdll.Ingresar_Tipos_Producto();
         }
 
-        public void Editar()
+        public DataTable Consultar_IdTipo_Producto(string id)
         {
-            objdll.Modificar_Tipos_Producto();
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
         }
 
-        public void Eliminar()
+
+        public DataTable Listar_Tipo_Producto()
         {
-            objdll.Eliminar_Tipos_Producto();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Tipo_Producto();
+            return tabla;
+        }
+
+        public void Insertar_Tipo_Producto(string nombre, string detalle, string observacion, string estado)
+        {
+            objdll.Insertar(nombre, detalle, observacion, Convert.ToInt32(estado));
+        }
+
+        public void Editar_Tipo_Producto(string nombre, string detalle, string observacion, string estado, string id)
+        {
+            objdll.Editar(nombre, detalle, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Tipo_Producto(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
     }
 }

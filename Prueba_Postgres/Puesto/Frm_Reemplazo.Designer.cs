@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateinicio = new System.Windows.Forms.DateTimePicker();
             this.Mostrar = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.Volver = new System.Windows.Forms.Button();
@@ -50,19 +49,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.datefin = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtfechaf = new System.Windows.Forms.TextBox();
+            this.txtfechai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dateinicio
-            // 
-            this.dateinicio.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateinicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateinicio.Location = new System.Drawing.Point(209, 97);
-            this.dateinicio.Name = "dateinicio";
-            this.dateinicio.Size = new System.Drawing.Size(166, 25);
-            this.dateinicio.TabIndex = 211;
             // 
             // Mostrar
             // 
@@ -157,9 +148,9 @@
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(205, 74);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 19);
+            this.label14.Size = new System.Drawing.Size(94, 19);
             this.label14.TabIndex = 202;
-            this.label14.Text = "Fecha_Oficio";
+            this.label14.Text = "Fecha_Inicio";
             // 
             // txtnoficio
             // 
@@ -276,33 +267,42 @@
             this.label8.TabIndex = 188;
             this.label8.Text = "Estado";
             // 
-            // datefin
-            // 
-            this.datefin.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datefin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datefin.Location = new System.Drawing.Point(397, 97);
-            this.datefin.Name = "datefin";
-            this.datefin.Size = new System.Drawing.Size(166, 25);
-            this.datefin.TabIndex = 213;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(393, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 19);
+            this.label1.Size = new System.Drawing.Size(78, 19);
             this.label1.TabIndex = 212;
-            this.label1.Text = "Fecha_Oficio";
+            this.label1.Text = "Fecha_Fin";
+            // 
+            // txtfechaf
+            // 
+            this.txtfechaf.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfechaf.Location = new System.Drawing.Point(397, 97);
+            this.txtfechaf.MaxLength = 20;
+            this.txtfechaf.Name = "txtfechaf";
+            this.txtfechaf.Size = new System.Drawing.Size(166, 25);
+            this.txtfechaf.TabIndex = 213;
+            // 
+            // txtfechai
+            // 
+            this.txtfechai.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfechai.Location = new System.Drawing.Point(209, 97);
+            this.txtfechai.MaxLength = 20;
+            this.txtfechai.Name = "txtfechai";
+            this.txtfechai.Size = new System.Drawing.Size(166, 25);
+            this.txtfechai.TabIndex = 214;
             // 
             // Frm_Reemplazo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 410);
-            this.Controls.Add(this.datefin);
+            this.Controls.Add(this.txtfechai);
+            this.Controls.Add(this.txtfechaf);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateinicio);
             this.Controls.Add(this.Mostrar);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.Volver);
@@ -334,8 +334,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateinicio;
         private System.Windows.Forms.Button Mostrar;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Button Volver;
@@ -357,7 +355,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker datefin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtfechaf;
+        private System.Windows.Forms.TextBox txtfechai;
     }
 }

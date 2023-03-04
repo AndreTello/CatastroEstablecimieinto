@@ -137,7 +137,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-
         public void Editar(string nombre, int estado, int id)
         {
             NpgsqlConnection con = null;
@@ -164,7 +163,6 @@ namespace DAL_CE_Postgresql.Catastro
             }
 
         }
-
         public void Eliminar(int id)
         {
             NpgsqlConnection con = null;

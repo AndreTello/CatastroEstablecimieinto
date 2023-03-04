@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Prueba_Postgres.Puesto
 {
-    public partial class Frm_Documento : Form
+    public partial class Frm_Documento_Comerciante : Form
     {
-        public Frm_Documento()
+        public Frm_Documento_Comerciante()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace Prueba_Postgres.Puesto
             cmbtipo.SelectedIndex = 0;
             cmbcomerciante.SelectedIndex = 0;
             txtnombre.Text = string.Empty;
-            date.Text = string.Empty;
+            txtfecha.Text = string.Empty;
             txtdetalle.Text = string.Empty;
             txtobservacion.Text = string.Empty;
             cmbestado.SelectedIndex = 0;
@@ -75,14 +75,14 @@ namespace Prueba_Postgres.Puesto
         {
             if (editar == false)
             {
-                objbll.Insertar_Documento_Comerciante(Convert.ToInt32(cmbtipo.SelectedValue), Convert.ToInt32(cmbcomerciante.SelectedValue), txtnombre.Text, date.Text, txtdetalle.Text, txtobservacion.Text, cmbestado.Text);
+                objbll.Insertar_Documento_Comerciante(Convert.ToInt32(cmbtipo.SelectedValue), Convert.ToInt32(cmbcomerciante.SelectedValue), txtnombre.Text, txtfecha.Text, txtdetalle.Text, txtobservacion.Text, cmbestado.Text);
                 MessageBox.Show("REGISTRADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
             }
             if (editar == true)
             {
-                objbll.Editar_Documento_Comerciante(Convert.ToInt32(cmbtipo.SelectedValue), Convert.ToInt32(cmbcomerciante.SelectedValue), txtnombre.Text, date.Text, txtdetalle.Text, txtobservacion.Text, cmbestado.Text, id);
+                objbll.Editar_Documento_Comerciante(Convert.ToInt32(cmbtipo.SelectedValue), Convert.ToInt32(cmbcomerciante.SelectedValue), txtnombre.Text, txtfecha.Text, txtdetalle.Text, txtobservacion.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -98,7 +98,7 @@ namespace Prueba_Postgres.Puesto
                 cmbtipo.Text = datos.CurrentRow.Cells["tipo_documento_comerciante_nombre"].Value.ToString();
                 cmbcomerciante.Text = datos.CurrentRow.Cells["comerciante_nombres_representante_legal"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["documento_comerciante_nombre"].Value.ToString();
-                date.Text = datos.CurrentRow.Cells["documento_comerciante_fecha"].Value.ToString();
+                txtfecha.Text = datos.CurrentRow.Cells["documento_comerciante_fecha"].Value.ToString();
                 txtdetalle.Text = datos.CurrentRow.Cells["documento_comerciante_detalle"].Value.ToString();
                 txtobservacion.Text = datos.CurrentRow.Cells["documento_comerciante_observacion"].Value.ToString();
                 cmbestado.Text = datos.CurrentRow.Cells["documento_comerciante_estado"].Value.ToString();

@@ -112,6 +112,18 @@
     <Compile Include="Comerciante\Frm_Tipo_Ocupante.Designer.cs">
       <DependentUpon>Frm_Tipo_Ocupante.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiroNegocio\Frm_Giro_Negocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Giro_Negocio.Designer.cs">
+      <DependentUpon>Frm_Giro_Negocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Tipo_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Tipo_Producto.Designer.cs">
+      <DependentUpon>Frm_Tipo_Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mercado\Frm_Administracion_Zonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,11 +216,23 @@
     <Compile Include="Puesto\Frm_Bloque.Designer.cs">
       <DependentUpon>Frm_Bloque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Puesto\Frm_Documento.cs">
+    <Compile Include="Puesto\Frm_Documento_Comerciante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Puesto\Frm_Documento.Designer.cs">
-      <DependentUpon>Frm_Documento.cs</DependentUpon>
+    <Compile Include="Puesto\Frm_Documento_Comerciante.Designer.cs">
+      <DependentUpon>Frm_Documento_Comerciante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Documento_Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Documento_Puesto.Designer.cs">
+      <DependentUpon>Frm_Documento_Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Familiar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Familiar.Designer.cs">
+      <DependentUpon>Frm_Familiar.cs</DependentUpon>
     </Compile>
     <Compile Include="Puesto\Frm_Piso.cs">
       <SubType>Form</SubType>
@@ -228,11 +252,23 @@
     <Compile Include="Puesto\Frm_Tipo_Area.Designer.cs">
       <DependentUpon>Frm_Tipo_Area.cs</DependentUpon>
     </Compile>
-    <Compile Include="Puesto\Frm_Tipo_Documento.cs">
+    <Compile Include="Puesto\Frm_Tipo_Doc_Comerciante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Puesto\Frm_Tipo_Documento.Designer.cs">
-      <DependentUpon>Frm_Tipo_Documento.cs</DependentUpon>
+    <Compile Include="Puesto\Frm_Tipo_Doc_Comerciante.Designer.cs">
+      <DependentUpon>Frm_Tipo_Doc_Comerciante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Doc_Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Doc_Puesto.Designer.cs">
+      <DependentUpon>Frm_Tipo_Doc_Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Familiar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Familiar.Designer.cs">
+      <DependentUpon>Frm_Tipo_Familiar.cs</DependentUpon>
     </Compile>
     <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.cs">
       <SubType>Form</SubType>
@@ -284,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Comerciante\Frm_Tipo_Ocupante.resx">
       <DependentUpon>Frm_Tipo_Ocupante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiroNegocio\Frm_Giro_Negocio.resx">
+      <DependentUpon>Frm_Giro_Negocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiroNegocio\Frm_Tipo_Producto.resx">
+      <DependentUpon>Frm_Tipo_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mercado\Frm_Administracion_Zonal.resx">
       <DependentUpon>Frm_Administracion_Zonal.cs</DependentUpon>
@@ -339,8 +381,11 @@
     <EmbeddedResource Include="Puesto\Frm_Bloque.resx">
       <DependentUpon>Frm_Bloque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Puesto\Frm_Documento.resx">
-      <DependentUpon>Frm_Documento.cs</DependentUpon>
+    <EmbeddedResource Include="Puesto\Frm_Documento_Comerciante.resx">
+      <DependentUpon>Frm_Documento_Comerciante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Familiar.resx">
+      <DependentUpon>Frm_Familiar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Puesto\Frm_Piso.resx">
       <DependentUpon>Frm_Piso.cs</DependentUpon>
@@ -351,8 +396,14 @@
     <EmbeddedResource Include="Puesto\Frm_Tipo_Area.resx">
       <DependentUpon>Frm_Tipo_Area.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Puesto\Frm_Tipo_Documento.resx">
-      <DependentUpon>Frm_Tipo_Documento.cs</DependentUpon>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Doc_Comerciante.resx">
+      <DependentUpon>Frm_Tipo_Doc_Comerciante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Doc_Puesto.resx">
+      <DependentUpon>Frm_Tipo_Doc_Puesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Familiar.resx">
+      <DependentUpon>Frm_Tipo_Familiar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.resx">
       <DependentUpon>Frm_Discapacidad.cs</DependentUpon>
@@ -395,7 +446,9 @@
       <Name>BLL_CE</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="EstatusSocial\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

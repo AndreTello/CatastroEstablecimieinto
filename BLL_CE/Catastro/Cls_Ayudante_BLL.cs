@@ -36,12 +36,12 @@ namespace BLL_CE.Catastro
 
         public void Insertar_Ayudante(string cedula, string apellidos, string nombres, string parentezco, string autorizacion, string numero, string fecha, string estado)
         {
-            objdll.Insertar(cedula, apellidos, nombres, parentezco, autorizacion, numero, Convert.ToDateTime(fecha), Convert.ToInt32(estado));
+            objdll.Insertar(cedula, apellidos, nombres, parentezco, autorizacion, numero,fecha, Convert.ToInt32(estado));
         }
 
         public void Editar_Ayudante(string cedula, string apellidos, string nombres, string parentezco, string autorizacion, string numero, string fecha, string estado, string id)
         {
-            objdll.Editar(cedula, apellidos, nombres, parentezco, autorizacion, numero, Convert.ToDateTime(fecha), Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(cedula, apellidos, nombres, parentezco, autorizacion, numero, fecha, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
         public void Eliminar_Ayudante(string id)
