@@ -10,7 +10,7 @@
         public string ayudante_autorizacion { get; set; }
         public string ayudante_numero_oficio { get; set; }
         public DateTime ayudante_fecha_oficio { get; set; }
-
+        public int ayudante_estado { get; set; }
 
     }
 }

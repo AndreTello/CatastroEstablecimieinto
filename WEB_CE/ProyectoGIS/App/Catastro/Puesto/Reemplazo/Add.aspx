@@ -12,15 +12,13 @@
     <asp:TextBox CssClass="form-control mb-4 mt-2" runat="server" ID="REEMPLAZO_AUTORIZACION" />
     <label>Numero de Oficio del Reemplazo</label>
     <asp:TextBox CssClass="form-control mb-4 mt-2" runat="server" ID="REEMPLAZO_NUMERO_OFICIO" />
-    <label>Archivo de Oficio del Reemplazo</label>
-    <asp:FileUpload CssClass="form-control mb-4 mt-2" runat="server" ID="REEMPLAZO_OFICIO_ARCHIVO" />
     <label>Fecha de Inicio</label>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:Calendar CssClass="form-control " runat="server" ID="REEMPLAZO_FECHA_INICIO" />
         </ContentTemplate>
         <Triggers>
-            <asp:AsyncPostBackTrigger ControlID="REEMPLAZO_FECHA_OFICIO" EventName="SelectionChanged" />
+            <asp:AsyncPostBackTrigger ControlID="REEMPLAZO_FECHA_INICIO" EventName="SelectionChanged" />
         </Triggers>
     </asp:UpdatePanel>
     <label>Fecha de Fin</label>
@@ -29,10 +27,16 @@
             <asp:Calendar CssClass="form-control " runat="server" ID="REEMPLAZO_FECHA_FIN" />
         </ContentTemplate>
         <Triggers>
-            <asp:AsyncPostBackTrigger ControlID="REEMPLAZO_FECHA_OFICIO" EventName="SelectionChanged" />
+            <asp:AsyncPostBackTrigger ControlID="REEMPLAZO_FECHA_FIN" EventName="SelectionChanged" />
         </Triggers>
     </asp:UpdatePanel>
-   
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
-    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+    <label>Estado</label>
+    <asp:DropDownList CssClass="form-control mb-4 mt-2" runat="server" ID="REEMPLAZO_ESTADO" />
+        
+   <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+        <ContentTemplate>
+            <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
+            <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>

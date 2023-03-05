@@ -19,6 +19,13 @@ namespace REST_CE.Controllers
             var lista = await function.MostrarProductos();
             return lista;
         }
+        [HttpGet("listar/{id}")]
+        public async Task<ActionResult<List<Cls_Ayudante_Model>>> Get(int id)
+        {
+            var function = new Cls_Ayudante();
+            var lista = await function.MostrarProducto(id);
+            return lista;
+        }
 
         [HttpPost]
         [Route("guardar")]

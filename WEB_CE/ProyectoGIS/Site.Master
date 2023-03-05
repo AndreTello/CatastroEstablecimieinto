@@ -348,6 +348,12 @@
                                       <a href="#"  class="a fw-bold">Puesto Comercio</a>
                                       <ul class="sub-menu">
                                             <li class="nav-item">
+                                                <a class="nav-link" href="/App/Catastro/Puesto/Ayudante/Ficha">
+                                                <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                                     Ayudante
+                                                </a>
+                                            </li>
+                                          <li class="nav-item">
                                                 <a class="nav-link" href="/App/Catastro/Puesto/TipoDocumento/Ficha">
                                                 <span data-feather="shopping-cart" class="align-text-bottom"></span>
                                                      Tipo de Documento del Puesto

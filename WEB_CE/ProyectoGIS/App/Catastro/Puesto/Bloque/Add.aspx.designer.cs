@@ -42,13 +42,13 @@ namespace ProyectoGIS.App.Catastro.Puesto.Bloque
         protected global::System.Web.UI.WebControls.TextBox BLOQUE_NOMBRE;
 
         /// <summary>
-        /// Control TIPO_DOCUMENTO_PUESTO_ESTADO.
+        /// Control BLOQUE_ESTADO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TIPO_DOCUMENTO_PUESTO_ESTADO;
+        protected global::System.Web.UI.WebControls.DropDownList BLOQUE_ESTADO;
 
         /// <summary>
         /// Control BLOQUE_OBSERVACION.
@@ -58,6 +58,15 @@ namespace ProyectoGIS.App.Catastro.Puesto.Bloque
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox BLOQUE_OBSERVACION;
+
+        /// <summary>
+        /// Control UpdatePanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
         /// Control btnGuardar.

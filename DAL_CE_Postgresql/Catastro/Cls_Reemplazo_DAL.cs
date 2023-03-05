@@ -126,7 +126,7 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
 
-        public void Insertar(string cedula, string apellidos, string nombres, string autorizacion, string numero, DateTime fechainicio, DateTime fechafin, int estado)
+        public void Insertar(string cedula, string apellidos, string nombres, string autorizacion, string numero, string fechainicio, string fechafin, int estado)
         {
             NpgsqlConnection con = null;
             try

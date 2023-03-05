@@ -51,13 +51,22 @@ namespace ProyectoGIS.App.Catastro.Puesto.Piso
         protected global::System.Web.UI.WebControls.DropDownList PISO_ESTADO;
 
         /// <summary>
-        /// Control OBSERVACION_OBSERVACION.
+        /// Control PISO_OBSERVACION.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox OBSERVACION_OBSERVACION;
+        protected global::System.Web.UI.WebControls.TextBox PISO_OBSERVACION;
+
+        /// <summary>
+        /// Control UpdatePanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
 
         /// <summary>
         /// Control btnGuardar.

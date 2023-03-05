@@ -127,7 +127,7 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
          
-        public void Insertar(string cedula, string apellidos, string nombres, string parentezco, string autorizacion, string numero, DateTime fecha, int estado)
+        public void Insertar(string cedula, string apellidos, string nombres, string parentezco, string autorizacion, string numero, string fecha, int estado)
         {
             NpgsqlConnection con = null;
             try
@@ -152,7 +152,7 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-        public void Editar(string cedula, string apellidos, string nombres, string parentezco, string autorizacion, string numero, DateTime fecha, int estado, int id)
+        public void Editar(string cedula, string apellidos, string nombres, string parentezco, string autorizacion, string numero, string fecha, int estado, int id)
         {
             NpgsqlConnection con = null;
             try

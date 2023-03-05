@@ -26,6 +26,38 @@ namespace REST_CE.Datos
                             obj.ayudante_autorizacion = dr.GetString(5);
                             obj.ayudante_numero_oficio = dr.GetString(6);
                             obj.ayudante_fecha_oficio = dr.GetDateTime(7);
+                            obj.ayudante_estado = dr.GetInt32(8);
+                            lista.Add(obj);
+                        }
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public async Task <List<Cls_Ayudante_Model>> MostrarProducto(int id)
+        {
+            var lista = new List<Cls_Ayudante_Model>();
+            using (var sql = new NpgsqlConnection(cn.getCadenaConexion()))
+            {
+                using (var cmd = new NpgsqlCommand("SELECT * FROM catastroestablecimiento.cm_ayudante WHERE ayudante_id = @ayudante_id", sql))
+                {
+                    cmd.Parameters.AddWithValue("ayudante_id", id);
+                    await sql.OpenAsync();
+                    using (var dr = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await dr.ReadAsync())
+                        {
+                            var obj = new Cls_Ayudante_Model();
+                            obj.ayudante_id = dr.GetInt32(0);
+                            obj.ayudante_cedula = dr.GetString(1);
+                            obj.ayudante_apellido = dr.GetString(2);
+                            obj.ayudante_nombre = dr.GetString(3);
+                            obj.ayudante_parentezco = dr.GetString(4);
+                            obj.ayudante_autorizacion = dr.GetString(5);
+                            obj.ayudante_numero_oficio = dr.GetString(6);
+                            obj.ayudante_fecha_oficio = dr.GetDateTime(7);
+                            obj.ayudante_estado = dr.GetInt32(8);
                             lista.Add(obj);
                         }
                     }
@@ -47,6 +79,7 @@ namespace REST_CE.Datos
                     cmd.Parameters.AddWithValue("ayudante_autorizacion", obj.ayudante_autorizacion);
                     cmd.Parameters.AddWithValue("ayudante_numero_oficio", obj.ayudante_numero_oficio);
                     cmd.Parameters.AddWithValue("ayudante_fecha_oficio", obj.ayudante_fecha_oficio);
+                    cmd.Parameters.AddWithValue("ayudante_estado", obj.ayudante_estado);
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                 }
@@ -67,6 +100,8 @@ namespace REST_CE.Datos
                     cmd.Parameters.AddWithValue("ayudante_autorizacion", obj.ayudante_autorizacion);
                     cmd.Parameters.AddWithValue("ayudante_numero_oficio", obj.ayudante_numero_oficio);
                     cmd.Parameters.AddWithValue("ayudante_fecha_oficio", obj.ayudante_fecha_oficio);
+                    cmd.Parameters.AddWithValue("ayudante_estado", obj.ayudante_estado);
+
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                 }
