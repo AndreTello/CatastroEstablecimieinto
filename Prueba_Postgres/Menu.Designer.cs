@@ -61,13 +61,27 @@
             this.Tipo_Area = new System.Windows.Forms.Button();
             this.Bloque = new System.Windows.Forms.Button();
             this.Ayudante = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Puesto = new System.Windows.Forms.Button();
+            this.Documento_Puesto = new System.Windows.Forms.Button();
+            this.Tipo_Doc_Puesto = new System.Windows.Forms.Button();
+            this.Familiar = new System.Windows.Forms.Button();
+            this.Tipo_Familiar = new System.Windows.Forms.Button();
+            this.Giro_Negocio = new System.Windows.Forms.Button();
+            this.Tipo_Producto = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Estatus_Legal = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Usuario = new System.Windows.Forms.Button();
+            this.Rol_Permiso = new System.Windows.Forms.Button();
+            this.Permiso = new System.Windows.Forms.Button();
+            this.Rol = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Provincia
             // 
             this.Provincia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Provincia.Location = new System.Drawing.Point(15, 36);
+            this.Provincia.Location = new System.Drawing.Point(27, 52);
             this.Provincia.Name = "Provincia";
             this.Provincia.Size = new System.Drawing.Size(188, 32);
             this.Provincia.TabIndex = 0;
@@ -78,7 +92,7 @@
             // Canton
             // 
             this.Canton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Canton.Location = new System.Drawing.Point(221, 36);
+            this.Canton.Location = new System.Drawing.Point(233, 52);
             this.Canton.Name = "Canton";
             this.Canton.Size = new System.Drawing.Size(188, 32);
             this.Canton.TabIndex = 1;
@@ -89,7 +103,7 @@
             // Zona
             // 
             this.Zona.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Zona.Location = new System.Drawing.Point(426, 36);
+            this.Zona.Location = new System.Drawing.Point(438, 52);
             this.Zona.Name = "Zona";
             this.Zona.Size = new System.Drawing.Size(188, 32);
             this.Zona.TabIndex = 2;
@@ -100,7 +114,7 @@
             // Parroquia
             // 
             this.Parroquia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parroquia.Location = new System.Drawing.Point(15, 74);
+            this.Parroquia.Location = new System.Drawing.Point(27, 90);
             this.Parroquia.Name = "Parroquia";
             this.Parroquia.Size = new System.Drawing.Size(188, 32);
             this.Parroquia.TabIndex = 5;
@@ -111,7 +125,7 @@
             // Manzana
             // 
             this.Manzana.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manzana.Location = new System.Drawing.Point(221, 74);
+            this.Manzana.Location = new System.Drawing.Point(233, 90);
             this.Manzana.Name = "Manzana";
             this.Manzana.Size = new System.Drawing.Size(188, 32);
             this.Manzana.TabIndex = 6;
@@ -122,7 +136,7 @@
             // Tipo_Establecimiento
             // 
             this.Tipo_Establecimiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Establecimiento.Location = new System.Drawing.Point(426, 112);
+            this.Tipo_Establecimiento.Location = new System.Drawing.Point(438, 128);
             this.Tipo_Establecimiento.Name = "Tipo_Establecimiento";
             this.Tipo_Establecimiento.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Establecimiento.TabIndex = 10;
@@ -133,7 +147,7 @@
             // Asociacion
             // 
             this.Asociacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Asociacion.Location = new System.Drawing.Point(221, 112);
+            this.Asociacion.Location = new System.Drawing.Point(233, 128);
             this.Asociacion.Name = "Asociacion";
             this.Asociacion.Size = new System.Drawing.Size(188, 32);
             this.Asociacion.TabIndex = 9;
@@ -144,7 +158,7 @@
             // Administracion_Zonal
             // 
             this.Administracion_Zonal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Administracion_Zonal.Location = new System.Drawing.Point(15, 112);
+            this.Administracion_Zonal.Location = new System.Drawing.Point(27, 128);
             this.Administracion_Zonal.Name = "Administracion_Zonal";
             this.Administracion_Zonal.Size = new System.Drawing.Size(188, 32);
             this.Administracion_Zonal.TabIndex = 8;
@@ -155,7 +169,7 @@
             // Lote
             // 
             this.Lote.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lote.Location = new System.Drawing.Point(426, 74);
+            this.Lote.Location = new System.Drawing.Point(438, 90);
             this.Lote.Name = "Lote";
             this.Lote.Size = new System.Drawing.Size(188, 32);
             this.Lote.TabIndex = 7;
@@ -166,7 +180,7 @@
             // Comerciante
             // 
             this.Comerciante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Comerciante.Location = new System.Drawing.Point(1063, 36);
+            this.Comerciante.Location = new System.Drawing.Point(438, 255);
             this.Comerciante.Name = "Comerciante";
             this.Comerciante.Size = new System.Drawing.Size(188, 32);
             this.Comerciante.TabIndex = 20;
@@ -177,7 +191,7 @@
             // Tipo_Ocupante
             // 
             this.Tipo_Ocupante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Ocupante.Location = new System.Drawing.Point(858, 36);
+            this.Tipo_Ocupante.Location = new System.Drawing.Point(233, 255);
             this.Tipo_Ocupante.Name = "Tipo_Ocupante";
             this.Tipo_Ocupante.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Ocupante.TabIndex = 19;
@@ -188,7 +202,7 @@
             // Tipo_Identificacion
             // 
             this.Tipo_Identificacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Identificacion.Location = new System.Drawing.Point(652, 36);
+            this.Tipo_Identificacion.Location = new System.Drawing.Point(27, 255);
             this.Tipo_Identificacion.Name = "Tipo_Identificacion";
             this.Tipo_Identificacion.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Identificacion.TabIndex = 18;
@@ -199,7 +213,7 @@
             // Establecimiento
             // 
             this.Establecimiento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Establecimiento.Location = new System.Drawing.Point(426, 150);
+            this.Establecimiento.Location = new System.Drawing.Point(438, 166);
             this.Establecimiento.Name = "Establecimiento";
             this.Establecimiento.Size = new System.Drawing.Size(188, 32);
             this.Establecimiento.TabIndex = 14;
@@ -210,7 +224,7 @@
             // Intervencion_Tecnica_E
             // 
             this.Intervencion_Tecnica_E.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intervencion_Tecnica_E.Location = new System.Drawing.Point(221, 150);
+            this.Intervencion_Tecnica_E.Location = new System.Drawing.Point(233, 166);
             this.Intervencion_Tecnica_E.Name = "Intervencion_Tecnica_E";
             this.Intervencion_Tecnica_E.Size = new System.Drawing.Size(188, 32);
             this.Intervencion_Tecnica_E.TabIndex = 27;
@@ -221,7 +235,7 @@
             // Tipo_Intervencion_T
             // 
             this.Tipo_Intervencion_T.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Intervencion_T.Location = new System.Drawing.Point(15, 150);
+            this.Tipo_Intervencion_T.Location = new System.Drawing.Point(27, 166);
             this.Tipo_Intervencion_T.Name = "Tipo_Intervencion_T";
             this.Tipo_Intervencion_T.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Intervencion_T.TabIndex = 22;
@@ -234,7 +248,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 42;
@@ -245,7 +259,7 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(652, 9);
+            this.label2.Location = new System.Drawing.Point(27, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 24);
             this.label2.TabIndex = 43;
@@ -256,7 +270,7 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 195);
+            this.label3.Location = new System.Drawing.Point(27, 313);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(333, 24);
             this.label3.TabIndex = 44;
@@ -265,7 +279,7 @@
             // Razon_Social
             // 
             this.Razon_Social.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Razon_Social.Location = new System.Drawing.Point(15, 298);
+            this.Razon_Social.Location = new System.Drawing.Point(27, 416);
             this.Razon_Social.Name = "Razon_Social";
             this.Razon_Social.Size = new System.Drawing.Size(188, 32);
             this.Razon_Social.TabIndex = 51;
@@ -276,7 +290,7 @@
             // Nacionalidad
             // 
             this.Nacionalidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nacionalidad.Location = new System.Drawing.Point(426, 260);
+            this.Nacionalidad.Location = new System.Drawing.Point(438, 378);
             this.Nacionalidad.Name = "Nacionalidad";
             this.Nacionalidad.Size = new System.Drawing.Size(188, 32);
             this.Nacionalidad.TabIndex = 50;
@@ -287,7 +301,7 @@
             // Genero
             // 
             this.Genero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Genero.Location = new System.Drawing.Point(221, 260);
+            this.Genero.Location = new System.Drawing.Point(233, 378);
             this.Genero.Name = "Genero";
             this.Genero.Size = new System.Drawing.Size(188, 32);
             this.Genero.TabIndex = 49;
@@ -298,7 +312,7 @@
             // Etnia
             // 
             this.Etnia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Etnia.Location = new System.Drawing.Point(15, 260);
+            this.Etnia.Location = new System.Drawing.Point(27, 378);
             this.Etnia.Name = "Etnia";
             this.Etnia.Size = new System.Drawing.Size(188, 32);
             this.Etnia.TabIndex = 48;
@@ -309,7 +323,7 @@
             // Estado_Civil
             // 
             this.Estado_Civil.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estado_Civil.Location = new System.Drawing.Point(426, 222);
+            this.Estado_Civil.Location = new System.Drawing.Point(438, 340);
             this.Estado_Civil.Name = "Estado_Civil";
             this.Estado_Civil.Size = new System.Drawing.Size(188, 32);
             this.Estado_Civil.TabIndex = 47;
@@ -320,7 +334,7 @@
             // Educacion
             // 
             this.Educacion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Educacion.Location = new System.Drawing.Point(221, 222);
+            this.Educacion.Location = new System.Drawing.Point(233, 340);
             this.Educacion.Name = "Educacion";
             this.Educacion.Size = new System.Drawing.Size(188, 32);
             this.Educacion.TabIndex = 46;
@@ -331,7 +345,7 @@
             // Discapacidad
             // 
             this.Discapacidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discapacidad.Location = new System.Drawing.Point(15, 222);
+            this.Discapacidad.Location = new System.Drawing.Point(27, 340);
             this.Discapacidad.Name = "Discapacidad";
             this.Discapacidad.Size = new System.Drawing.Size(188, 32);
             this.Discapacidad.TabIndex = 45;
@@ -344,7 +358,7 @@
             this.label4.AutoSize = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(652, 82);
+            this.label4.Location = new System.Drawing.Point(670, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 24);
             this.label4.TabIndex = 52;
@@ -353,18 +367,18 @@
             // Documento
             // 
             this.Documento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Documento.Location = new System.Drawing.Point(652, 185);
+            this.Documento.Location = new System.Drawing.Point(670, 128);
             this.Documento.Name = "Documento";
             this.Documento.Size = new System.Drawing.Size(188, 32);
             this.Documento.TabIndex = 59;
-            this.Documento.Text = "Documento";
+            this.Documento.Text = "Documento_Comerciante ";
             this.Documento.UseVisualStyleBackColor = true;
             this.Documento.Click += new System.EventHandler(this.Documento_Click);
             // 
             // Piso
             // 
             this.Piso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Piso.Location = new System.Drawing.Point(1063, 147);
+            this.Piso.Location = new System.Drawing.Point(1081, 90);
             this.Piso.Name = "Piso";
             this.Piso.Size = new System.Drawing.Size(188, 32);
             this.Piso.TabIndex = 58;
@@ -375,7 +389,7 @@
             // Reemplazo
             // 
             this.Reemplazo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reemplazo.Location = new System.Drawing.Point(858, 147);
+            this.Reemplazo.Location = new System.Drawing.Point(876, 90);
             this.Reemplazo.Name = "Reemplazo";
             this.Reemplazo.Size = new System.Drawing.Size(188, 32);
             this.Reemplazo.TabIndex = 57;
@@ -386,18 +400,18 @@
             // Tipo_Documento
             // 
             this.Tipo_Documento.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Documento.Location = new System.Drawing.Point(652, 147);
+            this.Tipo_Documento.Location = new System.Drawing.Point(670, 90);
             this.Tipo_Documento.Name = "Tipo_Documento";
             this.Tipo_Documento.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Documento.TabIndex = 56;
-            this.Tipo_Documento.Text = "Tipo_Documento";
+            this.Tipo_Documento.Text = "Tipo_Doc_Comerciante";
             this.Tipo_Documento.UseVisualStyleBackColor = true;
             this.Tipo_Documento.Click += new System.EventHandler(this.Tipo_Documento_Click);
             // 
             // Tipo_Area
             // 
             this.Tipo_Area.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Area.Location = new System.Drawing.Point(1063, 109);
+            this.Tipo_Area.Location = new System.Drawing.Point(1081, 52);
             this.Tipo_Area.Name = "Tipo_Area";
             this.Tipo_Area.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Area.TabIndex = 55;
@@ -408,7 +422,7 @@
             // Bloque
             // 
             this.Bloque.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bloque.Location = new System.Drawing.Point(858, 109);
+            this.Bloque.Location = new System.Drawing.Point(876, 52);
             this.Bloque.Name = "Bloque";
             this.Bloque.Size = new System.Drawing.Size(188, 32);
             this.Bloque.TabIndex = 54;
@@ -419,7 +433,7 @@
             // Ayudante
             // 
             this.Ayudante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ayudante.Location = new System.Drawing.Point(652, 109);
+            this.Ayudante.Location = new System.Drawing.Point(670, 52);
             this.Ayudante.Name = "Ayudante";
             this.Ayudante.Size = new System.Drawing.Size(188, 32);
             this.Ayudante.TabIndex = 53;
@@ -427,22 +441,191 @@
             this.Ayudante.UseVisualStyleBackColor = true;
             this.Ayudante.Click += new System.EventHandler(this.Ayudante_Click);
             // 
-            // button8
+            // Puesto
             // 
-            this.button8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(858, 185);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(188, 32);
-            this.button8.TabIndex = 60;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Puesto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Puesto.Location = new System.Drawing.Point(670, 166);
+            this.Puesto.Name = "Puesto";
+            this.Puesto.Size = new System.Drawing.Size(188, 32);
+            this.Puesto.TabIndex = 60;
+            this.Puesto.Text = "Puesto";
+            this.Puesto.UseVisualStyleBackColor = true;
+            this.Puesto.Click += new System.EventHandler(this.Puesto_Click);
+            // 
+            // Documento_Puesto
+            // 
+            this.Documento_Puesto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Documento_Puesto.Location = new System.Drawing.Point(1081, 128);
+            this.Documento_Puesto.Name = "Documento_Puesto";
+            this.Documento_Puesto.Size = new System.Drawing.Size(188, 32);
+            this.Documento_Puesto.TabIndex = 62;
+            this.Documento_Puesto.Text = "Documento_Puesto";
+            this.Documento_Puesto.UseVisualStyleBackColor = true;
+            this.Documento_Puesto.Click += new System.EventHandler(this.Documento_Puesto_Click);
+            // 
+            // Tipo_Doc_Puesto
+            // 
+            this.Tipo_Doc_Puesto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo_Doc_Puesto.Location = new System.Drawing.Point(876, 128);
+            this.Tipo_Doc_Puesto.Name = "Tipo_Doc_Puesto";
+            this.Tipo_Doc_Puesto.Size = new System.Drawing.Size(188, 32);
+            this.Tipo_Doc_Puesto.TabIndex = 61;
+            this.Tipo_Doc_Puesto.Text = "Tipo_Doc_Puesto";
+            this.Tipo_Doc_Puesto.UseVisualStyleBackColor = true;
+            this.Tipo_Doc_Puesto.Click += new System.EventHandler(this.Tipo_Doc_Puesto_Click);
+            // 
+            // Familiar
+            // 
+            this.Familiar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Familiar.Location = new System.Drawing.Point(1081, 166);
+            this.Familiar.Name = "Familiar";
+            this.Familiar.Size = new System.Drawing.Size(188, 32);
+            this.Familiar.TabIndex = 64;
+            this.Familiar.Text = "Familiar";
+            this.Familiar.UseVisualStyleBackColor = true;
+            this.Familiar.Click += new System.EventHandler(this.Familiar_Click);
+            // 
+            // Tipo_Familiar
+            // 
+            this.Tipo_Familiar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo_Familiar.Location = new System.Drawing.Point(876, 166);
+            this.Tipo_Familiar.Name = "Tipo_Familiar";
+            this.Tipo_Familiar.Size = new System.Drawing.Size(188, 32);
+            this.Tipo_Familiar.TabIndex = 63;
+            this.Tipo_Familiar.Text = "Tipo_Familiar";
+            this.Tipo_Familiar.UseVisualStyleBackColor = true;
+            this.Tipo_Familiar.Click += new System.EventHandler(this.Tipo_Familiar_Click);
+            // 
+            // Giro_Negocio
+            // 
+            this.Giro_Negocio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Giro_Negocio.Location = new System.Drawing.Point(876, 367);
+            this.Giro_Negocio.Name = "Giro_Negocio";
+            this.Giro_Negocio.Size = new System.Drawing.Size(188, 32);
+            this.Giro_Negocio.TabIndex = 67;
+            this.Giro_Negocio.Text = "Giro_Negocio";
+            this.Giro_Negocio.UseVisualStyleBackColor = true;
+            this.Giro_Negocio.Click += new System.EventHandler(this.Giro_Negocio_Click);
+            // 
+            // Tipo_Producto
+            // 
+            this.Tipo_Producto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo_Producto.Location = new System.Drawing.Point(670, 367);
+            this.Tipo_Producto.Name = "Tipo_Producto";
+            this.Tipo_Producto.Size = new System.Drawing.Size(188, 32);
+            this.Tipo_Producto.TabIndex = 66;
+            this.Tipo_Producto.Text = "Tipo_Producto";
+            this.Tipo_Producto.UseVisualStyleBackColor = true;
+            this.Tipo_Producto.Click += new System.EventHandler(this.Tipo_Producto_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(670, 340);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 24);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Giro Negocio";
+            // 
+            // Estatus_Legal
+            // 
+            this.Estatus_Legal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estatus_Legal.Location = new System.Drawing.Point(670, 452);
+            this.Estatus_Legal.Name = "Estatus_Legal";
+            this.Estatus_Legal.Size = new System.Drawing.Size(188, 32);
+            this.Estatus_Legal.TabIndex = 69;
+            this.Estatus_Legal.Text = "Estatus_Legal";
+            this.Estatus_Legal.UseVisualStyleBackColor = true;
+            this.Estatus_Legal.Click += new System.EventHandler(this.Estatus_Legal_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(670, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 24);
+            this.label6.TabIndex = 68;
+            this.label6.Text = "Estatus Legal";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(670, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 24);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "Administracion";
+            // 
+            // Usuario
+            // 
+            this.Usuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario.Location = new System.Drawing.Point(670, 293);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(188, 32);
+            this.Usuario.TabIndex = 74;
+            this.Usuario.Text = "Usuario";
+            this.Usuario.UseVisualStyleBackColor = true;
+            this.Usuario.Click += new System.EventHandler(this.Usuario_Click);
+            // 
+            // Rol_Permiso
+            // 
+            this.Rol_Permiso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rol_Permiso.Location = new System.Drawing.Point(1081, 255);
+            this.Rol_Permiso.Name = "Rol_Permiso";
+            this.Rol_Permiso.Size = new System.Drawing.Size(188, 32);
+            this.Rol_Permiso.TabIndex = 73;
+            this.Rol_Permiso.Text = "Rol_Permiso";
+            this.Rol_Permiso.UseVisualStyleBackColor = true;
+            this.Rol_Permiso.Click += new System.EventHandler(this.Rol_Permiso_Click);
+            // 
+            // Permiso
+            // 
+            this.Permiso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Permiso.Location = new System.Drawing.Point(876, 255);
+            this.Permiso.Name = "Permiso";
+            this.Permiso.Size = new System.Drawing.Size(188, 32);
+            this.Permiso.TabIndex = 72;
+            this.Permiso.Text = "Permiso";
+            this.Permiso.UseVisualStyleBackColor = true;
+            this.Permiso.Click += new System.EventHandler(this.Permiso_Click);
+            // 
+            // Rol
+            // 
+            this.Rol.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rol.Location = new System.Drawing.Point(670, 255);
+            this.Rol.Name = "Rol";
+            this.Rol.Size = new System.Drawing.Size(188, 32);
+            this.Rol.TabIndex = 71;
+            this.Rol.Text = "Rol";
+            this.Rol.UseVisualStyleBackColor = true;
+            this.Rol.Click += new System.EventHandler(this.Rol_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 346);
-            this.Controls.Add(this.button8);
+            this.ClientSize = new System.Drawing.Size(1292, 505);
+            this.Controls.Add(this.Usuario);
+            this.Controls.Add(this.Rol_Permiso);
+            this.Controls.Add(this.Permiso);
+            this.Controls.Add(this.Rol);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Estatus_Legal);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Giro_Negocio);
+            this.Controls.Add(this.Tipo_Producto);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Familiar);
+            this.Controls.Add(this.Tipo_Familiar);
+            this.Controls.Add(this.Documento_Puesto);
+            this.Controls.Add(this.Tipo_Doc_Puesto);
+            this.Controls.Add(this.Puesto);
             this.Controls.Add(this.Documento);
             this.Controls.Add(this.Piso);
             this.Controls.Add(this.Reemplazo);
@@ -518,6 +701,20 @@
         private System.Windows.Forms.Button Tipo_Area;
         private System.Windows.Forms.Button Bloque;
         private System.Windows.Forms.Button Ayudante;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Puesto;
+        private System.Windows.Forms.Button Documento_Puesto;
+        private System.Windows.Forms.Button Tipo_Doc_Puesto;
+        private System.Windows.Forms.Button Familiar;
+        private System.Windows.Forms.Button Tipo_Familiar;
+        private System.Windows.Forms.Button Giro_Negocio;
+        private System.Windows.Forms.Button Tipo_Producto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Estatus_Legal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Usuario;
+        private System.Windows.Forms.Button Rol_Permiso;
+        private System.Windows.Forms.Button Permiso;
+        private System.Windows.Forms.Button Rol;
     }
 }

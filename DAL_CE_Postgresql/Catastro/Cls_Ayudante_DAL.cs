@@ -22,7 +22,7 @@ namespace DAL_CE_Postgresql.Catastro
         private string AYUDANTE_AUTORIZACION;
         private string AYUDANTE_NUMERO_OFICIO;
         //private byte [] AYUDANTE_OFICIO_ARCHIVO;
-		private DateTime AYUDANTE_FECHA_OFICIO;
+		private string AYUDANTE_FECHA_OFICIO;
         private int AYUDANTE_ESTADO;
 
         public int AYUDANTE_ID1 { get => AYUDANTE_ID; set => AYUDANTE_ID = value; }
@@ -33,7 +33,7 @@ namespace DAL_CE_Postgresql.Catastro
         public string AYUDANTE_AUTORIZACION1 { get => AYUDANTE_AUTORIZACION; set => AYUDANTE_AUTORIZACION = value; }
         public string AYUDANTE_NUMERO_OFICIO1 { get => AYUDANTE_NUMERO_OFICIO; set => AYUDANTE_NUMERO_OFICIO = value; }
         //public byte[] AYUDANTE_OFICIO_ARCHIVO1 { get => AYUDANTE_OFICIO_ARCHIVO; set => AYUDANTE_OFICIO_ARCHIVO = value; }
-        public DateTime AYUDANTE_FECHA_OFICIO1 { get => AYUDANTE_FECHA_OFICIO; set => AYUDANTE_FECHA_OFICIO = value; }
+        public string AYUDANTE_FECHA_OFICIO1 { get => AYUDANTE_FECHA_OFICIO; set => AYUDANTE_FECHA_OFICIO = value; }
         public int AYUDANTE_ESTADO1 { get => AYUDANTE_ESTADO; set => AYUDANTE_ESTADO = value; }
 
         public DataTable Consultar()

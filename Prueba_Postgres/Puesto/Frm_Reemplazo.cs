@@ -44,28 +44,29 @@ namespace Prueba_Postgres.Puesto
             txtnombres.Text = string.Empty;
             txtautorizacion.Text = string.Empty;
             txtnoficio.Text = string.Empty;
-            dateinicio.Text = string.Empty;
-            datefin.Text = string.Empty;
+            txtfechai.Text = string.Empty;
+            txtfechaf.Text = string.Empty;
             cmbestado.SelectedIndex = 0;
         }
 
         private void Mostrar_Click(object sender, EventArgs e)
         {
             Mostrar_Datos();
+            Limpiar();
         }
 
         private void Guardar_Click(object sender, EventArgs e)
         {
             if (editar == false)
             {
-                objbll.Insertar_Reemplazo(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtautorizacion.Text, txtnoficio.Text, dateinicio.Text, datefin.Text, cmbestado.Text);
+                objbll.Insertar_Reemplazo(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtautorizacion.Text, txtnoficio.Text, txtfechai.Text, txtfechaf.Text, cmbestado.Text);
                 MessageBox.Show("REGISTRADO CORRECTAMENTE");
                 Mostrar_Datos();
                 Limpiar();
             }
             if (editar == true)
             {
-                objbll.Editar_Reemplazo(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtautorizacion.Text, txtnoficio.Text, dateinicio.Text, datefin.Text, cmbestado.Text, id);
+                objbll.Editar_Reemplazo(txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtautorizacion.Text, txtnoficio.Text, txtfechai.Text, txtfechaf.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -83,8 +84,8 @@ namespace Prueba_Postgres.Puesto
                 txtnombres.Text = datos.CurrentRow.Cells["reemplazo_nombres"].Value.ToString();
                 txtautorizacion.Text = datos.CurrentRow.Cells["reemplazo_autorizacion"].Value.ToString();
                 txtnoficio.Text = datos.CurrentRow.Cells["reemplazo_numero_oficio"].Value.ToString();
-                dateinicio.Text = datos.CurrentRow.Cells["reemplazo_fecha_inicio"].Value.ToString();
-                datefin.Text = datos.CurrentRow.Cells["reemplazo_fecha_fin"].Value.ToString();
+                txtfechai.Text = datos.CurrentRow.Cells["reemplazo_fecha_inicio"].Value.ToString();
+                txtfechaf.Text = datos.CurrentRow.Cells["reemplazo_fecha_fin"].Value.ToString();
                 cmbestado.Text = datos.CurrentRow.Cells["reemplazo_estado"].Value.ToString();
                 id = datos.CurrentRow.Cells["reemplazo_id"].Value.ToString();
             }

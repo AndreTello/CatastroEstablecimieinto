@@ -94,6 +94,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Frm_Permiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Frm_Permiso.Designer.cs">
+      <DependentUpon>Frm_Permiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Frm_Rol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Frm_Rol.Designer.cs">
+      <DependentUpon>Frm_Rol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Frm_Rol_Permiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Frm_Rol_Permiso.Designer.cs">
+      <DependentUpon>Frm_Rol_Permiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Frm_Usuario.Designer.cs">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Comerciante\Frm_Comerciante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +135,24 @@
     </Compile>
     <Compile Include="Comerciante\Frm_Tipo_Ocupante.Designer.cs">
       <DependentUpon>Frm_Tipo_Ocupante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstatusSocial\Frm_Estatus_Legal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstatusSocial\Frm_Estatus_Legal.Designer.cs">
+      <DependentUpon>Frm_Estatus_Legal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Giro_Negocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Giro_Negocio.Designer.cs">
+      <DependentUpon>Frm_Giro_Negocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Tipo_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiroNegocio\Frm_Tipo_Producto.Designer.cs">
+      <DependentUpon>Frm_Tipo_Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Mercado\Frm_Administracion_Zonal.cs">
       <SubType>Form</SubType>
@@ -204,17 +246,35 @@
     <Compile Include="Puesto\Frm_Bloque.Designer.cs">
       <DependentUpon>Frm_Bloque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Puesto\Frm_Documento.cs">
+    <Compile Include="Puesto\Frm_Documento_Comerciante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Puesto\Frm_Documento.Designer.cs">
-      <DependentUpon>Frm_Documento.cs</DependentUpon>
+    <Compile Include="Puesto\Frm_Documento_Comerciante.Designer.cs">
+      <DependentUpon>Frm_Documento_Comerciante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Documento_Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Documento_Puesto.Designer.cs">
+      <DependentUpon>Frm_Documento_Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Familiar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Familiar.Designer.cs">
+      <DependentUpon>Frm_Familiar.cs</DependentUpon>
     </Compile>
     <Compile Include="Puesto\Frm_Piso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Puesto\Frm_Piso.Designer.cs">
       <DependentUpon>Frm_Piso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Puesto.Designer.cs">
+      <DependentUpon>Frm_Puesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Puesto\Frm_Reemplazo.cs">
       <SubType>Form</SubType>
@@ -228,11 +288,23 @@
     <Compile Include="Puesto\Frm_Tipo_Area.Designer.cs">
       <DependentUpon>Frm_Tipo_Area.cs</DependentUpon>
     </Compile>
-    <Compile Include="Puesto\Frm_Tipo_Documento.cs">
+    <Compile Include="Puesto\Frm_Tipo_Doc_Comerciante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Puesto\Frm_Tipo_Documento.Designer.cs">
-      <DependentUpon>Frm_Tipo_Documento.cs</DependentUpon>
+    <Compile Include="Puesto\Frm_Tipo_Doc_Comerciante.Designer.cs">
+      <DependentUpon>Frm_Tipo_Doc_Comerciante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Doc_Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Doc_Puesto.Designer.cs">
+      <DependentUpon>Frm_Tipo_Doc_Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Familiar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto\Frm_Tipo_Familiar.Designer.cs">
+      <DependentUpon>Frm_Tipo_Familiar.cs</DependentUpon>
     </Compile>
     <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.cs">
       <SubType>Form</SubType>
@@ -276,6 +348,18 @@
     <Compile Include="RazonSocioEconomicaDelComerciante\Frm_Razon_Social.Designer.cs">
       <DependentUpon>Frm_Razon_Social.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracion\Frm_Permiso.resx">
+      <DependentUpon>Frm_Permiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Frm_Rol.resx">
+      <DependentUpon>Frm_Rol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Frm_Rol_Permiso.resx">
+      <DependentUpon>Frm_Rol_Permiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Frm_Usuario.resx">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Comerciante\Frm_Comerciante.resx">
       <DependentUpon>Frm_Comerciante.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +368,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Comerciante\Frm_Tipo_Ocupante.resx">
       <DependentUpon>Frm_Tipo_Ocupante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstatusSocial\Frm_Estatus_Legal.resx">
+      <DependentUpon>Frm_Estatus_Legal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiroNegocio\Frm_Giro_Negocio.resx">
+      <DependentUpon>Frm_Giro_Negocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiroNegocio\Frm_Tipo_Producto.resx">
+      <DependentUpon>Frm_Tipo_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mercado\Frm_Administracion_Zonal.resx">
       <DependentUpon>Frm_Administracion_Zonal.cs</DependentUpon>
@@ -339,11 +432,20 @@
     <EmbeddedResource Include="Puesto\Frm_Bloque.resx">
       <DependentUpon>Frm_Bloque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Puesto\Frm_Documento.resx">
-      <DependentUpon>Frm_Documento.cs</DependentUpon>
+    <EmbeddedResource Include="Puesto\Frm_Documento_Comerciante.resx">
+      <DependentUpon>Frm_Documento_Comerciante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Documento_Puesto.resx">
+      <DependentUpon>Frm_Documento_Puesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Familiar.resx">
+      <DependentUpon>Frm_Familiar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Puesto\Frm_Piso.resx">
       <DependentUpon>Frm_Piso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Puesto.resx">
+      <DependentUpon>Frm_Puesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Puesto\Frm_Reemplazo.resx">
       <DependentUpon>Frm_Reemplazo.cs</DependentUpon>
@@ -351,8 +453,14 @@
     <EmbeddedResource Include="Puesto\Frm_Tipo_Area.resx">
       <DependentUpon>Frm_Tipo_Area.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Puesto\Frm_Tipo_Documento.resx">
-      <DependentUpon>Frm_Tipo_Documento.cs</DependentUpon>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Doc_Comerciante.resx">
+      <DependentUpon>Frm_Tipo_Doc_Comerciante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Doc_Puesto.resx">
+      <DependentUpon>Frm_Tipo_Doc_Puesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto\Frm_Tipo_Familiar.resx">
+      <DependentUpon>Frm_Tipo_Familiar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RazonSocioEconomicaDelComerciante\Frm_Discapacidad.resx">
       <DependentUpon>Frm_Discapacidad.cs</DependentUpon>

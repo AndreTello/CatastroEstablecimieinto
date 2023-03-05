@@ -35,12 +35,12 @@ namespace BLL_CE.Catastro
 
         public void Insertar_Documento_Comerciante(int tipo, int comerciante, string nombre, string fecha, string detalle, string observacion, string estado)
         {
-            objdll.Insertar(tipo, comerciante, nombre, Convert.ToDateTime(fecha), detalle, observacion, Convert.ToInt32(estado));
+            objdll.Insertar(tipo, comerciante, nombre, fecha, detalle, observacion, Convert.ToInt32(estado));
         }
 
         public void Editar_Documento_Comerciante(int tipo, int comerciante, string nombre, string fecha, string detalle, string observacion, string estado, string id)
         {
-            objdll.Editar(tipo, comerciante, nombre, Convert.ToDateTime(fecha), detalle, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(tipo, comerciante, nombre, fecha, detalle, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
         }
 
         public void Eliminar_Documento_Comerciante(string id)

@@ -8,26 +8,40 @@ namespace BLL_CE.Catastro
     {
         Cls_Tipo_Documento_Puesto_DAL objdll = new Cls_Tipo_Documento_Puesto_DAL();
 
-        public DataTable Consultar()
+        public DataTable Consultar_Tipo_Documento_Puesto()
         {
-            DataTable dt = new DataTable();
-            dt = objdll.Consultar_Tipo_Documento_Puesto();
-            return dt;
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar(string nombre, string estado)
+        public DataTable Consultar_IdTipo_Documento_Puesto(string id)
         {
-            objdll.Ingresar_Tipo_Documento_Puesto(nombre, Convert.ToInt32(estado));
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
         }
 
-        public void Editar()
+        public DataTable Listar_Tipo_Documento_Puesto()
         {
-            objdll.Modificar_Tipo_Documento_Puesto();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Tipo_Documento_Puesto();
+            return tabla;
         }
 
-        public void Eliminar()
+        public void Insertar_Tipo_Documento_Puesto(string nombre, string estado)
         {
-            objdll.Eliminar_Tipo_Documento_Puesto();
+            objdll.Insertar(nombre, Convert.ToInt32(estado));
+        }
+
+        public void Editar_Tipo_Documento_Puesto(string nombre, string estado, string id)
+        {
+            objdll.Editar(nombre, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Tipo_Documento_Puesto(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

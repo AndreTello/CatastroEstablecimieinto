@@ -18,7 +18,7 @@ namespace DAL_CE_Postgresql.Catastro
         private int TIPO_DOCUMENTO_COMERCIANTE_ID;
 		private int COMERCIANTE_ID;
         private string DOCUMENTO_COMERCIANTE_NOMBRE;
-        private DateTime DOCUMENTO_COMERCIANTE_FECHA;
+        private string DOCUMENTO_COMERCIANTE_FECHA;
         //private int DOCUMENTO_COMERCIANTE_ARCHIVO; //bytea
         private string DOCUMENTO_COMERCIANTE_DETALLE;
         private string DOCUMENTO_COMERCIANTE_OBSERVACION;
@@ -28,7 +28,7 @@ namespace DAL_CE_Postgresql.Catastro
         public int TIPO_DOCUMENTO_COMERCIANTE_ID1 { get => TIPO_DOCUMENTO_COMERCIANTE_ID; set => TIPO_DOCUMENTO_COMERCIANTE_ID = value; }
         public int COMERCIANTE_ID1 { get => COMERCIANTE_ID; set => COMERCIANTE_ID = value; }
         public string DOCUMENTO_COMERCIANTE_NOMBRE1 { get => DOCUMENTO_COMERCIANTE_NOMBRE; set => DOCUMENTO_COMERCIANTE_NOMBRE = value; }
-        public DateTime DOCUMENTO_COMERCIANTE_FECHA1 { get => DOCUMENTO_COMERCIANTE_FECHA; set => DOCUMENTO_COMERCIANTE_FECHA = value; }
+        public string DOCUMENTO_COMERCIANTE_FECHA1 { get => DOCUMENTO_COMERCIANTE_FECHA; set => DOCUMENTO_COMERCIANTE_FECHA = value; }
        // public int DOCUMENTO_COMERCIANTE_ARCHIVO1 { get => DOCUMENTO_COMERCIANTE_ARCHIVO; set => DOCUMENTO_COMERCIANTE_ARCHIVO = value; }
         public string DOCUMENTO_COMERCIANTE_DETALLE1 { get => DOCUMENTO_COMERCIANTE_DETALLE; set => DOCUMENTO_COMERCIANTE_DETALLE = value; }
         public string DOCUMENTO_COMERCIANTE_OBSERVACION1 { get => DOCUMENTO_COMERCIANTE_OBSERVACION; set => DOCUMENTO_COMERCIANTE_OBSERVACION = value; }
@@ -135,7 +135,7 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
 
-        public void Insertar(int tipo, int comerciante, string nombre, DateTime fecha, string detalle, string observacion, int estado)
+        public void Insertar(int tipo, int comerciante, string nombre, string fecha, string detalle, string observacion, int estado)
         {
             NpgsqlConnection con = null;
             try
@@ -160,7 +160,7 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-        public void Editar(int tipo, int comerciante, string nombre, DateTime fecha, string detalle, string observacion, int estado, int id)
+        public void Editar(int tipo, int comerciante, string nombre, string fecha, string detalle, string observacion, int estado, int id)
         {
             NpgsqlConnection con = null;
             try
