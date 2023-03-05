@@ -1,6 +1,7 @@
 ﻿using DAL_CE_Postgresql.Administracion;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,24 +12,40 @@ namespace BLL_CE.Administracion
     {
         Cls_Usuario_DAL objdll = new Cls_Usuario_DAL();
 
-        public void Consultar()
+        public DataTable Consultar_Usuario()
         {
-            objdll.Consultar_Usuario();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Consultar();
+            return tabla;
         }
 
-        public void Insertar()
+        public DataTable Consultar_IdUsuario(string id)
         {
-            objdll.Ingresar_Usuario();
+            DataTable tabla = new DataTable();
+            tabla = objdll.ConsultarID(Convert.ToInt32(id));
+            return tabla;
         }
 
-        public void Editar()
+        /*public DataTable Listar_Familiar()
         {
-            objdll.Modificar_Usuario();
+            DataTable tabla = new DataTable();
+            tabla = objdll.Familiar();
+            return tabla;
+        }*/
+
+        public void Insertar_Usuario(int rol, string login, string clave, string cedula, string apellidos, string nombres, string email, string direccion, string telefono, string estado)
+        {
+            objdll.Insertar(rol, login, clave, cedula, apellidos, nombres, email, direccion, telefono, Convert.ToInt32(estado));
         }
 
-        public void Eliminar()
+        public void Editar_Usuario(int rol, string login, string clave, string cedula, string apellidos, string nombres, string email, string direccion, string telefono, string estado, string id)
         {
-            objdll.Eliminar_Usuario();
+            objdll.Editar(rol, login, clave, cedula, apellidos, nombres, email, direccion, telefono, Convert.ToInt32(estado), Convert.ToInt32(id));
+        }
+
+        public void Eliminar_Usuario(string id)
+        {
+            objdll.Eliminar(Convert.ToInt32(id));
         }
 
     }

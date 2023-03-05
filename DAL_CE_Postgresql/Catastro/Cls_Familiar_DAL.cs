@@ -218,6 +218,5 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-
     }
 }

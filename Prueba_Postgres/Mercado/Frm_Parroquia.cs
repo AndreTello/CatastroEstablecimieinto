@@ -134,6 +134,7 @@ namespace Prueba_Postgres
         private void Mostrar_Click(object sender, EventArgs e)
         {
             Mostrar_Datos();
+            Limpiar();
         }
     }
 }

@@ -58,6 +58,7 @@ namespace Prueba_Postgres.Puesto
         private void Mostrar_Click(object sender, EventArgs e)
         {
             Mostrar_Datos();
+            Limpiar();
         }
 
         private void Guardar_Click(object sender, EventArgs e)

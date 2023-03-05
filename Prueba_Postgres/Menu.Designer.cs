@@ -71,6 +71,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Estatus_Legal = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Usuario = new System.Windows.Forms.Button();
+            this.Rol_Permiso = new System.Windows.Forms.Button();
+            this.Permiso = new System.Windows.Forms.Button();
+            this.Rol = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Provincia
@@ -445,6 +450,7 @@
             this.Puesto.TabIndex = 60;
             this.Puesto.Text = "Puesto";
             this.Puesto.UseVisualStyleBackColor = true;
+            this.Puesto.Click += new System.EventHandler(this.Puesto_Click);
             // 
             // Documento_Puesto
             // 
@@ -455,6 +461,7 @@
             this.Documento_Puesto.TabIndex = 62;
             this.Documento_Puesto.Text = "Documento_Puesto";
             this.Documento_Puesto.UseVisualStyleBackColor = true;
+            this.Documento_Puesto.Click += new System.EventHandler(this.Documento_Puesto_Click);
             // 
             // Tipo_Doc_Puesto
             // 
@@ -492,7 +499,7 @@
             // Giro_Negocio
             // 
             this.Giro_Negocio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Giro_Negocio.Location = new System.Drawing.Point(233, 495);
+            this.Giro_Negocio.Location = new System.Drawing.Point(876, 367);
             this.Giro_Negocio.Name = "Giro_Negocio";
             this.Giro_Negocio.Size = new System.Drawing.Size(188, 32);
             this.Giro_Negocio.TabIndex = 67;
@@ -503,7 +510,7 @@
             // Tipo_Producto
             // 
             this.Tipo_Producto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tipo_Producto.Location = new System.Drawing.Point(27, 495);
+            this.Tipo_Producto.Location = new System.Drawing.Point(670, 367);
             this.Tipo_Producto.Name = "Tipo_Producto";
             this.Tipo_Producto.Size = new System.Drawing.Size(188, 32);
             this.Tipo_Producto.TabIndex = 66;
@@ -516,7 +523,7 @@
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 468);
+            this.label5.Location = new System.Drawing.Point(670, 340);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 24);
             this.label5.TabIndex = 65;
@@ -525,29 +532,90 @@
             // Estatus_Legal
             // 
             this.Estatus_Legal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estatus_Legal.Location = new System.Drawing.Point(27, 580);
+            this.Estatus_Legal.Location = new System.Drawing.Point(670, 452);
             this.Estatus_Legal.Name = "Estatus_Legal";
             this.Estatus_Legal.Size = new System.Drawing.Size(188, 32);
             this.Estatus_Legal.TabIndex = 69;
             this.Estatus_Legal.Text = "Estatus_Legal";
             this.Estatus_Legal.UseVisualStyleBackColor = true;
+            this.Estatus_Legal.Click += new System.EventHandler(this.Estatus_Legal_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 553);
+            this.label6.Location = new System.Drawing.Point(670, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 24);
             this.label6.TabIndex = 68;
             this.label6.Text = "Estatus Legal";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(670, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 24);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "Administracion";
+            // 
+            // Usuario
+            // 
+            this.Usuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario.Location = new System.Drawing.Point(670, 293);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(188, 32);
+            this.Usuario.TabIndex = 74;
+            this.Usuario.Text = "Usuario";
+            this.Usuario.UseVisualStyleBackColor = true;
+            this.Usuario.Click += new System.EventHandler(this.Usuario_Click);
+            // 
+            // Rol_Permiso
+            // 
+            this.Rol_Permiso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rol_Permiso.Location = new System.Drawing.Point(1081, 255);
+            this.Rol_Permiso.Name = "Rol_Permiso";
+            this.Rol_Permiso.Size = new System.Drawing.Size(188, 32);
+            this.Rol_Permiso.TabIndex = 73;
+            this.Rol_Permiso.Text = "Rol_Permiso";
+            this.Rol_Permiso.UseVisualStyleBackColor = true;
+            this.Rol_Permiso.Click += new System.EventHandler(this.Rol_Permiso_Click);
+            // 
+            // Permiso
+            // 
+            this.Permiso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Permiso.Location = new System.Drawing.Point(876, 255);
+            this.Permiso.Name = "Permiso";
+            this.Permiso.Size = new System.Drawing.Size(188, 32);
+            this.Permiso.TabIndex = 72;
+            this.Permiso.Text = "Permiso";
+            this.Permiso.UseVisualStyleBackColor = true;
+            this.Permiso.Click += new System.EventHandler(this.Permiso_Click);
+            // 
+            // Rol
+            // 
+            this.Rol.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rol.Location = new System.Drawing.Point(670, 255);
+            this.Rol.Name = "Rol";
+            this.Rol.Size = new System.Drawing.Size(188, 32);
+            this.Rol.TabIndex = 71;
+            this.Rol.Text = "Rol";
+            this.Rol.UseVisualStyleBackColor = true;
+            this.Rol.Click += new System.EventHandler(this.Rol_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 628);
+            this.ClientSize = new System.Drawing.Size(1292, 505);
+            this.Controls.Add(this.Usuario);
+            this.Controls.Add(this.Rol_Permiso);
+            this.Controls.Add(this.Permiso);
+            this.Controls.Add(this.Rol);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Estatus_Legal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Giro_Negocio);
@@ -643,5 +711,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Estatus_Legal;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Usuario;
+        private System.Windows.Forms.Button Rol_Permiso;
+        private System.Windows.Forms.Button Permiso;
+        private System.Windows.Forms.Button Rol;
     }
 }

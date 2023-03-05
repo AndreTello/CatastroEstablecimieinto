@@ -1,4 +1,6 @@
-﻿using Prueba_Postgres.Comerciante;
+﻿using Prueba_Postgres.Administracion;
+using Prueba_Postgres.Comerciante;
+using Prueba_Postgres.EstatusSocial;
 using Prueba_Postgres.GiroNegocio;
 using Prueba_Postgres.Puesto;
 using Prueba_Postgres.RazonSocioEconomicaDelComerciante;
@@ -256,6 +258,55 @@ namespace Prueba_Postgres
         {
             Frm_Giro_Negocio frm_Giro_Negocio = new Frm_Giro_Negocio();
             frm_Giro_Negocio.Show();
+            this.Hide();
+        }
+
+        private void Rol_Click(object sender, EventArgs e)
+        {
+            Frm_Rol frm_Rol = new Frm_Rol();
+            frm_Rol.Show();
+            this.Hide();
+        }
+
+        private void Permiso_Click(object sender, EventArgs e)
+        {
+            Frm_Permiso frm_Permiso = new Frm_Permiso();
+            frm_Permiso.Show();
+            this.Hide();
+        }
+
+        private void Rol_Permiso_Click(object sender, EventArgs e)
+        {
+            Frm_Rol_Permiso frm_Rol_Permiso = new Frm_Rol_Permiso();
+            frm_Rol_Permiso.Show();
+            this.Hide();
+        }
+
+        private void Usuario_Click(object sender, EventArgs e)
+        {
+            Frm_Usuario frm_Usuario = new Frm_Usuario();
+            frm_Usuario.Show();
+            this.Hide();
+        }
+
+        private void Puesto_Click(object sender, EventArgs e)
+        {
+            Frm_Puesto frm_Puesto = new Frm_Puesto();
+            frm_Puesto.Show();
+            this.Hide();
+        }
+
+        private void Documento_Puesto_Click(object sender, EventArgs e)
+        {
+            Frm_Documento_Puesto frm_Documento_Puesto = new Frm_Documento_Puesto();
+            frm_Documento_Puesto.Show();
+            this.Hide();
+        }
+
+        private void Estatus_Legal_Click(object sender, EventArgs e)
+        {
+            Frm_Estatus_Legal frm_Estatus_Legal = new Frm_Estatus_Legal();
+            frm_Estatus_Legal.Show();
             this.Hide();
         }
     }
