@@ -55,6 +55,9 @@
       <HintPath>..\..\packages\AspNet.ScriptManager.jQuery.3.6.0\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="GMaps, Version=4.1.0.6, Culture=neutral, PublicKeyToken=564d55b144e7aa5a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Subgurim.Maps.4.1.0.6\lib\net20\GMaps.dll</HintPath>
       <Private>True</Private>
@@ -266,6 +269,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Administracion\GestionPermiso\Add.aspx" />
+    <Content Include="App\Administracion\GestionPermiso\GestionPermiso.aspx" />
+    <Content Include="App\Administracion\GestionRolPermiso\Add.aspx" />
+    <Content Include="App\Administracion\GestionRolPermiso\GestionRolPermiso.aspx" />
+    <Content Include="App\Administracion\GestionRol\Add.aspx" />
+    <Content Include="App\Administracion\GestionUsuario\Add.aspx" />
     <Content Include="App\Catastro\Comerciante\Comerciante\Add.aspx" />
     <Content Include="App\Catastro\Comerciante\Comerciante\Ficha.aspx" />
     <Content Include="App\Catastro\Comerciante\TipoIdentificacion\Add.aspx" />
@@ -333,8 +342,8 @@
     <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\Nacionalidad\Ficha.aspx" />
     <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Add.aspx" />
     <Content Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Ficha.aspx" />
-    <Content Include="App\GestionRoles.aspx" />
-    <Content Include="App\GestionUsuario.aspx" />
+    <Content Include="App\Administracion\GestionRol\GestionRoles.aspx" />
+    <Content Include="App\Administracion\GestionUsuario\GestionUsuario.aspx" />
     <Content Include="App\Home.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -404,6 +413,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Forms.Mobile.Master" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -465,6 +475,48 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Administracion\GestionPermiso\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Administracion\GestionPermiso\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Administracion\GestionPermiso\GestionPermiso.aspx.cs">
+      <DependentUpon>GestionPermiso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Administracion\GestionPermiso\GestionPermiso.aspx.designer.cs">
+      <DependentUpon>GestionPermiso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Administracion\GestionRolPermiso\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Administracion\GestionRolPermiso\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Administracion\GestionRolPermiso\GestionRolPermiso.aspx.cs">
+      <DependentUpon>GestionRolPermiso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Administracion\GestionRolPermiso\GestionRolPermiso.aspx.designer.cs">
+      <DependentUpon>GestionRolPermiso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Administracion\GestionRol\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Administracion\GestionRol\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Administracion\GestionUsuario\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Administracion\GestionUsuario\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App\Catastro\Comerciante\Comerciante\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -934,18 +986,18 @@
     <Compile Include="App\Catastro\RazonSocioEconomicaDelComerciante\RazonSocial\Ficha.aspx.designer.cs">
       <DependentUpon>Ficha.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\GestionRoles.aspx.cs">
+    <Compile Include="App\Administracion\GestionRol\GestionRoles.aspx.cs">
       <DependentUpon>GestionRoles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\GestionRoles.aspx.designer.cs">
+    <Compile Include="App\Administracion\GestionRol\GestionRoles.aspx.designer.cs">
       <DependentUpon>GestionRoles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App\GestionUsuario.aspx.cs">
+    <Compile Include="App\Administracion\GestionUsuario\GestionUsuario.aspx.cs">
       <DependentUpon>GestionUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App\GestionUsuario.aspx.designer.cs">
+    <Compile Include="App\Administracion\GestionUsuario\GestionUsuario.aspx.designer.cs">
       <DependentUpon>GestionUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="App\Home.aspx.cs">
@@ -961,6 +1013,13 @@
     </Compile>
     <Compile Include="App\GeoVisor.aspx.designer.cs">
       <DependentUpon>GeoVisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms.Mobile.Master.cs">
+      <DependentUpon>Forms.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms.Mobile.Master.designer.cs">
+      <DependentUpon>Forms.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

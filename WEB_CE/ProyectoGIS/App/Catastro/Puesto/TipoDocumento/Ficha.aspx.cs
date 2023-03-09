@@ -17,17 +17,17 @@ namespace ProyectoGIS.App.Catastro.Puesto.TipoDocumento
         }
         protected void BindData()
         {
-            DataTable dt = objdll.Consultar();
+            DataTable dt = objdll.Consultar_Tipo_Documento_Puesto();
             MiTabla.DataSource = dt;
             MiTabla.DataBind();
         }
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            /*LinkButton btnEliminar = (LinkButton)(sender);
+            LinkButton btnEliminar = (LinkButton)(sender);
             string tipo_documento_puesto_id = btnEliminar.CommandArgument;
-            objdll.Eliminar(tipo_documento_puesto_id);
+            objdll.Eliminar_Tipo_Documento_Puesto(tipo_documento_puesto_id);
             DataBind();
-            Response.AddHeader("REFRESH", "0;URL=./Ficha.aspx");*/
+            Response.AddHeader("REFRESH", "0;URL=./Ficha.aspx");
         }
     }
 }

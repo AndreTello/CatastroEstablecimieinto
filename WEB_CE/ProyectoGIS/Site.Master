@@ -141,24 +141,24 @@
                             <a href="#"  class="a fw-bold">Administración</a>
                             <ul class="sub-menu">
                                <li class="nav-item" > 
-                                    <a class="nav-link" aria-current="page" href="/App/GestionUsuario">
+                                    <a class="nav-link" aria-current="page" href="/App/Administracion/GestionUsuario/GestionUsuario">
                                         <span data-feather="home" class="align-text-bottom">Gestionar Usuarios</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/App/GestionRoles">
+                                    <a class="nav-link" href="/App/Administracion/GestionRol/GestionRoles">
                                     <span data-feather="file" class="align-text-bottom"></span>
                                         Gestión de Roles
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/App/permisos">
+                                    <a class="nav-link" href="/App/Administracion/GestionPermiso/GestionPermiso">
                                     <span data-feather="shopping-cart" class="align-text-bottom"></span>
                                         Gestión de Permisos
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/App/rolPermiso">
+                                    <a class="nav-link" href="/App/Administracion/GestionRolPermiso/GestionRolPermiso">
                                     <span data-feather="shopping-cart" class="align-text-bottom"></span>
                                         Gestión de Rol y Permisos
                                     </a>
@@ -326,7 +326,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="/App/Catastro/GiroNegocio/GiroNegocio/Ficha">
+                                                <a class="nav-link" href="/App/Catastro/GiroNegocio/GiroComercio/Ficha">
                                                 <span data-feather="shopping-cart" class="align-text-bottom"></span>
                                                     Giro de Negocio
                                                 </a>

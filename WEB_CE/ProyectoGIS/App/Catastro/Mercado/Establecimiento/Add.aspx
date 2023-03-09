@@ -3,35 +3,35 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <label>Lote</label>
-    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="LOTE_ID" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="LOTE_ID" />
     <label>Administración Zonal</label>
-    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ADMINISTRACION_ZONAL_ID" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="ADMINISTRACION_ZONAL_ID" />
     <label>Tipo de Establecimiento</label>
-    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="TIPO_ESTABLECIMIENTO_ID" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="TIPO_ESTABLECIMIENTO_ID" />
     <label>Asociación</label>
-    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ASOCIACION_ID" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="ASOCIACION_ID" />
     <label>Intervencion Técnica del Establecimiento</label>
-    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ID" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ID" />
     <label>Predio</label>
-    <asp:TextBox CssClass="form-control mt-1" MaxLength="5" runat="server" ID="ESTABLECIMIENTO_PREDIO" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="5" runat="server" ID="ESTABLECIMIENTO_PREDIO" />
     <label>Clave Catastral</label>
-    <asp:TextBox CssClass="form-control mt-1" MaxLength="20" runat="server" ID="ESTABLECIMIENTO_CLAVE_CATASTRAL" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="20" runat="server" ID="ESTABLECIMIENTO_CLAVE_CATASTRAL" />
     <label>Nomenclatura Vial</label>
-    <asp:TextBox CssClass="form-control mt-1" MaxLength="20" runat="server" ID="ESTABLECIMIENTO_NOMENCLATURA_VIAL" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="20" runat="server" ID="ESTABLECIMIENTO_NOMENCLATURA_VIAL" />
     <label>Calle Principal</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_CALLE_PRINCIPAL" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_CALLE_PRINCIPAL" />
     <label>Calle Secundaria</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_CALLE_SECUNDARIA" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_CALLE_SECUNDARIA" />
     <label>Parqueadero</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" MaxLength="10" ID="ESTABLECIMIENTO_PARQUEADERO" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" MaxLength="10" ID="ESTABLECIMIENTO_PARQUEADERO" />
     <label>Numero de Parqueadero</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" onkeypress="return isNumberKey(event)" ID="ESTABLECIMIENTO_NUMERO_PARQUEADERO" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" onkeypress="return isNumberKey(event)" ID="ESTABLECIMIENTO_NUMERO_PARQUEADERO" />
     <label>Dias de Apertura</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" MaxLength="1" ID="ESTABLECIMIENTO_DIAS_APERTURA" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" MaxLength="1" ID="ESTABLECIMIENTO_DIAS_APERTURA" />
     <label>Horario de Atención</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_HORARIO_ATENCION" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_HORARIO_ATENCION" />
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-select mt-1" runat="server" ID="ESTABLECIMIENTO_ESTADO" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="ESTABLECIMIENTO_ESTADO" />
 
     <asp:UpdatePanel runat="server">
          <ContentTemplate>

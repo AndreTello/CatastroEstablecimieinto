@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,7 +13,20 @@ namespace ProyectoGIS.App.Catastro.Puesto.Documento
         Cls_Documento_Puesto_BLL objdll = new Cls_Documento_Puesto_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            BindData();
+        }
+        protected void BindData()
+        {
+            DataTable dt = objdll.Consultar_Documento_Puesto();
+            MiTabla.DataSource = dt;
+            MiTabla.DataBind();
+        }
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            LinkButton btnEliminar = (LinkButton)(sender);
+            string documento_puesto_id = btnEliminar.CommandArgument;
+            objdll.Eliminar_Documento_Puesto(documento_puesto_id);
+            DataBind();
         }
     }
 }

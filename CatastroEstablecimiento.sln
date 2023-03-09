@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_CE", "WEB_CE\ProyectoGI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba_Postgres", "Prueba_Postgres\Prueba_Postgres.csproj", "{D6E60C13-4A74-44F5-8E4C-210FA04CE6A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST_CE", "REST_CE\REST_CE.csproj", "{539AA441-68F4-433A-B970-553577C318AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REST_CE", "REST_CE\REST_CE.csproj", "{539AA441-68F4-433A-B970-553577C318AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

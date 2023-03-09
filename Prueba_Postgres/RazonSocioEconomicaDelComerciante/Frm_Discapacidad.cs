@@ -73,7 +73,7 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             }
             if (editar == true)
             {
-<<<<<<< HEAD
+
 
                /* CultureInfo originalCulture = Thread.CurrentThread.CurrentCulture;
 
@@ -86,8 +86,7 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
 
                 objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, decimal.Parse(txtporcentaje.Text, englishCulture), cmbestado.Text, id);
 
-=======
->>>>>>> 46f9a24419873e2cfead247654ddd3c12e65a5a8
+
                 objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();

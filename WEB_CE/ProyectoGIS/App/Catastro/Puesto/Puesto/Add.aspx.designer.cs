@@ -87,33 +87,6 @@ namespace ProyectoGIS.App.Catastro.Puesto.Puesto
         protected global::System.Web.UI.WebControls.TextBox PUESTO_CLAVE_CATASTRAL;
 
         /// <summary>
-        /// Control PUESTO_AREA.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PUESTO_AREA;
-
-        /// <summary>
-        /// Control PUESTO_FRENTE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PUESTO_FRENTE;
-
-        /// <summary>
-        /// Control PUESTO_FONDO.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PUESTO_FONDO;
-
-        /// <summary>
         /// Control PUESTO_ESTADO_CONSERVACION.
         /// </summary>
         /// <remarks>
@@ -148,6 +121,15 @@ namespace ProyectoGIS.App.Catastro.Puesto.Puesto
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PUESTO_REMODELACION;
+
+        /// <summary>
+        /// Control PUESTO_ESTADO.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList PUESTO_ESTADO;
 
         /// <summary>
         /// Control btnGuardar.
