@@ -19,6 +19,12 @@
                     <asp:BoundField DataField="establecimiento_numero_parqueadero" HeaderText="Numero de Parqueadero" />
                     <asp:BoundField DataField="establecimiento_dias_apertura"  HeaderText="Días de Apertura" />
                     <asp:BoundField DataField="establecimiento_horario_atencion" HeaderText="Horario de Atencion" />
+                    <asp:TemplateField HeaderText="Ficha">
+                        <ItemTemplate>
+                            <a href="./VerFicha?id=<%# Eval("establecimiento_id") %>" class="btn btn-warning">Ver</a>                        
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
                              <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />

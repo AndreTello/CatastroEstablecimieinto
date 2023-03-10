@@ -7,15 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace ProyectoGIS
 {
-    public partial class Site2 : System.Web.UI.MasterPage
+    public partial class Ficha : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["rol"].ToString() == "ADMIN" )
-            {
-                return;
-            }
-            Response.Redirect("/");
 
         }
     }
