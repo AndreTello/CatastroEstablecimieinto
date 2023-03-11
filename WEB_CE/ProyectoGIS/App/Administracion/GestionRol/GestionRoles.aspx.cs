@@ -27,6 +27,7 @@ namespace ProyectoGIS.App
             string rol_id = btnEliminar.CommandArgument;
             objdll.Eliminar_Rol(rol_id);
             DataBind();
+            Response.Redirect("./GestionRoles");
         }
     }
 }

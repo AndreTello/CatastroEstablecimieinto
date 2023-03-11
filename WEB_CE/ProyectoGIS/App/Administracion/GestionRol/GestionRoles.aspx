@@ -7,10 +7,14 @@
                     <asp:BoundField DataField="rol_id" HeaderText="Id" />
                     <asp:BoundField DataField="rol_nombre" HeaderText="Nombre" />
                     <asp:BoundField DataField="rol_detalle" HeaderText="Detalle" />
-                    <asp:BoundField DataField="rol_estado" HeaderText="Estado" />
+                    <asp:TemplateField HeaderText="Estado">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("rol_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
-                            <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <a href="./Add?id=<%# Eval("rol_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("rol_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
                         </ItemTemplate>
                     </asp:TemplateField>

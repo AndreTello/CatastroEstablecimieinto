@@ -7,8 +7,8 @@
     <label>Detalle</label>
     <asp:TextBox CssClass="form-control mb-3 mt-2" ID="ROL_DETALLE" runat="server" />
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-control mb-3 mt-2" ID="ROL_ESTADO" runat="server">
-        <asp:ListItem Text="-- Selecciona un Estado --" />
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" ID="ROL_ESTADO" runat="server">
+        <asp:ListItem Text="-- Selecciona un Estado --" Value="" />
         <asp:ListItem Value="1">Activo</asp:ListItem>
         <asp:ListItem Value="0">Inactivo</asp:ListItem>
     </asp:DropDownList>

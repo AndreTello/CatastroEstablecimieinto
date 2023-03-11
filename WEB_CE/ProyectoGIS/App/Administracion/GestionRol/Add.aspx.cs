@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using BLL_CE.Administracion;
+﻿using BLL_CE.Administracion;
+using System;
+using System.Data;
 namespace ProyectoGIS.App.Administracion.GestionRol
 {
     public partial class Add : System.Web.UI.Page
@@ -12,7 +8,26 @@ namespace ProyectoGIS.App.Administracion.GestionRol
         Cls_Rol_BLL rol = new Cls_Rol_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+                if (Request.QueryString["id"] != null)
+                {
+                    string id = Request.QueryString["id"];
+                    DataTable dt = rol.Consultar_IdRol(id);
+                    if (dt != null)
+                    {
+                        ROL_NOMBRE.Text = dt.Rows[0]["ROL_NOMBRE"].ToString();
+                        ROL_DETALLE.Text = dt.Rows[0]["ROL_DETALLE"].ToString();
+                        ROL_ESTADO.SelectedValue = dt.Rows[0]["ROL_ESTADO"].ToString();
+                        btnGuardar.Text = "Actualizar";
+                    }
+                    else
+                    {
+                        btnGuardar.Text = "Guardar";
+                    }
+                }
+            }
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -23,8 +38,17 @@ namespace ProyectoGIS.App.Administracion.GestionRol
 
                 return;
             }
-            rol.Insertar_Rol(ROL_NOMBRE.Text, ROL_DETALLE.Text, ROL_ESTADO.SelectedValue);
-            Response.Redirect("./GestionRol");
+            if (Request.QueryString["id"] != null)
+            {
+                string id = Request.QueryString["id"];
+                rol.Editar_Rol(ROL_NOMBRE.Text, ROL_DETALLE.Text, ROL_ESTADO.SelectedValue, id);
+                Response.Redirect("./GestionRoles");
+            }
+            else
+            {
+                rol.Insertar_Rol(ROL_NOMBRE.Text, ROL_DETALLE.Text, ROL_ESTADO.SelectedValue);
+                Response.Redirect("./GestionRoles");
+            }
         }
     }
 }

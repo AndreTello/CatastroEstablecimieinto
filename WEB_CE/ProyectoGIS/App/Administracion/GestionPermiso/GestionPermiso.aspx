@@ -7,10 +7,14 @@
                     <asp:BoundField DataField="permiso_id" HeaderText="Id" />
                     <asp:BoundField DataField="permiso_nombre" HeaderText="Nombre" />
                     <asp:BoundField DataField="permiso_detalle" HeaderText="Detalle" />
-                    <asp:BoundField DataField="permiso_estado" HeaderText="Estado" />
+                    <asp:TemplateField HeaderText="Estado">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("permiso_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
-                            <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <a href="./Add?id=<%# Eval("permiso_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("permiso_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
                         </ItemTemplate>
                     </asp:TemplateField>

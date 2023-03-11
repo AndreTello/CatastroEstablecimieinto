@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,6 +25,22 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
                 PERMISO_ID.DataTextField = "PERMISO_NOMBRE";
                 PERMISO_ID.DataValueField = "PERMISO_ID";
                 PERMISO_ID.DataBind();
+                if (Request.QueryString["id"] != null)
+                {
+                    string id = Request.QueryString["id"];
+                    DataTable dt = rolP.Consultar_IdRol_Permiso(id);
+                    if(dt != null)
+                    { 
+                        PERMISO_ROL_ESTADO.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString();
+                        PERMISO_ID.SelectedValue = dt.Rows[0]["permiso_id"].ToString();
+                        ROL_ID.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString();
+                        btnGuardar.Text = "Actualizar";
+                    }
+                    else
+                    {
+                        btnGuardar.Text = "Guardar";
+                    }
+                }
             }
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -33,8 +50,17 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
                 Response.Write("<script>alert('Debe llenar todos los campos')</script>");
                 return;
             }
-            rolP.Insertar_Rol_Permiso(Convert.ToInt32(ROL_ID.SelectedValue), Convert.ToInt32(PERMISO_ID.SelectedValue), PERMISO_ROL_ESTADO.SelectedValue);
-            Response.Redirect("./GestionRolPermiso");
+            if (Request.QueryString["id"] != null)
+            {
+                string id = Request.QueryString["id"];
+                rolP.Editar_Rol_Permiso(Convert.ToInt32(ROL_ID.SelectedValue), Convert.ToInt32(PERMISO_ID.SelectedValue), PERMISO_ROL_ESTADO.SelectedValue, id);
+                Response.Redirect("./GestionRolPermiso");
+            }
+            else
+            {
+                rolP.Insertar_Rol_Permiso(Convert.ToInt32(ROL_ID.SelectedValue), Convert.ToInt32(PERMISO_ID.SelectedValue), PERMISO_ROL_ESTADO.SelectedValue);
+                Response.Redirect("./GestionRolPermiso");
+            }
         }
     }
 }
