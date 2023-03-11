@@ -2,12 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-primary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="permiso_id" HeaderText="Id" />
-                    <asp:BoundField DataField="permiso_nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="permiso_detalle" HeaderText="Detalle" />
-                    <asp:TemplateField HeaderText="Estado">
+                    
+                    <asp:BoundField DataField="permiso_nombre" HeaderText="NOMBRE" />
+                    <asp:BoundField DataField="permiso_detalle" HeaderText="DETALLE" />
+                    <asp:TemplateField HeaderText="ESTADO">
                        <ItemTemplate>
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("permiso_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>

@@ -2,12 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-primary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="rol_permiso_id" HeaderText="Id" />
-                    <asp:BoundField DataField="rol_nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="permiso_nombre" HeaderText="Detalle" />
-                    <asp:BoundField DataField="rol_permiso_estado" HeaderText="Estado" />
+                    <asp:BoundField DataField="rol_nombre" HeaderText="NOMBRE" />
+                    <asp:BoundField DataField="permiso_nombre" HeaderText="DETALLE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("rol_permiso_id").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
                             <a href="./Add?id=<%# Eval("rol_permiso_id") %>" class="btn btn-primary">Editar</a>
