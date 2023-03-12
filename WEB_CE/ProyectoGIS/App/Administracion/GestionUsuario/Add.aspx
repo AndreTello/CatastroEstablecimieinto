@@ -22,7 +22,7 @@
     <asp:TextBox CssClass="form-control" runat="server" ID="USUARIO_TELEFONO" />
     <label>Estado</label>
     <asp:DropDownList CssClass="form-select" runat="server" ID="USUARIO_ESTADO"  >
-        <asp:ListItem Text="-- Selecciona un Estado --" />
+        <asp:ListItem Text="-- Selecciona un Estado --" Value="" />
         <asp:ListItem Value="1">Activo</asp:ListItem>
         <asp:ListItem Value="0">Inactivo</asp:ListItem>
     </asp:DropDownList>

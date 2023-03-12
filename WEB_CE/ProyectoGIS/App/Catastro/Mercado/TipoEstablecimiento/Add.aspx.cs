@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,10 +13,18 @@ namespace ProyectoGIS.App.Catastro.TipoEstablecimiento
         Cls_Tipo_Establecimiento_BLL objdll = new Cls_Tipo_Establecimiento_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            TIPO_ESTABLECIMIENTO_ESTADO.Items.Insert(0, new ListItem("-- Seleccione un Estado --", ""));
-            TIPO_ESTABLECIMIENTO_ESTADO.Items.Insert(1, new ListItem("Activo", "1"));
-            TIPO_ESTABLECIMIENTO_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));
-
+            if(!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    string id = Request.QueryString["id"];
+                    DataTable dt = objdll.Consultar_IdTipo_Establecimiento(id);
+                    TIPO_ESTABLECIMIENTO_NOMBRE.Text =dt.Rows[0]["TIPO_ESTABLECIMIENTO_NOMBRE"].ToString().Trim();
+                    TIPO_ESTABLECIMIENTO_DETALLE.Text = dt.Rows[0]["TIPO_ESTABLECIMIENTO_DETALLE"].ToString().Trim();
+                    TIPO_ESTABLECIMIENTO_ESTADO.SelectedValue = dt.Rows[0]["TIPO_ESTABLECIMIENTO_ESTADO"].ToString();
+                    btnGuardar.Text = "Actualizar";
+                }
+            }
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -24,8 +33,17 @@ namespace ProyectoGIS.App.Catastro.TipoEstablecimiento
                 Response.Write("<script>alert('Debe llenar todos los campos')</script>");
                 return;
             }
-            objdll.Insertar_Tipo_Establecimiento(TIPO_ESTABLECIMIENTO_NOMBRE.Text, TIPO_ESTABLECIMIENTO_DETALLE.Text, TIPO_ESTABLECIMIENTO_ESTADO.SelectedValue);
-            Response.Redirect("./Ficha.aspx");
+            if (Request.QueryString["id"] != null)
+            {
+                string id = Request.QueryString["id"];
+                objdll.Editar_Tipo_Establecimiento(TIPO_ESTABLECIMIENTO_NOMBRE.Text, TIPO_ESTABLECIMIENTO_DETALLE.Text, TIPO_ESTABLECIMIENTO_ESTADO.SelectedValue,id);
+                Response.Redirect("./Ficha.aspx");
+            }
+            else
+            {
+                objdll.Insertar_Tipo_Establecimiento(TIPO_ESTABLECIMIENTO_NOMBRE.Text, TIPO_ESTABLECIMIENTO_DETALLE.Text, TIPO_ESTABLECIMIENTO_ESTADO.SelectedValue);
+                Response.Redirect("./Ficha.aspx");
+            }
         }
     }
 }

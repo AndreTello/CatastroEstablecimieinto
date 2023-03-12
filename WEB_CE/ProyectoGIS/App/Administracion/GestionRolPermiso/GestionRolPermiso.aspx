@@ -8,7 +8,7 @@
                     <asp:BoundField DataField="permiso_nombre" HeaderText="DETALLE" />
                     <asp:TemplateField HeaderText="ESTADO">
                        <ItemTemplate>
-                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("rol_permiso_id").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("rol_permiso_ESTADO").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Acciones">

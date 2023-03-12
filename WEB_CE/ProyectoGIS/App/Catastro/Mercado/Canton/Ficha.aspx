@@ -1,18 +1,24 @@
 ﻿<%@ Page Title="Gestión Cantones" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ficha.aspx.cs" Inherits="ProyectoGIS.App.Catastro.Canton.Ficha" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-        <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+        <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
             <Columns>
-                <asp:BoundField DataField="canton_id" HeaderText="Id" />
-                <asp:BoundField DataField="provincia_nombre" HeaderText="Provincia" />
-                <asp:BoundField DataField="canton_codigo" HeaderText="Codigo Cantón" />
-                <asp:BoundField DataField="canton_nombre" HeaderText="Nombre" />
-                <asp:BoundField DataField="canton_estado" HeaderText="Estado" />
-                <asp:BoundField DataField="canton_observacion" HeaderText="Observaciones" />
-
+                <asp:BoundField DataField="provincia_nombre" HeaderText="PROVINCIA" />
+                <asp:BoundField DataField="canton_codigo" HeaderText="CÓDIGO CANTÓN" />
+                <asp:BoundField DataField="canton_nombre" HeaderText="NOMBRE" />
+                <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("CANTON_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                <asp:TemplateField HeaderText="OBSERVACIONES">
+                    <ItemTemplate>
+                        <asp:Label ID="lblObservacion" Text='<%# Eval("CANTON_OBSERVACION").ToString() == "" ? "SIN OBSERVACIONES" : Eval("CANTON_OBSERVACION").ToString() %>' runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" CommandArgument='<%# Eval("canton_id") %>' />
+                            <a href="./Add?id=<%# Eval("canton_id") %>" class="btn btn-primary">Editar</a>
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("canton_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
                     </ItemTemplate>
                 </asp:TemplateField>

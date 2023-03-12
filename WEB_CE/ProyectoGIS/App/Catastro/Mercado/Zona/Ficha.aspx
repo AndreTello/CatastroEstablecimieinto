@@ -2,18 +2,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-         <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+         <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
             <Columns> 
                    
-                <asp:BoundField DataField="zona_nombre" HeaderText="Id" />
-                <asp:BoundField DataField="canton_nombre" HeaderText="Canton" />
-                <asp:BoundField DataField="zona_codigo" HeaderText="Codigo Zona" />
-                <asp:BoundField DataField="zona_nombre" HeaderText="Nombre" />
-                <asp:BoundField DataField="zona_estado" HeaderText="Estado" />
-                <asp:BoundField DataField="zona_observacion" HeaderText="Observaciones" />
+                <asp:BoundField DataField="zona_nombre" HeaderText="ZONA" />
+                <asp:BoundField DataField="canton_nombre" HeaderText="CANTÓN" />
+                <asp:BoundField DataField="zona_codigo" HeaderText="CODIGO ZONA" />
+                <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("ZONA_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                <asp:TemplateField HeaderText="OBSERVACIONES">
+                    <ItemTemplate>
+                        <asp:Label ID="lblObservacion" Text='<%# Eval("ZONA_OBSERVACION").ToString() == "" ? "SIN OBSERVACIONES" : Eval("ZONA_OBSERVACION").ToString() %>' runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <a href="./Add?id=<%# Eval("ZONA_id") %>" class="btn btn-primary">Editar</a>
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("zona_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
                     </ItemTemplate>
                 </asp:TemplateField>

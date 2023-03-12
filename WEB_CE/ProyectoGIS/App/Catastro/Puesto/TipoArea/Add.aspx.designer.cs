@@ -51,15 +51,6 @@ namespace ProyectoGIS.App.Catastro.Puesto.TipoArea
         protected global::System.Web.UI.WebControls.DropDownList TIPO_AREA_ESTADO;
 
         /// <summary>
-        /// Control UpdatePanel2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
-
-        /// <summary>
         /// Control btnGuardar.
         /// </summary>
         /// <remarks>

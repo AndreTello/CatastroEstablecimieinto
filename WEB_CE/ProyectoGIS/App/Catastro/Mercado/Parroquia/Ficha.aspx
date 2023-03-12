@@ -2,17 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                  <Columns> 
-                     <asp:BoundField DataField="parroquia_id" HeaderText="Id" SortExpression="Id" />
-                    <asp:BoundField DataField="zona_nombre" HeaderText="Zona" SortExpression="Zona" />
-                    <asp:BoundField DataField="parroquia_codigo" HeaderText="Codigo Parroquia" SortExpression="CodigoParroquia" />
-                    <asp:BoundField DataField="parroquia_nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                    <asp:BoundField DataField="parroquia_estado" HeaderText="Estado" SortExpression="Estado" />
-                    <asp:BoundField DataField="parroquia_observacion" HeaderText="Observaciones" SortExpression="Observaciones" />
+                    <asp:BoundField DataField="zona_nombre" HeaderText="ZONA" SortExpression="ZONA" />
+                    <asp:BoundField DataField="parroquia_codigo" HeaderText="CODIGO PARROQUIA" SortExpression="CODIGOPARROQUIA" />
+                    <asp:BoundField DataField="parroquia_nombre" HeaderText="NOMBRE" SortExpression="NOMBRE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("PARROQUIA_ESTADO").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="OBSERVACIONES">
+                        <ItemTemplate>
+                            <asp:Label ID="lblObservacion" Text='<%# Eval("PARROQUIA_OBSERVACION").ToString() == "" ? "Sin Observaciones" : Eval("PARROQUIA_OBSERVACION").ToString() %>' runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
-                            <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <a href="./Add?id=<%# Eval("parroquia_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("parroquia_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
                         </ItemTemplate>
                     </asp:TemplateField>

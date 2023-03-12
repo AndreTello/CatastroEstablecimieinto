@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,9 +13,22 @@ namespace ProyectoGIS.App.Catastro.Puesto.TipoArea
         Cls_Tipo_Area_BLL objdll = new Cls_Tipo_Area_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            TIPO_AREA_ESTADO.Items.Insert(0, new ListItem("-- Seleccione un Estado --", ""));
-            TIPO_AREA_ESTADO.Items.Insert(1, new ListItem("Activo", "1"));
-            TIPO_AREA_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    string id = Request.QueryString["id"];
+                    DataTable dt = objdll.Consultar_IdTipo_Area(id);
+                    if (dt != null)
+                    {
+                        TIPO_AREA_IDENTIFICACION.Text = dt.Rows[0]["TIPO_AREA_IDENTIFICACION"].ToString().Trim();
+                        TIPO_AREA_NOMBRE.Text = dt.Rows[0]["TIPO_AREA_NOMBRE"].ToString().Trim();
+                        TIPO_AREA_OBSERVACION.Text = dt.Rows[0]["TIPO_AREA_OBSERVACION"].ToString().Trim();
+                        TIPO_AREA_ESTADO.SelectedValue = dt.Rows[0]["TIPO_AREA_ESTADO"].ToString().Trim();
+                        btnGuardar.Text = "Actualizar";
+                    }
+                }
+            }
 
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -24,8 +38,16 @@ namespace ProyectoGIS.App.Catastro.Puesto.TipoArea
                 Response.Write("<script>alert('Debe llenar todos los campos')</script>");
                 return;
             }
-            objdll.Insertar_Tipo_Area(TIPO_AREA_IDENTIFICACION.Text,TIPO_AREA_NOMBRE.Text,TIPO_AREA_OBSERVACION.Text , TIPO_AREA_ESTADO.SelectedValue);
-            Response.Redirect("./Ficha.aspx");
+            if (Request.QueryString["id"] != null)
+            {
+                objdll.Editar_Tipo_Area(TIPO_AREA_IDENTIFICACION.Text, TIPO_AREA_NOMBRE.Text, TIPO_AREA_OBSERVACION.Text, TIPO_AREA_ESTADO.SelectedValue, Request.QueryString["id"]);
+                Response.Redirect("./Ficha.aspx");
+            }
+            else
+            {
+                objdll.Insertar_Tipo_Area(TIPO_AREA_IDENTIFICACION.Text,TIPO_AREA_NOMBRE.Text,TIPO_AREA_OBSERVACION.Text , TIPO_AREA_ESTADO.SelectedValue);
+                Response.Redirect("./Ficha.aspx");
+            }
         }
     }
 }

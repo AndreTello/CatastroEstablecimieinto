@@ -2,14 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="tipo_documento_puesto_id" HeaderText="Id" SortExpression="Id" />
-                    <asp:BoundField DataField="tipo_documento_puesto_nombre" HeaderText="Nombre de Tipo de Documento del Puesto" SortExpression="Nombre" />
-                    <asp:BoundField DataField="tipo_documento_puesto_estado" HeaderText="Estado" SortExpression="Estado" />
-                     <asp:TemplateField HeaderText="Acciones">
+                    <asp:BoundField DataField="tipo_documento_puesto_nombre" HeaderText="NOMBRE DE TIPO DE DOCUMENTO DEL PUESTO" SortExpression="NOMBRE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("tipo_documento_puesto_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Acciones">
                         <ItemTemplate>
-                             <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" CommandArgument='<%# Eval("tipo_documento_puesto_id") %>' />
+                            <a href="./Add?id=<%# Eval("tipo_documento_puesto_id") %>" class="btn btn-primary">Editar</a>
                              <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("tipo_documento_puesto_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
                         </ItemTemplate>
                     </asp:TemplateField>

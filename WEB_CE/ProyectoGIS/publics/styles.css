@@ -6,6 +6,9 @@
     /* Prevent inheritance from `body` */
 }
 
+.backQP {
+    background-color: #0D6BE7;
+}
 
 /*
  * Base structure
