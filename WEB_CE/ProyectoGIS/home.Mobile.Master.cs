@@ -25,12 +25,11 @@ namespace ProyectoGIS
             DataTable dt = user.Consultar_Usuario();
             string cuenta = string.Empty;
             DataRow[] finded = dt.Select($"USUARIO_LOGIN = '{usuario_login.Text}'");
-
             if (finded.Length > 0)
             {
-                string usuario = finded[0].Field<string>("USUARIO_LOGIN").Trim();
-                string pass = finded[0].Field<string>("USUARIO_CLAVE").Trim();
-                string rol = finded[0].Field<string>("ROL_NOMBRE").Trim();
+                string usuario = finded[0].Field<string>("USUARIO_LOGIN");
+                string pass = finded[0].Field<string>("USUARIO_CLAVE");
+                string rol = finded[0].Field<string>("ROL_NOMBRE");
                 if (BCrypt.Net.BCrypt.Verify(usuario_clave.Text, pass))
                 {
                     Session["usuario_login"] = usuario_login.Text;
@@ -72,7 +71,6 @@ namespace ProyectoGIS
 
 
             }
-
 
         }
     }

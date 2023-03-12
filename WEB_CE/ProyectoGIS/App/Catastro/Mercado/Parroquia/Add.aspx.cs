@@ -28,8 +28,8 @@ namespace ProyectoGIS.App.Catastro.Parroquia
                     DataTable dt = objdll.Consultar_IdParroquia(id);
                     if (dt != null)
                     {
-                        PARROQUIA_CODIGO.Text = dt.Rows[0]["PARROQUIA_CODIGO"].ToString().Trim();
-                        PARROQUIA_NOMBRE.Text = dt.Rows[0]["PARROQUIA_NOMBRE"].ToString().Trim();
+                        PARROQUIA_CODIGO.Text = dt.Rows[0]["PARROQUIA_CODIGO"].ToString();
+                        PARROQUIA_NOMBRE.Text = dt.Rows[0]["PARROQUIA_NOMBRE"].ToString();
                         PARROQUIA_OBSERVACION.Text = dt.Rows[0]["PARROQUIA_OBSERVACION"].ToString();
                         PARROQUIA_ESTADO.SelectedValue = dt.Rows[0]["PARROQUIA_ESTADO"].ToString();
                         ZONA_ID.SelectedValue = dt.Rows[0]["ZONA_NOMBRE"].ToString();

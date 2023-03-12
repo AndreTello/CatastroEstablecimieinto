@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,32 +14,19 @@ namespace ProyectoGIS.App.Catastro.GiroNegocio.TipoProducto
         {
             if (!IsPostBack)
             {
-                string id = Request.QueryString["id"];
-                if (id != null)
-                {
-                    DataTable dt = objdll.Consultar_IdTipo_Producto(id);
-                    if(dt != null)
-                    {
-                        TIPO_PRODUCTO_NOMBRE.Text = dt.Rows[0]["TIPO_PRODUCTO_NOMBRE"].ToString().Trim();
-                        TIPO_PRODUCTO_DETALLE.Text = dt.Rows[0]["TIPO_PRODUCTO_DETALLE"].ToString().Trim();
-                        TIPO_PRODUCTO_OBSERVACION.Text = dt.Rows[0]["TIPO_PRODUCTO_OBSERVACION"].ToString().Trim();
-                        TIPO_PRODUCTO_ESTADO.Text = dt.Rows[0]["TIPO_PRODUCTO_ESTADO"].ToString().Trim();
-                        btnGuardar.Text = "Actualizar";
-                    }
-                }
+                TIPO_PRODUCTO_ESTADO.Items.Insert(0, new ListItem("-- Seleccione un Estado --", ""));
+                TIPO_PRODUCTO_ESTADO.Items.Insert(1, new ListItem("Activo", "1"));
+                TIPO_PRODUCTO_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));
+
             }
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(TIPO_PRODUCTO_ESTADO.SelectedValue =="" || TIPO_PRODUCTO_NOMBRE.Text == string.Empty || TIPO_PRODUCTO_DETALLE.Text == string.Empty )
+            if(TIPO_PRODUCTO_ESTADO.SelectedValue =="" || TIPO_PRODUCTO_NOMBRE.Text == string.Empty || TIPO_PRODUCTO_DETALLE.Text == string.Empty ||
+                TIPO_PRODUCTO_OBSERVACION.Text == string.Empty)
             {
                 Response.Write("<script>alert('Debe llenar todos los campos')</script>");
                 return;
-            }
-            if (Request.QueryString["id"] != null)
-            {
-                objdll.Editar_Tipo_Producto(TIPO_PRODUCTO_NOMBRE.Text, TIPO_PRODUCTO_DETALLE.Text, TIPO_PRODUCTO_OBSERVACION.Text, TIPO_PRODUCTO_ESTADO.SelectedValue, Request.QueryString["id"]);
-                Response.Redirect("./Ficha");
             }
             objdll.Insertar_Tipo_Producto(TIPO_PRODUCTO_NOMBRE.Text, TIPO_PRODUCTO_DETALLE.Text, TIPO_PRODUCTO_OBSERVACION.Text, TIPO_PRODUCTO_ESTADO.SelectedValue);
             Response.Redirect("./Ficha");

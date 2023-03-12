@@ -28,10 +28,10 @@ namespace ProyectoGIS.App.Catastro.Canton
                     DataTable dt = objdll.Consultar_IdCanton(id);
                     if(dt != null)
                     {
-                        CANTON_NOMBRE.Text = dt.Rows[0]["CANTON_NOMBRE"].ToString().Trim();
+                        CANTON_NOMBRE.Text = dt.Rows[0]["CANTON_NOMBRE"].ToString();
                         PROVINCIA_ID.SelectedValue = dt.Rows[0]["PROVINCIA_NOMBRE"].ToString();
-                        CANTON_OBSERVACION.Text = dt.Rows[0]["CANTON_OBSERVACION"].ToString().Trim();
-                        CANTON_CODIGO.Text = dt.Rows[0]["CANTON_CODIGO"].ToString().Trim();
+                        CANTON_OBSERVACION.Text = dt.Rows[0]["CANTON_OBSERVACION"].ToString();
+                        CANTON_CODIGO.Text = dt.Rows[0]["CANTON_CODIGO"].ToString();
                         CANTON_ESTADO.SelectedValue = dt.Rows[0]["CANTON_ESTADO"].ToString();
                         btnGuardar.Text = "Actualizar";
 

@@ -21,8 +21,8 @@ namespace ProyectoGIS.App.Catastro.TipoIntervencion
                     DataTable dt = objdll.Consultar_IdTipo_Intervencion_Tecnica(id);
                     if (dt != null)
                     {
-                        TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text = dt.Rows[0]["TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE"].ToString().Trim();
-                        TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE.Text = dt.Rows[0]["TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE"].ToString().Trim();
+                        TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text = dt.Rows[0]["TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE"].ToString();
+                        TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE.Text = dt.Rows[0]["TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE"].ToString();
                         TIPO_INTERVENCION_TECNICA_ESTADO.SelectedValue = dt.Rows[0]["TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }
