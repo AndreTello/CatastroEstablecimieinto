@@ -7,22 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using ENT_CE;
 
 namespace DAL_CE_Postgresql.Catastro
 {
     public class Cls_Estado_Civil_DAL
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
-
-        private int ESTADO_CIVIL_ID;
-        private string ESTADO_CIVIL_NOMBRE;
-        private string ESTADO_CIVIL_DETALLE;
-        private int ESTADO_CIVIL_ESTADO;
-
-        public int ESTADO_CIVIL_ID1 { get => ESTADO_CIVIL_ID; set => ESTADO_CIVIL_ID = value; }
-        public string ESTADO_CIVIL_NOMBRE1 { get => ESTADO_CIVIL_NOMBRE; set => ESTADO_CIVIL_NOMBRE = value; }
-        public string ESTADO_CIVIL_DETALLE1 { get => ESTADO_CIVIL_DETALLE; set => ESTADO_CIVIL_DETALLE = value; }
-        public int ESTADO_CIVIL_ESTADO1 { get => ESTADO_CIVIL_ESTADO; set => ESTADO_CIVIL_ESTADO = value; }
 
         public DataTable Consultar()
         {

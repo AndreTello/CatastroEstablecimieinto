@@ -110,6 +110,10 @@
       <Project>{b49c8792-1844-429b-a78c-6bcade3a9e04}</Project>
       <Name>DAL_CE_Postgresql</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ENT_CE\ENT_CE.csproj">
+      <Project>{eddc1e20-6c62-4fae-9a68-7e349816a1ae}</Project>
+      <Name>ENT_CE</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

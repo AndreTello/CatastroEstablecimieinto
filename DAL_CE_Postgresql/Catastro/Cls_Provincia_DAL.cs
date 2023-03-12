@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ENT_CE;
 
 namespace DAL_CE_Postgresql.Catastro
 {
@@ -13,17 +13,7 @@ namespace DAL_CE_Postgresql.Catastro
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
 
-        private int PROVINCIA_ID;
-        private string PROVINCIA_CODIGO;
-        private string PROVINCIA_NOMBRE;
-        private int PROVINCIA_ESTADO;
-        private string PROVINCIA_OBSERVACION;
-
-        public int PROVINCIA_ID1 { get => PROVINCIA_ID; set => PROVINCIA_ID = value; }
-        public string PROVINCIA_CODIGO1 { get => PROVINCIA_CODIGO; set => PROVINCIA_CODIGO = value; }
-        public string PROVINCIA_NOMBRE1 { get => PROVINCIA_NOMBRE; set => PROVINCIA_NOMBRE = value; }
-        public int PROVINCIA_ESTADO1 { get => PROVINCIA_ESTADO; set => PROVINCIA_ESTADO = value; }
-        public string PROVINCIA_OBSERVACION1 { get => PROVINCIA_OBSERVACION; set => PROVINCIA_OBSERVACION = value; }
+        NpgsqlCommand comando = new NpgsqlCommand();
 
         public DataTable Consultar()
         {
@@ -108,21 +98,25 @@ namespace DAL_CE_Postgresql.Catastro
             }
             return tabla;
         }
-
+                
         public void Insertar(string codigo, string nombre, string observacion, int estado)
         {
-            NpgsqlConnection con = null; 
+            NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into catastroestablecimiento.cm_provincia (provincia_codigo, provincia_nombre, provincia_observacion, provincia_estado) " +
-                "values ('" + codigo + "','" + nombre + "','" + observacion + "'," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "CATASTROESTABLECIMIENTO.insertar_provincia";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("p_codigo", codigo);
+                comando.Parameters.AddWithValue("p_nombre", nombre);
+                comando.Parameters.AddWithValue("p_observacion", observacion);
+                comando.Parameters.AddWithValue("p_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
+                // manejar excepciones
             }
             finally
             {
@@ -130,8 +124,9 @@ namespace DAL_CE_Postgresql.Catastro
                 {
                     con.Close();
                 }
-            }  
+            }
         }
+
 
         public void Editar(string codigo, string nombre, string observacion, int estado, int id)
         {

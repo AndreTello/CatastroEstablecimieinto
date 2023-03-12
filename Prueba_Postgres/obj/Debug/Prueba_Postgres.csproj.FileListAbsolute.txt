@@ -150,3 +150,5 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Adm
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Puesto.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento_Puesto.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.EstatusSocial.Frm_Estatus_Legal.resources
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\ENT_CE.dll
+C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\ENT_CE.pdb

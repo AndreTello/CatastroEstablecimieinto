@@ -38,9 +38,9 @@ namespace BLL_CE.Administracion
             objdll.Insertar(nombre, detalle, Convert.ToInt32(estado));
         }
 
-        public void Editar_Permiso(string nombre, string detalle, string estado, string id)
+        public void Editar_Permiso(string id, string nombre, string detalle, string estado)
         {
-            objdll.Editar(nombre, detalle, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), nombre, detalle, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Permiso(string id)

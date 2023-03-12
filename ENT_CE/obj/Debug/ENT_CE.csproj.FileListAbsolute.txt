@@ -1,0 +1,6 @@
+C:\Diomio\CatastroEstablecimieinto\ENT_CE\bin\Debug\ENT_CE.dll
+C:\Diomio\CatastroEstablecimieinto\ENT_CE\bin\Debug\ENT_CE.pdb
+C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.csproj.AssemblyReference.cache
+C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.csproj.CoreCompileInputs.cache
+C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.dll
+C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.pdb
