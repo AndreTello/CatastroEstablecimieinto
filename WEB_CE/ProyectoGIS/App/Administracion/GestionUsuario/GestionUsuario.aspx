@@ -18,7 +18,7 @@
                 <asp:TemplateField HeaderText="ESTADO">
 
                        <ItemTemplate>
-                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("usuario_id").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("usuario_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                 <asp:TemplateField HeaderText="ACCIONES">
