@@ -31,14 +31,14 @@ namespace ProyectoGIS.App.Administracion.GestionUsuario
                     if (usert.Length == 1)
                     {
                         DataRow usr = usert[0];
-                        USUARIO_LOGIN.Text = usr.Field<string>("USUARIO_LOGIN");
-                        USUARIO_CLAVE.Text = usr.Field<string>("USUARIO_CLAVE");
-                        USUARIO_CEDULA.Text = usr.Field<string>("USUARIO_CEDULA");
-                        USUARIO_APELLIDOS.Text = usr.Field<string>("USUARIO_APELLIDOS");
-                        USUARIO_NOMBRES.Text = usr.Field<string>("USUARIO_NOMBRES");
-                        USUARIO_MAIL.Text = usr.Field<string>("USUARIO_MAIL");
-                        USUARIO_DIRECCION.Text = usr.Field<string>("USUARIO_DIRECCION");
-                        USUARIO_TELEFONO.Text = usr.Field<string>("USUARIO_TELEFONO");
+                        USUARIO_LOGIN.Text = usr.Field<string>("USUARIO_LOGIN").Trim();
+                        USUARIO_CLAVE.Text = usr.Field<string>("USUARIO_CLAVE").Trim();
+                        USUARIO_CEDULA.Text = usr.Field<string>("USUARIO_CEDULA").Trim();
+                        USUARIO_APELLIDOS.Text = usr.Field<string>("USUARIO_APELLIDOS").Trim();
+                        USUARIO_NOMBRES.Text = usr.Field<string>("USUARIO_NOMBRES").Trim();
+                        USUARIO_MAIL.Text = usr.Field<string>("USUARIO_MAIL").Trim();
+                        USUARIO_DIRECCION.Text = usr.Field<string>("USUARIO_DIRECCION").Trim();
+                        USUARIO_TELEFONO.Text = usr.Field<string>("USUARIO_TELEFONO").Trim();
                         USUARIO_ESTADO.SelectedValue = ""+usr.Field<int>("USUARIO_ESTADO");
 
                         // Cambiar el texto del botón "Guardar" a "Actualizar"

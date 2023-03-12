@@ -24,3 +24,4 @@
 /REST_CE/.vs
 /REST_CE/bin
 /REST_CE/obj
+/DAL_CE_Postgresql/Cls_Conexion_Postgresql_DAL.cs

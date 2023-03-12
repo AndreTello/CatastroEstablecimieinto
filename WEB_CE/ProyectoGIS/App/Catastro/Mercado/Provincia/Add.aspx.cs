@@ -17,9 +17,9 @@ namespace ProyectoGIS.App.Catastro.Provincia
                     DataTable dt = objdll.Consultar_IdProvincia(id);
                     if(dt != null)
                     {
-                        PROVINCIA_NOMBRE.Text = dt.Rows[0]["PROVINCIA_NOMBRE"].ToString();
-                        PROVINCIA_CODIGO.Text = dt.Rows[0]["PROVINCIA_CODIGO"].ToString();
-                        PROVINCIA_OBSERVACION.Text = dt.Rows[0]["PROVINCIA_OBSERVACION"].ToString();
+                        PROVINCIA_NOMBRE.Text = dt.Rows[0]["PROVINCIA_NOMBRE"].ToString().Trim();
+                        PROVINCIA_CODIGO.Text = dt.Rows[0]["PROVINCIA_CODIGO"].ToString().Trim();
+                        PROVINCIA_OBSERVACION.Text = dt.Rows[0]["PROVINCIA_OBSERVACION"].ToString().Trim();
                         PROVINCIA_ESTADO.SelectedValue = dt.Rows[0]["PROVINCIA_ESTADO"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }

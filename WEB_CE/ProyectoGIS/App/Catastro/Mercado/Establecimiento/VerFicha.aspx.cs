@@ -14,6 +14,9 @@ using iTextSharp.tool.xml;
 using iTextSharp.tool.xml.html.table;
 using System.Web.UI.HtmlControls;
 using iTextSharp.tool.xml.html;
+using System.Net;
+using System.Drawing;
+using Image = iTextSharp.text.Image;
 
 namespace ProyectoGIS.App.Catastro.Mercado.Establecimiento
 {
@@ -57,34 +60,32 @@ namespace ProyectoGIS.App.Catastro.Mercado.Establecimiento
         public void generarPDF()
         {
 
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            // Crear una instancia del Document.
+            Document doc = new Document();
 
-            // Crea un objeto PdfWriter para escribir el documento en un archivo o en memoria
-            PdfWriter writer = PdfWriter.GetInstance(doc, Response.OutputStream);
+            // Crear una instancia del PdfWriter y asociarlo con el Document.
+            PdfWriter.GetInstance(doc, new FileStream("C:\\xd\\Code.pdf", FileMode.Create));
 
-            // Abre el documento
+            // Abrir el Document.
             doc.Open();
 
-            // Agrega el contenido del panel a un objeto Paragraph
-            StringWriter sw = new StringWriter();
-            HtmlTextWriter hw = new HtmlTextWriter(sw);
-            miPanel.RenderControl(hw);
-            Paragraph p = new Paragraph(sw.ToString());
+            // Crear una instancia del WebClient y obtener el contenido de la página ASPX.
+            WebClient wc = new WebClient();
+            byte[] contenido = wc.DownloadData("E:\\Works\\SefaKS\\Git\\CatastroEstablecimieinto\\WEB_CE\\ProyectoGIS\\App\\Catastro\\Mercado\\Establecimiento\\VerFicha.aspx");
 
-            // Agrega el objeto Paragraph al documento
-            doc.Add(p);
+            // Crear una instancia del MemoryStream y cargar el contenido de la página ASPX.
+            MemoryStream ms = new MemoryStream(contenido);
 
-            // Cierra el documento
+            // Crear una instancia del Image y cargar la imagen desde el MemoryStream.
+            Image img = Image.GetInstance(ms);
+
+            // Agregar la imagen al Document.
+            doc.Add(img);
+
+            // Cerrar el Document y el PdfWriter.
             doc.Close();
 
-            // Establece las cabeceras de respuesta para descargar el archivo
-            Response.ContentType = "application/pdf";
-            Response.AddHeader("content-disposition", "attachment;filename=MiArchivo.pdf");
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-
-            // Escribe el contenido del archivo al Response
-            Response.Write(doc);
-            Response.End();
+          
 
         }
 

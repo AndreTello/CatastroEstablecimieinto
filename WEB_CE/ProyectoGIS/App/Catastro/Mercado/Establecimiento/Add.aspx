@@ -31,7 +31,11 @@
     <label>Horario de Atención</label>
     <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" MaxLength="100" ID="ESTABLECIMIENTO_HORARIO_ATENCION" />
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="ESTABLECIMIENTO_ESTADO" />
+    <asp:DropDownList CssClass="form-select" runat="server" ID="ESTABLECIMIENTO_ESTADO"  >
+        <asp:ListItem Text="-- Selecciona un Estado --" Value="" />
+        <asp:ListItem Value="1">Activo</asp:ListItem>
+        <asp:ListItem Value="0">Inactivo</asp:ListItem>
+    </asp:DropDownList>
 
     <asp:UpdatePanel runat="server">
          <ContentTemplate>

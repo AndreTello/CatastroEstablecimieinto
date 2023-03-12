@@ -13,6 +13,6 @@
         <asp:ListItem Value="0">Inactivo</asp:ListItem>
     </asp:DropDownList>
 <asp:Button CssClass="btn btn-primary mt-3" ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
-<a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+<a class="btn btn-danger mt-3" href="./GestionRoles" >Cancelar</a>
 
 </asp:Content>

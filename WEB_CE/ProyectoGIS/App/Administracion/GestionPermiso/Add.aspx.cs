@@ -16,8 +16,8 @@ namespace ProyectoGIS.App.Administracion.GestiolPermiso
                     DataTable dt = permiso.Consultar_IdPermiso(Request.QueryString["id"]);
                     if (dt != null)
                     {
-                        PERMISO_NOMBRE.Text = dt.Rows[0]["PERMISO_NOMBRE"].ToString();
-                        PERMISO_DETALLE.Text = dt.Rows[0]["PERMISO_DETALLE"].ToString();
+                        PERMISO_NOMBRE.Text = dt.Rows[0]["PERMISO_NOMBRE"].ToString().Trim();
+                        PERMISO_DETALLE.Text = dt.Rows[0]["PERMISO_DETALLE"].ToString().Trim();
                         PERMISO_ESTADO.SelectedValue = dt.Rows[0]["PERMISO_ESTADO"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }
