@@ -9,19 +9,19 @@
             <Columns>
                 <asp:BoundField DataField="rol_nombre" HeaderText="ROL" SortExpression="rol_id" />
                 <asp:BoundField DataField="usuario_login" HeaderText="USUARIO" SortExpression="usuario_login" />
-                <asp:BoundField DataField="usuario_cedula" HeaderText="CEDULA" SortExpression="usuario_cedula" />
+                <asp:BoundField DataField="usuario_cedula" HeaderText="CÉDULA" SortExpression="usuario_cedula" />
                 <asp:BoundField DataField="usuario_apellidos" HeaderText="APELLIDOS" SortExpression="usuario_apellidos" />
                 <asp:BoundField DataField="usuario_nombres" HeaderText="NOMBRES" SortExpression="usuario_nombres" />
                 <asp:BoundField DataField="usuario_mail" HeaderText="CORREO" SortExpression="usuario_mail" />
                 <asp:BoundField DataField="usuario_direccion" HeaderText="DIRECCIÓN" SortExpression="usuario_direccion" />
-                <asp:BoundField DataField="usuario_telefono" HeaderText="TELEFONO" SortExpression="usuario_telefono" />
+                <asp:BoundField DataField="usuario_telefono" HeaderText="TELÉFONO" SortExpression="usuario_telefono" />
                 <asp:TemplateField HeaderText="ESTADO">
 
                        <ItemTemplate>
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("usuario_id").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                <asp:TemplateField HeaderText="Acciones">
+                <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                     <div class=" d-flex ">
                         <div class="col mx-2">

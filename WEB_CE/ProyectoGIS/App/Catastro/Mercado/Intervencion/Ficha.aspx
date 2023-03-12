@@ -10,7 +10,7 @@
                     <asp:BoundField DataField="intervencion_tecnica_establecimiento_fecha_inicio" HeaderText="Fecha Inicio" />
                     <asp:BoundField DataField="intervencion_tecnica_establecimiento_fecha_fin" HeaderText="Fecha Fin" />
                     <asp:BoundField DataField="intervencion_tecnica_establecimiento_estado" HeaderText="Estado" />
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                              <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("intervencion_tecnica_establecimiento_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />

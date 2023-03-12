@@ -11,7 +11,7 @@
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("rol_permiso_ESTADO").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                             <a href="./Add?id=<%# Eval("rol_permiso_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger px-2" CommandName="Eliminar" CommandArgument='<%# Eval("rol_permiso_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />

@@ -13,7 +13,7 @@
                     <asp:BoundField DataField="documento_comerciante_detalle" HeaderText="Detalle" />
                     <asp:BoundField DataField="documento_comerciante_observacion" HeaderText="Observación" />
                     <asp:BoundField DataField="documento_comerciante_estado" HeaderText="Estado" />
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>  
                             <a href="./Add?id=<%# Eval("documento_comerciante_id") %>" class="btn btn-primary">Editar</a>
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("documento_comerciante_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />

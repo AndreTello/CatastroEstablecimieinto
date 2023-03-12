@@ -8,7 +8,7 @@
                     <asp:BoundField DataField="asociacion_nombre" HeaderText="NOMBRE" />
                     <asp:BoundField DataField="asociacion_telefono" HeaderText="TELÉFONO" />
                     <asp:BoundField DataField="asociacion_mail" HeaderText="MAIL" />
-                    <asp:BoundField DataField="asociacion_contacto" HeaderText="Contacto" />
+                    <asp:BoundField DataField="asociacion_contacto" HeaderText="CONTACTO" />
                     <asp:TemplateField HeaderText="ESTADO">
                        <ItemTemplate>
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("asociacion_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
@@ -20,7 +20,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                             <div class=" d-flex ">
                                 <div class="col mx-2">

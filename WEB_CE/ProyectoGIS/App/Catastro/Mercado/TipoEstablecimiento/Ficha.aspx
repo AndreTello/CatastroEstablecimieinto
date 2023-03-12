@@ -4,14 +4,14 @@
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
             <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="tipo_establecimiento_nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                    <asp:BoundField DataField="tipo_establecimiento_detalle" HeaderText="Detalle" SortExpression="Detalle" />
+                    <asp:BoundField DataField="tipo_establecimiento_nombre" HeaderText="NOMBRE" SortExpression="NOMBRE" />
+                    <asp:BoundField DataField="tipo_establecimiento_detalle" HeaderText="DETALLE" SortExpression="DETALLE" />
                     <asp:TemplateField HeaderText="ESTADO">
                        <ItemTemplate>
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("tipo_establecimiento_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                             <a href="./Add?id=<%# Eval("tipo_establecimiento_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("tipo_establecimiento_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />

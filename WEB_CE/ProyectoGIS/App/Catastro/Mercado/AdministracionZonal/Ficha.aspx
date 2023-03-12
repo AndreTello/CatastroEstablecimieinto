@@ -16,7 +16,7 @@
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("administracion_zonal_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                             <div class=" d-flex ">
                                 <div class="col mx-2">

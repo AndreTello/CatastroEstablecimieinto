@@ -4,13 +4,13 @@
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
             <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="tipo_documento_comerciante_nombre" HeaderText="Nombre" />
+                    <asp:BoundField DataField="tipo_documento_comerciante_nombre" HeaderText="NOMBRE" />
                     <asp:TemplateField HeaderText="ESTADO">
                        <ItemTemplate>
                             <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("tipo_documento_comerciante_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                         <a href="./Add?id=<%# Eval("tipo_documento_comerciante_id") %>" class="btn btn-primary">Editar</a>
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("tipo_documento_comerciante_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />

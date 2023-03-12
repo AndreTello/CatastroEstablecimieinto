@@ -17,7 +17,7 @@
                             <asp:Label ID="lblObservacion" Text='<%# Eval("MANZANA_OBSERVACION").ToString() == "" ? "SIN OBSERVACIONES" : Eval("MANZANA_OBSERVACION").ToString() %>' runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
                             <a href="./Add?id=<%# Eval("manzana_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("manzana_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
