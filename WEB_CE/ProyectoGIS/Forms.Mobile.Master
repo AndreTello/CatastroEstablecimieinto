@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 
-<html class="h-100">
+<html class="">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width" />
     <title>Añadir</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -22,12 +23,13 @@
             text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
             background: url("/publics/imgs/quito.jpg") no-repeat center center fixed;
             background-size: cover;
-            
+         width:100%;
+         height: 100%;
 }
         
     </style>
 </head>
-<body class="d-flex h-100 text-center text-bg-dark ">
+<body class=" text-center text-bg-dark ">
     <form id="form1" runat="server">
          <asp:ScriptManager runat="server">
             <Scripts>
@@ -50,7 +52,7 @@
         </asp:ScriptManager>
         <div class="text-dark">
             
-                <div class =" p-5">
+                <div class ="p-3    ">
             <div class ="bg-light rounded-5 shadow-lg p-4">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
@@ -60,13 +62,7 @@
         </div>
 
     <script type="text/javascript">
-        window.addEventListener('scroll', function () {
-            // Si el usuario ha desplazado la página hacia abajo
-            if (window.scrollY > 0) {
-                // Vuelve a desplazar la página a su posición original
-                window.scrollTo(0, 0);
-            }
-        });
+        
     </script>
     </form>
 </body>
