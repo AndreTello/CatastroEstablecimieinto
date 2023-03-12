@@ -17,8 +17,8 @@ namespace ProyectoGIS.App.Administracion.GestionRol
                     DataTable dt = rol.Consultar_IdRol(id);
                     if (dt != null)
                     {
-                        ROL_NOMBRE.Text = dt.Rows[0]["ROL_NOMBRE"].ToString();
-                        ROL_DETALLE.Text = dt.Rows[0]["ROL_DETALLE"].ToString();
+                        ROL_NOMBRE.Text = dt.Rows[0]["ROL_NOMBRE"].ToString().Trim();
+                        ROL_DETALLE.Text = dt.Rows[0]["ROL_DETALLE"].ToString().Trim();
                         ROL_ESTADO.SelectedValue = dt.Rows[0]["ROL_ESTADO"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }

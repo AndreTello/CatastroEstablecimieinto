@@ -5,7 +5,7 @@
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
             
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm  text-nowrap table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
             <Columns>
                 <asp:BoundField DataField="rol_nombre" HeaderText="ROL" SortExpression="rol_id" />
                 <asp:BoundField DataField="usuario_login" HeaderText="USUARIO" SortExpression="usuario_login" />
@@ -18,7 +18,7 @@
                 <asp:TemplateField HeaderText="ESTADO">
 
                        <ItemTemplate>
-                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("usuario_id").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("usuario_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                 <asp:TemplateField HeaderText="ACCIONES">

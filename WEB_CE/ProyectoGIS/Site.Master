@@ -81,7 +81,7 @@
             -webkit-overflow-scrolling: touch;
         }
         .imgT{
-            width: 160px;
+            width: 120px;
             filter: brightness(1.15);
         }
         .logBtn{
@@ -113,7 +113,7 @@
 
         <header class="navbar  sticky-top backQ flex-md-nowrap p-0 ">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 backQP" href="/App/home">
-            <asp:Image runat="server" ImageUrl="~/publics/imgs/QH_HORIZONTAL-01.png" CssClass="imgT" />
+            <asp:Image runat="server" ImageUrl="~/publics/imgs/LogoQuito.png" CssClass="imgT" />
             <img src="~/publics/imgs/QH_HORIZONTAL-01.png"
                 class="  rounded shadow-xl img-fluid"  alt=""></a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
@@ -123,25 +123,31 @@
         </button>
                 
 
-            <div class="text-light text-nowrap">
-                <div class="row">
-                    <div class="col fw-bold px-5">
+        <div class="text-light text-nowrap">
+            <div class="row">
+                <div class="col fw-bold text-uppercase px-5">
                         <%: Page.Title %> 
 
-                    </div>
-                    <div class="col">
+                </div>
+                <div class="col">
                         
-                            <asp:Label ID="rol" name="rol" Text="" runat="server" Visible="false" />
-                        </div>
-
-                    </div>
-
-                </div> 
+                    
+                </div>
 
             </div>
+
+        </div> 
+
+            
         <div class="navbar navbar-nav">
             <div class="nav-item text-nowrap">
-                <asp:Button class="btn nav-link px-3 me-3 btn-danger text-white logBtn" OnClick="btnLogout_Click"   Text="Cerrar Sesión" runat="server" />
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="mt-2 text-white fw-bold mx-3 text-uppercase">
+                            <asp:Label ID="rol" name="rol" Text="" runat="server" />
+                        </div>
+
+                        <asp:Button class="btn nav-link px-3 me-3 btn-danger text-white logBtn" OnClick="btnLogout_Click"   Text="Cerrar Sesión" runat="server" />
+                    </div>
             </div>
         </div>
                 
@@ -149,7 +155,7 @@
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
             <div class="position-sticky pt-3 sidebar-sticky vertical-menu">
                 <ul>
-                    <li class="lis">
+                    <li class="lis fw-bold mt-3">
                         <a href="/App/Home" class="a">Inicio</a>
                     </li>
                     <asp:HyperLink ID="adminLink" runat="server" class="mt-n5" Visible="false">
@@ -255,7 +261,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="/App/Catastro/Puesto/TipoArea/Ficha">
                                                 <span data-feather="shopping-cart" class="align-text-bottom"></span>
-                                                Tipo Area
+                                                Tipo Área
                                             </a>
                                         </li>
 
@@ -293,7 +299,7 @@
                                 </li>
                                 <hr />
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/App/Catastro/GiroNegocio/GiroComercio/Ficha">
+                                    <a class="nav-link" href="/App/Catastro/GiroNegocio/TipoProducto/Ficha">
                                         <span data-feather="shopping-cart" class="align-text-bottom"></span>
                                         Productos
                                     </a>
@@ -438,7 +444,7 @@
         </nav>
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
-                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                class="d-flex justify-content-between flex-wrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                
                 
             </div>

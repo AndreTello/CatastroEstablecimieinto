@@ -21,18 +21,20 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
                 ROL_ID.DataTextField = "ROL_NOMBRE";
                 ROL_ID.DataValueField = "ROL_ID";
                 ROL_ID.DataBind();
+                ROL_ID.Items.Insert(0, new ListItem("-- Seleccione un Rol --", ""));
                 PERMISO_ID.DataSource = permiso.Consultar_Permiso();
                 PERMISO_ID.DataTextField = "PERMISO_NOMBRE";
                 PERMISO_ID.DataValueField = "PERMISO_ID";
                 PERMISO_ID.DataBind();
+                PERMISO_ID.Items.Insert(0, new ListItem("-- Seleccione un Permiso --", ""));
                 if (Request.QueryString["id"] != null)
                 {
                     string id = Request.QueryString["id"];
                     DataTable dt = rolP.Consultar_IdRol_Permiso(id);
                     if(dt != null)
                     { 
-                        PERMISO_ROL_ESTADO.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString();
-                        PERMISO_ID.SelectedValue = dt.Rows[0]["permiso_id"].ToString();
+                        PERMISO_ROL_ESTADO.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString().Trim();
+                        PERMISO_ID.SelectedValue = dt.Rows[0]["permiso_id"].ToString().Trim();
                         ROL_ID.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }

@@ -27,13 +27,10 @@
         <asp:ListItem Value="0">Inactivo</asp:ListItem>
     </asp:DropDownList>
 
-    <asp:UpdatePanel runat="server">
-        <ContentTemplate>
-            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary mt-3" OnClick="btnGuardar_Click" />
-            <a class="btn btn-danger mt-3" href="./GestionUsuario" >Cancelar</a>
 
-            </ContentTemplate>
-    </asp:UpdatePanel>
+    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary mt-3" OnClick="btnGuardar_Click" />
+    <a class="btn btn-danger mt-3" href="./GestionUsuario" >Cancelar</a>
+
 
 
 </asp:Content>
