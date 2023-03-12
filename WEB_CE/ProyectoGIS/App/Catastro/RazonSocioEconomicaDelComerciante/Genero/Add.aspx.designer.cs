@@ -24,13 +24,13 @@ namespace ProyectoGIS.App.Catastro.RazonSocioEconomicaDelComerciante.Genero
         protected global::System.Web.UI.WebControls.TextBox GENERO_NOMBRE;
 
         /// <summary>
-        /// Control GENERO_PORCENTAJE.
+        /// Control GENERO_DETALLE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GENERO_PORCENTAJE;
+        protected global::System.Web.UI.WebControls.TextBox GENERO_DETALLE;
 
         /// <summary>
         /// Control GENERO_ESTADO.

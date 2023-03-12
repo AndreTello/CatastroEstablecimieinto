@@ -24,13 +24,13 @@ namespace ProyectoGIS.App.Catastro.RazonSocioEconomicaDelComerciante.Etnia
         protected global::System.Web.UI.WebControls.TextBox ETNIA_NOMBRE;
 
         /// <summary>
-        /// Control ETNIA_PORCENTAJE.
+        /// Control ETNIA_DETALLE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ETNIA_PORCENTAJE;
+        protected global::System.Web.UI.WebControls.TextBox ETNIA_DETALLE;
 
         /// <summary>
         /// Control ETNIA_ESTADO.

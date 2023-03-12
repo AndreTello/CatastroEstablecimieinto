@@ -39,9 +39,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(zona, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Editar_Parroquia(int zona, string codigo, string nombre, string observacion, string estado, string id)
+        public void Editar_Parroquia(string id, int zona, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Editar(zona, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), zona, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Parroquia(string id)

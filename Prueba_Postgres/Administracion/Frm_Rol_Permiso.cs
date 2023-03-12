@@ -80,7 +80,7 @@ namespace Prueba_Postgres.Administracion
             }
             if (editar == true)
             {
-                objbll.Editar_Rol_Permiso(Convert.ToInt32(cmbrol.SelectedValue), Convert.ToInt32(cmbpermiso.SelectedValue), cmbestado.Text, id);
+                objbll.Editar_Rol_Permiso(id, Convert.ToInt32(cmbrol.SelectedValue), Convert.ToInt32(cmbpermiso.SelectedValue), cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -93,10 +93,10 @@ namespace Prueba_Postgres.Administracion
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["rol_permiso_id"].Value.ToString();
                 cmbrol.Text = datos.CurrentRow.Cells["rol_nombre"].Value.ToString();
                 cmbpermiso.Text = datos.CurrentRow.Cells["permiso_nombre"].Value.ToString();
                 cmbestado.Text = datos.CurrentRow.Cells["rol_permiso_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["rol_permiso_id"].Value.ToString();
             }
             else
             {

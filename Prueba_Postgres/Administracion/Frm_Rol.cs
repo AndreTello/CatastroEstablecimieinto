@@ -63,7 +63,7 @@ namespace Prueba_Postgres.Administracion
             }
             if (editar == true)
             {
-                objbll.Editar_Rol(txtnombre.Text, txtdetalle.Text, cmbestado.Text, id);
+                objbll.Editar_Rol(id, txtnombre.Text, txtdetalle.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -76,10 +76,10 @@ namespace Prueba_Postgres.Administracion
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["rol_id"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["rol_nombre"].Value.ToString();
                 txtdetalle.Text = datos.CurrentRow.Cells["rol_detalle"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["rol_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["rol_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["rol_estado"].Value.ToString();                
             }
             else
             {

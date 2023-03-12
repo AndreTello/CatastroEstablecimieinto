@@ -24,22 +24,13 @@ namespace ProyectoGIS.App.Catastro.Puesto.Documento
         protected global::System.Web.UI.WebControls.DropDownList TIPO_DOCUMENTO_PUESTO_ID;
 
         /// <summary>
-        /// Control PUESTO_ID.
+        /// Control DOCUMENTO_PUESTO_NOMBRE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PUESTO_ID;
-
-        /// <summary>
-        /// Control TIPO_DOCUMENTO_PUESTO_NOMBRE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TIPO_DOCUMENTO_PUESTO_NOMBRE;
+        protected global::System.Web.UI.WebControls.TextBox DOCUMENTO_PUESTO_NOMBRE;
 
         /// <summary>
         /// Control UpdatePanel1.
@@ -60,15 +51,6 @@ namespace ProyectoGIS.App.Catastro.Puesto.Documento
         protected global::System.Web.UI.WebControls.Calendar DOCUMENTO_PUESTO_FECHA;
 
         /// <summary>
-        /// Control DOCUMENTO_PUESTO_ARCHIVO.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload DOCUMENTO_PUESTO_ARCHIVO;
-
-        /// <summary>
         /// Control DOCUMENTO_PUESTO_DETALLE.
         /// </summary>
         /// <remarks>
@@ -85,6 +67,15 @@ namespace ProyectoGIS.App.Catastro.Puesto.Documento
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DOCUMENTO_PUESTO_OBSERVACION;
+
+        /// <summary>
+        /// Control DOCUMENTO_PUESTO_ESTADO.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DOCUMENTO_PUESTO_ESTADO;
 
         /// <summary>
         /// Control btnGuardar.

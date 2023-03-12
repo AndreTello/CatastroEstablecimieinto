@@ -15,6 +15,24 @@ namespace ProyectoGIS.App.Catastro.EstatusLegal.EstatusLegal
     {
 
         /// <summary>
+        /// Control PUESTO_CLAVE_CATASTRAL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList PUESTO_CLAVE_CATASTRAL;
+
+        /// <summary>
+        /// Control GIRO_NEGOCIO_NOMBRE.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList GIRO_NEGOCIO_NOMBRE;
+
+        /// <summary>
         /// Control UpdatePanel1.
         /// </summary>
         /// <remarks>
@@ -67,15 +85,6 @@ namespace ProyectoGIS.App.Catastro.EstatusLegal.EstatusLegal
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ESTATUS_LEGAL_CONDICION_USO;
-
-        /// <summary>
-        /// Control ESTATUS_LEGAL_CARTA_ADJUDICACION.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload ESTATUS_LEGAL_CARTA_ADJUDICACION;
 
         /// <summary>
         /// Control UpdatePanel2.

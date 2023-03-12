@@ -2,6 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <label>Clave Catastral</label>
+    <asp:DropDownList CssClass="form-control mb-4 mt-2" runat="server" ID="PUESTO_CLAVE_CATASTRAL" />
+    <label>Giro de Negocio</label>
+    <asp:DropDownList CssClass="form-control mb-4 mt-2" runat="server" ID="GIRO_NEGOCIO_NOMBRE" />
+
     <label>Fecha Ocupación</label>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
@@ -19,8 +24,7 @@
     <asp:TextBox CssClass="form-control mb-4 mt-2" runat="server" ID="ESTATUS_LEGAL_NUMERO_PUESTO_ADJUDICADO" />
     <label>Condición de Uso</label>
     <asp:TextBox CssClass="form-control mb-4 mt-2" runat="server" ID="ESTATUS_LEGAL_CONDICION_USO" />
-    <label>Carta de Adjudicación</label>
-    <asp:FileUpload CssClass="form-control mb-4 mt-2" runat="server" ID="ESTATUS_LEGAL_CARTA_ADJUDICACION" />
+    
     <label>Fecha de Notificación</label>
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>

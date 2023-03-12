@@ -7,42 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using ENT_CE;
 
 namespace DAL_CE_Postgresql.Administracion
 {
     public class Cls_Rol_Permiso_DAL
-    {   
+    {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
-
-        private int ROL_PERMISO_ID;
-        private int ROL_ID;
-        private int PERMISO_ID;
-        private int ROL_PERMISO_ESTADO;
-
-        public int ROL_PERMISO_ID1 { get => ROL_PERMISO_ID; set => ROL_PERMISO_ID = value; }
-        public int ROL_ID1 { get => ROL_ID; set => ROL_ID = value; }
-        public int PERMISO_ID1 { get => PERMISO_ID; set => PERMISO_ID = value; }
-        public int ROL_PERMISO_ESTADO1 { get => ROL_PERMISO_ESTADO; set => ROL_PERMISO_ESTADO = value; }
+        NpgsqlCommand comando = new NpgsqlCommand();
 
         public DataTable Consultar()
         {
+            DataTable tabla = new DataTable();
             NpgsqlConnection con = null;
-            string query = "select rol_permiso_id, rol_nombre, permiso_nombre, rol_permiso_estado " +
-                "from administracion.ad_rol_permiso " +
-                "join administracion.ad_rol " +
-                "on administracion.ad_rol.rol_id = administracion.ad_rol_permiso.rol_id " +
-                "join administracion.ad_permiso " +
-                "on administracion.ad_permiso.permiso_id = administracion.ad_rol_permiso.permiso_id " +
-                "order by rol_permiso_id asc";
-            NpgsqlCommand conector = null;
             NpgsqlDataAdapter datos = null;
-            DataTable tabla = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM administracion.consultar_rol_permiso()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -59,26 +41,16 @@ namespace DAL_CE_Postgresql.Administracion
             return tabla;
         }
 
-        public DataTable ConsultarID(int id)
+        public DataTable ConsultarID(int rp_id)
         {
+            DataTable tabla = new DataTable();
             NpgsqlConnection con = null;
-            string query = "select rol_permiso_id, rol_nombre, permiso_nombre, rol_permiso_estado " +
-                "from administracion.ad_rol_permiso " +
-                "join administracion.ad_rol " +
-                "on administracion.ad_rol.rol_id = administracion.ad_rol_permiso.rol_id " +
-                "join administracion.ad_permiso " +
-                "on administracion.ad_permiso.permiso_id = administracion.ad_rol_permiso.permiso_id " +
-                "where rol_permiso_id = " + id + " " +
-                "order by rol_permiso_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
-            DataTable tabla = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM administracion.consultar_rol_permisoid(@rp_id)", con);
+                comando.Parameters.AddWithValue("@rp_id", rp_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -94,48 +66,20 @@ namespace DAL_CE_Postgresql.Administracion
             }
             return tabla;
         }
-
-        /*public DataTable Rol_Permiso()
-        {
-            NpgsqlConnection con = null;
-            string query = "select familiar_id, familiar_nombres administracion.ad_rol_permiso order by familiar_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
-            DataTable tabla = null;
-            try
-            {
-                con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
-                datos.Fill(tabla);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
-            }
-            finally
-            {
-                if (con != null)
-                {
-                    con.Close();
-                }
-            }
-            return tabla;
-        }*/
-
 
         public void Insertar(int rol, int permiso, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into administracion.ad_rol_permiso (rol_id, permiso_id, rol_permiso_estado) " +
-                "values (" + rol + "," + permiso + "," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "administracion.insertar_rol_permiso";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("r_id", rol);
+                comando.Parameters.AddWithValue("p_id", permiso);
+                comando.Parameters.AddWithValue("rp_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -150,19 +94,19 @@ namespace DAL_CE_Postgresql.Administracion
             }
         }
 
-        public void Editar(int rol, int permiso, int estado, int id)
+        public void Editar(int id, int rol, int permiso, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "update administracion.ad_rol_permiso set " +
-                "rol_id = " + rol + ", " +
-                "permiso_id = " + permiso + ", " +
-                "rol_permiso_estado = " + estado +
-                " where rol_permiso_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("administracion.editar_rol_permiso", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("rp_id", id);
+                comando.Parameters.AddWithValue("r_id", rol);
+                comando.Parameters.AddWithValue("p_id", permiso);
+                comando.Parameters.AddWithValue("rp_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -183,9 +127,10 @@ namespace DAL_CE_Postgresql.Administracion
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from administracion.ad_rol_permiso where rol_permiso_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("administracion.eliminar_rol_permiso", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("rp_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

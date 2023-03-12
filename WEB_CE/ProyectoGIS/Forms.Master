@@ -9,20 +9,16 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <style>
         body{
             text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
             background: url("/publics/imgs/quito.jpg") no-repeat center center fixed;
             background-size: cover;
+            min-width:500px;
         }
+
     </style>
 
 </head>
@@ -49,8 +45,8 @@
         </asp:ScriptManager>
         <div class="text-dark">
             
-            <div class ="p-xl-5  bg-light rounded-5 shadow-lg">
-                <div class ="">
+            <div class ="p-5 bg-light rounded-5 shadow-lg">
+                <div >
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     
                     </asp:ContentPlaceHolder>
@@ -70,6 +66,7 @@
                 return false;
             return true;
         }
+
     </script>
 
 

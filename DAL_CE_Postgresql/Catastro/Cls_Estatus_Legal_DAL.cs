@@ -19,7 +19,7 @@ namespace DAL_CE_Postgresql.Catastro
         public DataTable Consultar()
         {
             NpgsqlConnection con = null;
-            string query = "select estatus_legal_id, puesto_clave_catastral, giro_negocio_nombre, estatus_legal_fecha_ocupacion, estatus_legal_historial, estatus_legal_estado_adjudicado, estatus_legal_numero_puesto_adjudicado, estatus_legal_condicion_uso, estatus_legal_notificacion, estatus_legal_fecha_resolucion_notificacion, estatus_legal_convenio_nombre, estatus_legal_convenio_numero, estatus_legal_convenio_fecha, estatus_legal_condicion, estatus_legal_cambio_giro, estatus_legal_numero_oficio_cambio_giro, estatus_legal_fecha_cambio_giro, estatus_legal_sanciones, estatus_legal_numero_resolucion_sancion, estatus_legal_fecha_resolucion_sancion, estatus_legal_estado " +
+            string query = "select estatus_legal_id, puesto_clave_catastral, giro_negocio_nombre, estatus_legal_fecha_ocupacion, estatus_legal_historial, estatus_legal_estado_adjudicado, estatus_legal_numero_puesto_adjudicado, estatus_legal_condicion_uso, estatus_fecha_notificacion, estatus_legal_fecha_resolucion_notificacion, estatus_legal_convenio_nombre, estatus_legal_convenio_numero, estatus_legal_convenio_fecha, estatus_legal_condicion, estatus_legal_cambio_giro, estatus_legal_numero_oficio_cambio_giro, estatus_legal_fecha_cambio_giro, estatus_legal_sanciones, estatus_legal_numero_resolucion_sancion, estatus_legal_fecha_resolucion_sancion, estatus_legal_estado " +
                 "from catastroestablecimiento.cm_estatus_legal " +
                 "join catastroestablecimiento.cm_puesto " +
                 "on catastroestablecimiento.cm_puesto.puesto_id = catastroestablecimiento.cm_estatus_legal.puesto_id " +

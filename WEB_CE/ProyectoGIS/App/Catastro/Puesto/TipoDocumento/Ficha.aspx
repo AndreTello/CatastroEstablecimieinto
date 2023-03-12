@@ -2,21 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <table class="table table-sm table-striped table-hover table-bordered table-dark text-center">
-                <thead>
-                    <tr>
-                        <th scope="row">Id</th>
-                        
-                        <th>Nombre de Tipo de Documento del Puesto</th>
-                        <th>Estado</th>
-
-                        <th colspan="2">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="datos">
-
-                </tbody>
-            </table>
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
+                <Columns>
+                    <asp:BoundField DataField="tipo_documento_puesto_nombre" HeaderText="NOMBRE DE TIPO DE DOCUMENTO DEL PUESTO" SortExpression="NOMBRE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("tipo_documento_puesto_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="ACCIONES">
+                        <ItemTemplate>
+                            <a href="./Add?id=<%# Eval("tipo_documento_puesto_id") %>" class="btn btn-primary">Editar</a>
+                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("tipo_documento_puesto_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                
+            </asp:GridView>
         </div>
          <div class="text-end pt-4">
             <a class="btn btn-success end text-center" href="./Add"

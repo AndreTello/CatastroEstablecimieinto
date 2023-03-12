@@ -24,6 +24,15 @@ namespace ProyectoGIS
         protected global::System.Web.UI.HtmlControls.HtmlForm general;
 
         /// <summary>
+        /// Control rol.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label rol;
+
+        /// <summary>
         /// Control adminLink.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace ProyectoGIS
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink modLink;
-
-        /// <summary>
-        /// Control rol.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label rol;
 
         /// <summary>
         /// Control MainContent.

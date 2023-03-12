@@ -1,7 +1,11 @@
-﻿.vertical-menu {
-    width: 200px;
-    
+﻿.vertical-menu{
+    width: 220px;
+    overflow:scroll;
 }
+    .vertical-menu::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
 
 .vertical-menu ul {
     list-style: none;
@@ -47,15 +51,18 @@
     transition: max-height 0.1s ease-in-out;
     top: 0;
     transform: translateY(-20px);
-    transform: translateX(20px);
+    transform: translateX(10px);
 }
 
 .vertical-menu .sub-menu-open ~ li {
-    transform: translateY(60px);
+    transform: translateY(40px);
     transition: transform 2s ease-out;
 }
 
 
 .backQ {
-    background-color: #020659;
+    background-color: #0656BF;
+}
+.backQP {
+    background-color: #0D6BE7;
 }

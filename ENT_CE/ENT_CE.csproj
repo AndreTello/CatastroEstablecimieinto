@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administracion\Cls_Permiso_ENT.cs" />
+    <Compile Include="Administracion\Cls_Rol_ENT.cs" />
+    <Compile Include="Administracion\Cls_Rol_Permiso_ENT.cs" />
+    <Compile Include="Administracion\Cls_Usuario_ENT.cs" />
     <Compile Include="Catastro\Cls_Administracion_Zonal_ENT.cs" />
     <Compile Include="Catastro\Cls_Asociacion_ENT.cs" />
     <Compile Include="Catastro\Cls_Ayudante_ENT.cs" />
@@ -64,6 +67,21 @@
     <Compile Include="Catastro\Cls_Manzana_ENT.cs" />
     <Compile Include="Catastro\Cls_Nacionalidad_ENT.cs" />
     <Compile Include="Catastro\Cls_Nivel_Educacion_ENT.cs" />
+    <Compile Include="Catastro\Cls_Parroquia_ENT.cs" />
+    <Compile Include="Catastro\Cls_Piso_ENT.cs" />
+    <Compile Include="Catastro\Cls_Provincia_ENT.cs" />
+    <Compile Include="Catastro\Cls_Puesto_ENT.cs" />
+    <Compile Include="Catastro\Cls_Reemplazo_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipos_Producto_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Area_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Documento_Comerciante_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Documento_Puesto_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Establecimiento_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Familiar_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Identificacion_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Intervencion_Tecnica_ENT.cs" />
+    <Compile Include="Catastro\Cls_Tipo_Ocupante_ENT.cs" />
+    <Compile Include="Catastro\Cls_Zona_ENT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

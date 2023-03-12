@@ -38,9 +38,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(provincia, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Editar_Canton(int provincia, string codigo, string nombre, string observacion, string estado, string id)
+        public void Editar_Canton(string id, int provincia, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Editar(provincia, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), provincia, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Canton(string id)

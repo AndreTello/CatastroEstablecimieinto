@@ -309,5 +309,10 @@ namespace Prueba_Postgres
             frm_Estatus_Legal.Show();
             this.Hide();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

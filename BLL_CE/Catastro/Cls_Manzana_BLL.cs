@@ -39,9 +39,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(parroquia, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Editar_Manzana(int parroquia, string codigo, string nombre, string observacion, string estado, string id)
+        public void Editar_Manzana(string id, int parroquia, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Editar(parroquia, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), parroquia, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Manzana(string id)

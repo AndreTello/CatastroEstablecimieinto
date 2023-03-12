@@ -11,6 +11,24 @@ namespace ProyectoGIS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario_login"] != null)
+            {
+                rol.Text = Session["usuario_login"] + " | " + Session["rol"].ToString();
+
+            }
+            else
+            {
+                Response.Redirect("/");
+            }
+            if (Session["rol"].ToString() == "ADMIN")
+            {
+                adminLink.Visible = true;
+                modLink.Visible = true;
+            }
+            if (Session["rol"].ToString() == "MOD")
+            {
+                modLink.Visible = true;
+            }
 
         }
         protected void btnLogout_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace DAL_CE_Postgresql
     public class Cls_Conexion_Postgresql_DAL
     {
         NpgsqlConnection con = new NpgsqlConnection();
+
         static string servidor = "localhost";
         static string bd = "poscatastroestablecimiento";
         static string usuario = "postgres";

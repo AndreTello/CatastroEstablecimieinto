@@ -12,16 +12,17 @@
     <label>Nombre del Cantòn </label>
     <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="50" runat="server" ID="CANTON_NOMBRE" />
     <label>Estado </label>
-    <asp:DropDownList CssClass="form-select mb-3 mt-2"  runat="server" ID="CANTON_ESTADO" />
+    <asp:DropDownList CssClass="form-select" runat="server" ID="CANTON_ESTADO"  >
+        <asp:ListItem Text="-- Selecciona un Estado --" Value="" />
+        <asp:ListItem Value="1">Activo</asp:ListItem>
+        <asp:ListItem Value="0">Inactivo</asp:ListItem>
+    </asp:DropDownList>
     <label>Observaciòn</label>
-
     <asp:TextBox CssClass="form-control flex-wrap mb-3 mt-2" TextMode="MultiLine" Rows="4"  runat="server" ID="CANTON_OBSERVACION" />
-    <asp:UpdatePanel runat="server">
-         <ContentTemplate>
-        <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar"  Text="Guardar" OnClick="btnGuardar_Click"/>
-        <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
-             </ContentTemplate>
-    </asp:UpdatePanel>
+    
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar"  Text="Guardar" OnClick="btnGuardar_Click"/>
+    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+             
     </div>
 
 </asp:Content>

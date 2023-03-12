@@ -2,23 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <table class="table table-sm table-striped table-hover table-bordered table-dark text-center">
-                <thead>
-                    <tr>
-                        <th scope="row">Id</th>
-                        <th>Tipo de Producto</th>
-                        <th>Nombre</th>
-                        <th>Sub Giros</th>
-                        <th>Abasteciomiento</th>
-                        <th colspan="3">Observación</th>
-                        <th>Estado</th>
-                        <th colspan="2">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="datos">
-
-                </tbody>
-            </table>
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+                <Columns>
+                    <asp:BoundField DataField="giro_negocio_id" HeaderText="Id" />
+                    <asp:BoundField DataField="tipo_producto_nombre" HeaderText="Tipo de Producto" />
+                    <asp:BoundField DataField="giro_negocio_nombre" HeaderText="Nombre" />
+                    <asp:BoundField DataField="giro_negocio_subgiro" HeaderText="Sub Giros" />
+                    <asp:BoundField DataField="giro_negocio_abastecimiento" HeaderText="Abastecimiento" />
+                    <asp:BoundField DataField="giro_negocio_observacion" HeaderText="Observación" />
+                    <asp:BoundField DataField="giro_negocio_estado" HeaderText="Estado" />
+                    <asp:TemplateField HeaderText="Acciones">
+                        <ItemTemplate>
+                            <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("giro_negocio_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+                
         </div>
          <div class="text-end pt-4">
             <a class="btn btn-success end text-center" href="./Add"

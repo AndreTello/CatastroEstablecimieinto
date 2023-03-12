@@ -15,13 +15,13 @@ namespace ProyectoGIS.App.Catastro.Puesto.TipoDocumento
     {
 
         /// <summary>
-        /// Control TIPO_DOCUMENTO_PUESTO_ID.
+        /// Control TIPO_DOCUMENTO_PUESTO_NOMBRE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TIPO_DOCUMENTO_PUESTO_ID;
+        protected global::System.Web.UI.WebControls.TextBox TIPO_DOCUMENTO_PUESTO_NOMBRE;
 
         /// <summary>
         /// Control TIPO_DOCUMENTO_PUESTO_ESTADO.

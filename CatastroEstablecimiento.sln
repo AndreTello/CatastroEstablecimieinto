@@ -14,8 +14,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba_Postgres", "Prueba_Postgres\Prueba_Postgres.csproj", "{D6E60C13-4A74-44F5-8E4C-210FA04CE6A6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REST_CE", "REST_CE\REST_CE.csproj", "{539AA441-68F4-433A-B970-553577C318AC}"
+<<<<<<< HEAD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENT_CE", "ENT_CE\ENT_CE.csproj", "{EDDC1E20-6C62-4FAE-9A68-7E349816A1AE}"
+=======
+>>>>>>> d635d851799327863d3db65b79ccd96313b14351
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

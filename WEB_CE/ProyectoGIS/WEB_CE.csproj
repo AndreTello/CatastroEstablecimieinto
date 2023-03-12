@@ -936,14 +936,12 @@
     </Compile>
     <Compile Include="App\GestionRoles.aspx.cs">
       <DependentUpon>GestionRoles.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App\GestionRoles.aspx.designer.cs">
       <DependentUpon>GestionRoles.aspx</DependentUpon>
     </Compile>
     <Compile Include="App\GestionUsuario.aspx.cs">
       <DependentUpon>GestionUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App\GestionUsuario.aspx.designer.cs">
       <DependentUpon>GestionUsuario.aspx</DependentUpon>

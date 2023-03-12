@@ -33,13 +33,13 @@ namespace ProyectoGIS.App.Catastro.TipoIntervencion
         protected global::System.Web.UI.WebControls.TextBox TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_DETALLE;
 
         /// <summary>
-        /// Control TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.
+        /// Control TIPO_INTERVENCION_TECNICA_ESTADO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO;
+        protected global::System.Web.UI.WebControls.DropDownList TIPO_INTERVENCION_TECNICA_ESTADO;
 
         /// <summary>
         /// Control btnGuardar.

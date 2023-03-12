@@ -83,12 +83,12 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["manzana_id"].Value.ToString();
                 cmbparroquia.Text = datos.CurrentRow.Cells["parroquia_nombre"].Value.ToString();
                 txtcodigo.Text = datos.CurrentRow.Cells["manzana_codigo"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["manzana_nombre"].Value.ToString();
                 txtobservacion.Text = datos.CurrentRow.Cells["manzana_observacion"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["manzana_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["manzana_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["manzana_estado"].Value.ToString();                
             }
             else
             {
@@ -123,7 +123,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Manzana(Convert.ToInt32(cmbparroquia.SelectedValue), txtcodigo.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text, id);
+                objbll.Editar_Manzana(id, Convert.ToInt32(cmbparroquia.SelectedValue), txtcodigo.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;

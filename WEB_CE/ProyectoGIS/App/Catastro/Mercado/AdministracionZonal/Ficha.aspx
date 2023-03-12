@@ -2,22 +2,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="administracion_zonal_id" HeaderText="Id" />
-                    <asp:BoundField DataField="administracion_zonal_nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="administracion_zonal_detalle" HeaderText="Detalle" />
-                    <asp:BoundField DataField="administracion_zonal_telefono" HeaderText="Telefono" />
-                    <asp:BoundField DataField="administracion_zonal_celular" HeaderText="Celular" />
-                    <asp:BoundField DataField="administracion_zonal_mail" HeaderText="Mail" />
-                    <asp:BoundField DataField="administracion_zonal_pagina_web" HeaderText="Pagina Web" />
-                    <asp:BoundField DataField="administracion_zonal_representante" HeaderText="Representante" />
-                    <asp:BoundField DataField="administracion_zonal_estado" HeaderText="Estado" />
-                    <asp:TemplateField HeaderText="Acciones">
-                        <ItemTemplate>
-                             <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
-                            <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("administracion_zonal_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
+                    <asp:BoundField DataField="administracion_zonal_nombre" HeaderText="NOMBRE" />
+                    <asp:BoundField DataField="administracion_zonal_detalle" HeaderText="DETALLE" />
+                    <asp:BoundField DataField="administracion_zonal_telefono" HeaderText="TELÉFONO" />
+                    <asp:BoundField DataField="administracion_zonal_celular" HeaderText="CELULAR" />
+                    <asp:BoundField DataField="administracion_zonal_mail" HeaderText="MAIL" />
+                    <asp:BoundField DataField="administracion_zonal_pagina_web" HeaderText="PÁGINA WEB" />
+                    <asp:BoundField DataField="administracion_zonal_representante" HeaderText="REPRESENTANTE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("administracion_zonal_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
                         </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="ACCIONES">
+                        <ItemTemplate>
+                            <div class=" d-flex ">
+                                <div class="col mx-2">
+                                    <a href="./Add?id=<%# Eval("administracion_zonal_id") %>" class="btn btn-primary">Editar</a>
+                                </div>
+                                <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("administracion_zonal_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />    
+                            </div>
+                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
                 </asp:GridView>

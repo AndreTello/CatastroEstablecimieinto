@@ -2,27 +2,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <table class="table table-sm table-striped table-hover table-bordered table-dark text-center">
-                <thead>
-                    <tr>
-                        <th scope="row">Id</th>
-                        
-                        <th>Tipo de Documento del Puesto</th>
-                        <th>Puesto</th>
-                        <th>Nombre del Documento del Puesto</th>
-                        <th>Fecha del Documento del Puesto</th>
-                        <th>Archivo del Documento del Puesto</th>
-                        <th>Detalle del Documento del Puesto</th>
-                        <th colspan="3">Observación del Documento del Puesto</th>
-                        <th>Estado</th>
-
-                        <th colspan="2">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="datos">
-
-                </tbody>
-            </table>
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+                <Columns>
+                    <asp:BoundField DataField="documento_puesto_id" HeaderText="Id" />
+                    <asp:BoundField DataField="TipoDocumentoPuesto" HeaderText="Tipo de Documento del Puesto" />
+                    <asp:BoundField DataField="tipo_documento_puesto_id" HeaderText="Puesto" />
+                    <asp:BoundField DataField="puesto_id" HeaderText="Nombre del Documento del Puesto" />
+                    <asp:BoundField DataField="documento_puesto_nombre" HeaderText="Fecha del Documento del Puesto" />
+                    <asp:BoundField DataField="documento_puesto_fecha" HeaderText="Archivo del Documento del Puesto" />
+                    <asp:BoundField DataField="documento_puesto_detalle" HeaderText="Detalle del Documento del Puesto" />
+                    <asp:BoundField DataField="documento_puesto_observacion" HeaderText="Observación del Documento del Puesto" />
+                    <asp:BoundField DataField="documento_puesto_estado" HeaderText="Estado" />
+                    <asp:TemplateField HeaderText="Acciones">
+                        <ItemTemplate>
+                             <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" CommandArgument='<%# Eval("documento_puesto_id") %>' />
+                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("documento_puesto_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
         </div>
          <div class="text-end pt-4">
             <a class="btn btn-success end text-center" href="./Add"

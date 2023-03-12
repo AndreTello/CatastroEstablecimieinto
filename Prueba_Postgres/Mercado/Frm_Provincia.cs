@@ -64,7 +64,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Provincia(txtcodigo.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text, id);
+                objbll.Editar_Provincia(id, txtcodigo.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -91,11 +91,11 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["provincia_id"].Value.ToString();
                 txtcodigo.Text = datos.CurrentRow.Cells["provincia_codigo"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["provincia_nombre"].Value.ToString();
                 txtobservacion.Text = datos.CurrentRow.Cells["provincia_observacion"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["provincia_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["provincia_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["provincia_estado"].Value.ToString();                
             }
             else
             {

@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using BLL_CE.Administracion;
 namespace ProyectoGIS
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        Cls_Usuario_BLL user = new Cls_Usuario_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usuario_login"] != null)
@@ -19,6 +21,34 @@ namespace ProyectoGIS
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            DataTable dt = user.Consultar_Usuario();
+            string cuenta = string.Empty;
+            DataRow[] finded = dt.Select($"USUARIO_LOGIN = '{usuario_login.Text}'");
+            if (finded.Length > 0)
+            {
+                string usuario = finded[0].Field<string>("USUARIO_LOGIN");
+                string pass=  finded[0].Field<string>("USUARIO_CLAVE");
+                string rol = finded[0].Field<string>("ROL_NOMBRE");
+                if (BCrypt.Net.BCrypt.Verify(usuario_clave.Text, pass))
+                {
+                    Session["usuario_login"] = usuario_login.Text;
+                    Session["rol"] = rol;
+                    Response.Redirect("./App/Home.aspx");
+                }
+                else
+                {
+                    errorLabel.Visible = true;
+                    //Mostrar una pantalla de error 
+                    errorLabel.Text = "Usuario / Contraseña invalidos.";
+                }
+
+            }
+            else 
+            {
+                errorLabel.Visible = true;
+                //Mostrar una pantalla de error 
+                errorLabel.Text = "No existe.";
+            }
             if (usuario_login.Text == "admin" && usuario_clave.Text == "admin")
             {
                 Session["usuario_login"] = usuario_login.Text;

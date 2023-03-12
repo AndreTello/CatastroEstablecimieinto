@@ -3,12 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <label>Nombre de la Identificación</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="TIPO_IDENTIFICACION_NOMBRE" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="50" runat="server" ID="TIPO_IDENTIFICACION_NOMBRE" />
     <label>Detalle</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="TIPO_IDENTIFICACION_DETALLE" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" ID="TIPO_IDENTIFICACION_DETALLE" />
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="TIPO_IDENTIFICACION_ESTADO" />
-    
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
+    <asp:DropDownList CssClass="form-select" runat="server" ID="TIPO_IDENTIFICACION_ESTADO"  >
+        <asp:ListItem Text="-- Selecciona un Estado --" Value="" />
+        <asp:ListItem Value="1">Activo</asp:ListItem>
+        <asp:ListItem Value="0">Inactivo</asp:ListItem>
+    </asp:DropDownList>
+   
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
     <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+         
 </asp:Content>

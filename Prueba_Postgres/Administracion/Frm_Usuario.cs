@@ -77,7 +77,7 @@ namespace Prueba_Postgres.Administracion
             }
             if (editar == true)
             {
-                objbll.Editar_Usuario(Convert.ToInt32(cmbrol.SelectedValue), txtlogin.Text, txtclave.Text, txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtemail.Text, txtdireccion.Text, txttelefono.Text, cmbestado.Text, id);
+                objbll.Editar_Usuario(id, Convert.ToInt32(cmbrol.SelectedValue), txtlogin.Text, txtclave.Text, txtcedula.Text, txtapellidos.Text, txtnombres.Text, txtemail.Text, txtdireccion.Text, txttelefono.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -90,6 +90,7 @@ namespace Prueba_Postgres.Administracion
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["usuario_id"].Value.ToString();
                 cmbrol.Text = datos.CurrentRow.Cells["rol_nombre"].Value.ToString();
                 txtlogin.Text = datos.CurrentRow.Cells["usuario_login"].Value.ToString();
                 txtclave.Text = datos.CurrentRow.Cells["usuario_clave"].Value.ToString();
@@ -100,7 +101,6 @@ namespace Prueba_Postgres.Administracion
                 txtdireccion.Text = datos.CurrentRow.Cells["usuario_direccion"].Value.ToString();
                 txttelefono.Text = datos.CurrentRow.Cells["usuario_telefono"].Value.ToString();
                 cmbestado.Text = datos.CurrentRow.Cells["usuario_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["usuario_id"].Value.ToString();
             }
             else
             {

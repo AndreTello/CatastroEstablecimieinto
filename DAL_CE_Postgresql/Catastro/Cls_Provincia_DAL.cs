@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ENT_CE;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DAL_CE_Postgresql.Catastro
 {
@@ -17,25 +19,22 @@ namespace DAL_CE_Postgresql.Catastro
 
         public DataTable Consultar()
         {
-            NpgsqlConnection con = null;
-            string query = "select * from catastroestablecimiento.cm_provincia order by provincia_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
-                con = conexion.EstablecerConexion();              
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                con = conexion.EstablecerConexion();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.consultar_provincia()", con);
                 datos.Fill(tabla);
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
-                if(con != null)
+                if (con != null)
                 {
                     con.Close();
                 }
@@ -43,23 +42,21 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
-        public DataTable ConsultarID(int id)
+        public DataTable ConsultarID(int p_id)
         {
-            NpgsqlConnection con = null;
-            string query = "select * from catastroestablecimiento.cm_provincia where provincia_id = " + id + " order by provincia_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM catastroestablecimiento.consultar_provinciaid(@p_id)", con);
+                comando.Parameters.AddWithValue("@p_id", p_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
             {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -73,21 +70,18 @@ namespace DAL_CE_Postgresql.Catastro
 
         public DataTable Provincia()
         {
-            NpgsqlConnection con = null;
-            string query = "select provincia_id, provincia_nombre from catastroestablecimiento.cm_provincia order by provincia_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
-                con = conexion.EstablecerConexion();                
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                con = conexion.EstablecerConexion();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.provincia()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
             {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -105,7 +99,7 @@ namespace DAL_CE_Postgresql.Catastro
             try
             {
                 comando.Connection = conexion.EstablecerConexion();
-                comando.CommandText = "CATASTROESTABLECIMIENTO.insertar_provincia";
+                comando.CommandText = "catastroestablecimiento.insertar_provincia";
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("p_codigo", codigo);
                 comando.Parameters.AddWithValue("p_nombre", nombre);
@@ -116,7 +110,7 @@ namespace DAL_CE_Postgresql.Catastro
             }
             catch (Exception ex)
             {
-                // manejar excepciones
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -128,20 +122,24 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
 
-        public void Editar(string codigo, string nombre, string observacion, int estado, int id)
+        public void Editar(int id, string codigo, string nombre, string observacion, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "update catastroestablecimiento.cm_provincia set provincia_codigo = '" + codigo + "', " +
-                "provincia_nombre = '" + nombre + "', provincia_observacion = '" + observacion + "', provincia_estado = " + estado +
-                " where provincia_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.editar_provincia", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("p_id", id);
+                comando.Parameters.AddWithValue("p_codigo", codigo);
+                comando.Parameters.AddWithValue("p_nombre", nombre);
+                comando.Parameters.AddWithValue("p_observacion", observacion);
+                comando.Parameters.AddWithValue("p_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {
@@ -159,12 +157,14 @@ namespace DAL_CE_Postgresql.Catastro
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from catastroestablecimiento.cm_provincia where provincia_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery(); 
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.eliminar_provincia", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("p_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
+                MessageBox.Show("HA OCURRIDO UN ERROR:  " + ex.ToString());
             }
             finally
             {

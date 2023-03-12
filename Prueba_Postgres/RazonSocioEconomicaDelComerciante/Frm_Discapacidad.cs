@@ -73,11 +73,26 @@ namespace Prueba_Postgres.RazonSocioEconomicaDelComerciante
             }
             if (editar == true)
             {
+
+
+               /* CultureInfo originalCulture = Thread.CurrentThread.CurrentCulture;
+
+                CultureInfo englishCulture = new CultureInfo("en-US");
+
+                // Establecer temporalmente la propiedad ListSeparator en la cultura inglesa
+                Thread.CurrentThread.CurrentCulture = englishCulture;
+                englishCulture.NumberFormat.NumberDecimalSeparator = ".";
+                englishCulture.NumberFormat.NumberGroupSeparator = ",";
+
+                objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, decimal.Parse(txtporcentaje.Text, englishCulture), cmbestado.Text, id);
+
+
                 objbll.Editar_Discapacidad(txtcarnet.Text, txtnombre.Text, cmbestado.Text, id);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
                 Limpiar();
+               */
             }
         }
 

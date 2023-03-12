@@ -7,38 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using ENT_CE;
 
 namespace DAL_CE_Postgresql.Administracion
 {
     public class Cls_Rol_DAL
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
-
-        private int ROL_ID;
-        private string ROL_NOMBRE;
-        private string ROL_DETALLE;
-        private int ROL_ESTADO;
-
-        public int ROL_ID1 { get => ROL_ID; set => ROL_ID = value; }
-        public string ROL_NOMBRE1 { get => ROL_NOMBRE; set => ROL_NOMBRE = value; }
-        public string ROL_DETALLE1 { get => ROL_DETALLE; set => ROL_DETALLE = value; }
-        public int ROL_ESTADO1 { get => ROL_ESTADO; set => ROL_ESTADO = value; }
+        NpgsqlCommand comando = new NpgsqlCommand();
 
         public DataTable Consultar()
         {
-            NpgsqlConnection con = null;
-            string query = "select rol_id, rol_nombre, rol_detalle, rol_estado " +
-                "from administracion.ad_rol " +
-                "order by rol_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM administracion.consultar_rol()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -55,22 +41,16 @@ namespace DAL_CE_Postgresql.Administracion
             return tabla;
         }
 
-        public DataTable ConsultarID(int id)
+        public DataTable ConsultarID(int r_id)
         {
-            NpgsqlConnection con = null;
-            string query = "select rol_id, rol_nombre, rol_detalle, rol_estado " +
-                "from administracion.ad_rol " +
-                "where rol_id = " + id + " " +
-                "order by rol_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM administracion.consultar_rolid(@r_id)", con);
+                comando.Parameters.AddWithValue("@r_id", r_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -89,17 +69,13 @@ namespace DAL_CE_Postgresql.Administracion
 
         public DataTable Rol()
         {
-            NpgsqlConnection con = null;
-            string query = "select rol_id, rol_nombre from administracion.ad_rol order by rol_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM administracion.rol()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -121,12 +97,14 @@ namespace DAL_CE_Postgresql.Administracion
             NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into administracion.ad_rol (rol_nombre, rol_detalle, rol_estado) " +
-                "values ('" + nombre + "','" + detalle + "'," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "administracion.insertar_rol";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("r_nombre", nombre);
+                comando.Parameters.AddWithValue("r_detalle", detalle);
+                comando.Parameters.AddWithValue("r_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -142,19 +120,19 @@ namespace DAL_CE_Postgresql.Administracion
         }
 
 
-        public void Editar(string nombre, string detalle, int estado, int id)
+        public void Editar(int id, string nombre, string detalle, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "update administracion.ad_rol set " +
-                "rol_nombre = '" + nombre + "', " +
-                "rol_detalle = '" + detalle + "', " +
-                "rol_estado = " + estado +
-                " where rol_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("administracion.editar_rol", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("r_id", id);
+                comando.Parameters.AddWithValue("r_nombre", nombre);
+                comando.Parameters.AddWithValue("r_detalle", detalle);
+                comando.Parameters.AddWithValue("r_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -167,7 +145,6 @@ namespace DAL_CE_Postgresql.Administracion
                     con.Close();
                 }
             }
-
         }
 
         public void Eliminar(int id)
@@ -176,9 +153,10 @@ namespace DAL_CE_Postgresql.Administracion
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from administracion.ad_rol where rol_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("administracion.eliminar_rol", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("r_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

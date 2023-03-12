@@ -150,5 +150,34 @@ C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Adm
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Puesto.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento_Puesto.resources
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.EstatusSocial.Frm_Estatus_Legal.resources
+<<<<<<< HEAD
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\ENT_CE.dll
 C:\Diomio\CatastroEstablecimieinto\Prueba_Postgres\bin\Debug\ENT_CE.pdb
+=======
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Administracion.Frm_Permiso.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Administracion.Frm_Rol.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Administracion.Frm_Rol_Permiso.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Administracion.Frm_Usuario.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.EstatusSocial.Frm_Estatus_Legal.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.GiroNegocio.Frm_Giro_Negocio.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.GiroNegocio.Frm_Tipo_Producto.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Ayudante.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Bloque.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento_Comerciante.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Documento_Puesto.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Familiar.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Piso.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Puesto.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Reemplazo.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Area.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Doc_Comerciante.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Doc_Puesto.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.Puesto.Frm_Tipo_Familiar.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Discapacidad.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Educacion.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_EstadoCivil.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Etnia.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Genero.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Nacionalidad.resources
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\Prueba_Postgres\obj\Debug\Prueba_Postgres.RazonSocioEconomicaDelComerciante.Frm_Razon_Social.resources
+>>>>>>> d635d851799327863d3db65b79ccd96313b14351

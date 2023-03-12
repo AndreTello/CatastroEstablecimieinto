@@ -38,9 +38,9 @@ namespace BLL_CE.Administracion
             objdll.Insertar(rol, login, clave, cedula, apellidos, nombres, email, direccion, telefono, Convert.ToInt32(estado));
         }
 
-        public void Editar_Usuario(int rol, string login, string clave, string cedula, string apellidos, string nombres, string email, string direccion, string telefono, string estado, string id)
+        public void Editar_Usuario(string id, int rol, string login, string clave, string cedula, string apellidos, string nombres, string email, string direccion, string telefono, string estado)
         {
-            objdll.Editar(rol, login, clave, cedula, apellidos, nombres, email, direccion, telefono, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), rol, login, clave, cedula, apellidos, nombres, email, direccion, telefono, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Usuario(string id)

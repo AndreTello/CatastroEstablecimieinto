@@ -2,16 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-        <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+        <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
              <Columns>
-                <asp:BoundField DataField="provincia_id" HeaderText="Id" />
-                 <asp:BoundField DataField="provincia_codigo" HeaderText="Codigo Provincia" />
-                 <asp:BoundField DataField="provincia_nombre" HeaderText="Nombre" />
-                 <asp:BoundField DataField="provincia_estado" HeaderText="Estado" />
-                 <asp:BoundField DataField="provincia_observacion" HeaderText="Observaciones" />
-                 <asp:TemplateField HeaderText="Acciones">
+                
+                 <asp:BoundField DataField="provincia_codigo" HeaderText="CÓDIGO PROVINCIA" />
+                 <asp:BoundField DataField="provincia_nombre" HeaderText="NOMBRE" />
+                 <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("PROVINCIA_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                 <asp:TemplateField HeaderText="OBSERVACIONES">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" CommandArgument='<%# Eval("provincia_id") %>' />
+                        <asp:Label ID="lblObservacion" Text='<%# Eval("PROVINCIA_OBSERVACION").ToString() == "" ? "SIN OBSERVACIONES" : Eval("PROVINCIA_OBSERVACION").ToString() %>' runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                 <asp:TemplateField HeaderText="ACCIONES">
+                    <ItemTemplate>
+                            <a href="./Add?id=<%# Eval("provincia_id") %>" class="btn btn-primary">Editar</a>
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("provincia_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar esta provincia?');" OnClick="btnEliminar_Click" />
                     </ItemTemplate>
                 </asp:TemplateField>

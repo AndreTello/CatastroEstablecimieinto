@@ -25,23 +25,16 @@ namespace BLL_CE.Administracion
             DataTable tabla = new DataTable();
             tabla = objdll.ConsultarID(Convert.ToInt32(id));
             return tabla;
-        }
-
-        /*public DataTable Listar_Familiar()
-        {
-            DataTable tabla = new DataTable();
-            tabla = objdll.Familiar();
-            return tabla;
-        }*/
+        }        
 
         public void Insertar_Rol_Permiso(int rol, int permiso, string estado)
         {
             objdll.Insertar(rol, permiso, Convert.ToInt32(estado));
         }
 
-        public void Editar_Rol_Permiso(int rol, int permiso, string estado, string id)
+        public void Editar_Rol_Permiso(string id, int rol, int permiso, string estado)
         {
-            objdll.Editar(rol, permiso, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), rol, permiso, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Rol_Permiso(string id)

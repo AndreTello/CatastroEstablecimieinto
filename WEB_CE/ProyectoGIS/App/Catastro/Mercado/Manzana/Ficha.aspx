@@ -2,17 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="manzana_id" HeaderText="Id" />
-                    <asp:BoundField DataField="parroquia_nombre" HeaderText="Parroquia" />
-                    <asp:BoundField DataField="manzana_codigo" HeaderText="Codigo Manzana" />
-                    <asp:BoundField DataField="manzana_nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="manzana_estado" HeaderText="Estado" />
-                    <asp:BoundField DataField="manzana_observacion" HeaderText="Observaciones" />
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:BoundField DataField="parroquia_nombre" HeaderText="PARROQUIA" />
+                    <asp:BoundField DataField="manzana_codigo" HeaderText="CODIGO MANZANA" />
+                    <asp:BoundField DataField="manzana_nombre" HeaderText="NOMBRE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("MANZANA_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="OBSERVACIONES">
                         <ItemTemplate>
-                            <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <asp:Label ID="lblObservacion" Text='<%# Eval("MANZANA_OBSERVACION").ToString() == "" ? "SIN OBSERVACIONES" : Eval("MANZANA_OBSERVACION").ToString() %>' runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="ACCIONES">
+                        <ItemTemplate>
+                            <a href="./Add?id=<%# Eval("manzana_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("manzana_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
                         </ItemTemplate>
                     </asp:TemplateField>

@@ -33,13 +33,13 @@ namespace ProyectoGIS.App.Catastro.RazonSocioEconomicaDelComerciante.Nacionalida
         protected global::System.Web.UI.WebControls.TextBox NACIONALIDAD_NOMBRE;
 
         /// <summary>
-        /// Control NACIONALIDAD_PORCENTAJE.
+        /// Control NACIONALIDAD_DETALLE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NACIONALIDAD_PORCENTAJE;
+        protected global::System.Web.UI.WebControls.TextBox NACIONALIDAD_DETALLE;
 
         /// <summary>
         /// Control NACIONALIDAD_ESTADO.

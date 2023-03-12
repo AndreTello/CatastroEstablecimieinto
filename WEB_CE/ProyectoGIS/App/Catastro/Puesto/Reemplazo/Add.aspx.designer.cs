@@ -60,15 +60,6 @@ namespace ProyectoGIS.App.Catastro.Puesto.Reemplazo
         protected global::System.Web.UI.WebControls.TextBox REEMPLAZO_NUMERO_OFICIO;
 
         /// <summary>
-        /// Control REEMPLAZO_OFICIO_ARCHIVO.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload REEMPLAZO_OFICIO_ARCHIVO;
-
-        /// <summary>
         /// Control UpdatePanel1.
         /// </summary>
         /// <remarks>
@@ -103,6 +94,24 @@ namespace ProyectoGIS.App.Catastro.Puesto.Reemplazo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar REEMPLAZO_FECHA_FIN;
+
+        /// <summary>
+        /// Control REEMPLAZO_ESTADO.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList REEMPLAZO_ESTADO;
+
+        /// <summary>
+        /// Control UpdatePanel3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
 
         /// <summary>
         /// Control btnGuardar.

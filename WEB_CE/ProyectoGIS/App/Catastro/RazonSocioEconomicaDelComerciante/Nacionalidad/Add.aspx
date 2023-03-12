@@ -3,14 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <label>Codigo de la Nacionalidad</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="NACIONALIDAD_CODIGO" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="3" runat="server" ID="NACIONALIDAD_CODIGO" />
     <label>Nombre</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="NACIONALIDAD_NOMBRE" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" MaxLength="100" runat="server" ID="NACIONALIDAD_NOMBRE" />
     <label>Detalle</label>
-    <asp:TextBox CssClass="form-control mt-1" runat="server" ID="NACIONALIDAD_PORCENTAJE" />
+    <asp:TextBox CssClass="form-control mb-3 mt-2" runat="server" ID="NACIONALIDAD_DETALLE" />
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-control mt-1" runat="server" ID="NACIONALIDAD_ESTADO" />
-    
-    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" Text="Guardar"/>
-    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+    <asp:DropDownList CssClass="form-select mb-3 mt-2" runat="server" ID="NACIONALIDAD_ESTADO" />
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+            <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
+            <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>
