@@ -39,9 +39,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(manzana, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
-        public void Editar_Lote(int manzana, string codigo, string nombre, string observacion, string estado, string id)
+        public void Editar_Lote(string id, int manzana, string codigo, string nombre, string observacion, string estado)
         {
-            objdll.Editar(manzana, codigo, nombre, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), manzana, codigo, nombre, observacion, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Lote(string id)

@@ -38,9 +38,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(codigo, nombre, telefono, mail, contacto, observacion, Convert.ToInt32(estado));
         }
 
-        public void Editar_Asociacion(string codigo, string nombre, string telefono, string mail, string contacto, string observacion, string estado, string id)
+        public void Editar_Asociacion(string id, string codigo, string nombre, string telefono, string mail, string contacto, string observacion, string estado)
         {
-            objdll.Editar(codigo, nombre, telefono, mail, contacto, observacion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), codigo, nombre, telefono, mail, contacto, observacion, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Asociacion(string id)

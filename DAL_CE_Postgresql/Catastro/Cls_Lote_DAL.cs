@@ -14,23 +14,17 @@ namespace DAL_CE_Postgresql.Catastro
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
 
+        NpgsqlCommand comando = new NpgsqlCommand();
+
         public DataTable Consultar()
         {
-            NpgsqlConnection con = null;
-            string query = "select lote_id, manzana_nombre, lote_codigo, lote_nombre, lote_observacion, lote_estado " +
-                "from catastroestablecimiento.cm_lote " +
-                "join catastroestablecimiento.cm_manzana " +
-                "on catastroestablecimiento.cm_manzana.manzana_id = catastroestablecimiento.cm_lote.manzana_id " +
-                "order by lote_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.consultar_lote()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -47,22 +41,16 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
-        public DataTable ConsultarID(int id)
+        public DataTable ConsultarID(int l_id)
         {
-            NpgsqlConnection con = null;
-            string query = "select lote_id, manzana_nombre, lote_codigo, lote_nombre, lote_observacion, lote_estado " +
-                "from catastroestablecimiento.cm_lote " +
-                "join catastroestablecimiento.cm_manzana " +
-                "on catastroestablecimiento.cm_manzana.manzana_id = catastroestablecimiento.cm_lote.manzana_id where lote_id = " + id + " order by lote_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM catastroestablecimiento.consultar_loteid(@l_id)", con);
+                comando.Parameters.AddWithValue("@l_id", l_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -81,17 +69,13 @@ namespace DAL_CE_Postgresql.Catastro
 
         public DataTable Lote()
         {
-            NpgsqlConnection con = null;
-            string query = "select lote_id, lote_nombre from catastroestablecimiento.cm_lote order by lote_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.lote()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -113,12 +97,16 @@ namespace DAL_CE_Postgresql.Catastro
             NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into catastroestablecimiento.cm_lote (manzana_id, lote_codigo, lote_nombre, lote_observacion, lote_estado) " +
-                "values (" + manzana + ",'" + codigo + "','" + nombre + "','" + observacion + "'," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "catastroestablecimiento.insertar_lote";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("m_id", manzana);
+                comando.Parameters.AddWithValue("l_codigo", codigo);
+                comando.Parameters.AddWithValue("l_nombre", nombre);
+                comando.Parameters.AddWithValue("l_observacion", observacion);
+                comando.Parameters.AddWithValue("l_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -133,17 +121,21 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-        public void Editar(int manzana, string codigo, string nombre, string observacion, int estado, int id)
+        public void Editar(int id, int manzana, string codigo, string nombre, string observacion, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "update catastroestablecimiento.cm_lote set manzana_id = " + manzana + ", lote_codigo = '" + codigo + "', " +
-                "lote_nombre = '" + nombre + "', lote_observacion = '" + observacion + "', lote_estado = " + estado +
-                " where lote_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.editar_lote", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("l_id", id);
+                comando.Parameters.AddWithValue("m_id", manzana);
+                comando.Parameters.AddWithValue("l_codigo", codigo);
+                comando.Parameters.AddWithValue("l_nombre", nombre);
+                comando.Parameters.AddWithValue("l_observacion", observacion);
+                comando.Parameters.AddWithValue("l_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -164,9 +156,10 @@ namespace DAL_CE_Postgresql.Catastro
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from catastroestablecimiento.cm_lote where lote_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.eliminar_lote", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("l_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

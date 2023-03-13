@@ -37,9 +37,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(nombre, detalle, telefono, celular, mail, pagina_web, representante, Convert.ToInt32(estado));
         }
 
-        public void Editar_Administracion_Zonal(string nombre, string detalle, string telefono, string celular, string mail, string pagina_web, string representante, string estado, string id)
+        public void Editar_Administracion_Zonal(string id, string nombre, string detalle, string telefono, string celular, string mail, string pagina_web, string representante, string estado)
         {
-            objdll.Editar(nombre, detalle, telefono, celular, mail, pagina_web, representante, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), nombre, detalle, telefono, celular, mail, pagina_web, representante, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Administracion_Zonal(string id)

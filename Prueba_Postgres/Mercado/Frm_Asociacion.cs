@@ -80,7 +80,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Asociacion(txtcodigo.Text, txtnombre.Text, txttelefono.Text, txtmail.Text, txtcontacto.Text, txtobservacion.Text, cmbestado.Text, id);
+                objbll.Editar_Asociacion(id, txtcodigo.Text, txtnombre.Text, txttelefono.Text, txtmail.Text, txtcontacto.Text, txtobservacion.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -93,14 +93,14 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["asociacion_id"].Value.ToString();
                 txtcodigo.Text = datos.CurrentRow.Cells["asociacion_codigo"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["asociacion_nombre"].Value.ToString();
                 txttelefono.Text = datos.CurrentRow.Cells["asociacion_telefono"].Value.ToString();                
                 txtmail.Text = datos.CurrentRow.Cells["asociacion_mail"].Value.ToString();
                 txtcontacto.Text = datos.CurrentRow.Cells["asociacion_contacto"].Value.ToString();
                 txtobservacion.Text = datos.CurrentRow.Cells["asociacion_observacion"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["asociacion_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["asociacion_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["asociacion_estado"].Value.ToString();                
             }
             else
             {

@@ -91,7 +91,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Administracion_Zonal(txtnombre.Text, txtdetalle.Text, txttelefono.Text, txtcelular.Text, txtmail.Text, txtpweb.Text, txtrepresentante.Text, cmbestado.Text, id);
+                objbll.Editar_Administracion_Zonal(id, txtnombre.Text, txtdetalle.Text, txttelefono.Text, txtcelular.Text, txtmail.Text, txtpweb.Text, txtrepresentante.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -104,6 +104,7 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["administracion_zonal_id"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["administracion_zonal_nombre"].Value.ToString();
                 txtdetalle.Text = datos.CurrentRow.Cells["administracion_zonal_detalle"].Value.ToString();
                 txttelefono.Text = datos.CurrentRow.Cells["administracion_zonal_telefono"].Value.ToString();
@@ -111,8 +112,7 @@ namespace Prueba_Postgres
                 txtmail.Text = datos.CurrentRow.Cells["administracion_zonal_mail"].Value.ToString();
                 txtpweb.Text = datos.CurrentRow.Cells["administracion_zonal_pagina_web"].Value.ToString();
                 txtrepresentante.Text = datos.CurrentRow.Cells["administracion_zonal_representante"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["administracion_zonal_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["administracion_zonal_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["administracion_zonal_estado"].Value.ToString();                
             }
             else
             {

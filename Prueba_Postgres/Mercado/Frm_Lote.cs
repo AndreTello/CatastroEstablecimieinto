@@ -73,7 +73,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Lote(Convert.ToInt32(cmbmanzana.SelectedValue), txtcodigo.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text, id);
+                objbll.Editar_Lote(id, Convert.ToInt32(cmbmanzana.SelectedValue), txtcodigo.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -101,12 +101,12 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["lote_id"].Value.ToString();
                 cmbmanzana.Text = datos.CurrentRow.Cells["manzana_nombre"].Value.ToString();
                 txtcodigo.Text = datos.CurrentRow.Cells["lote_codigo"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["lote_nombre"].Value.ToString();
                 txtobservacion.Text = datos.CurrentRow.Cells["lote_observacion"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["lote_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["lote_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["lote_estado"].Value.ToString();                
             }
             else
             {

@@ -15,21 +15,17 @@ namespace DAL_CE_Postgresql.Catastro
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
 
+        NpgsqlCommand comando = new NpgsqlCommand();
+
         public DataTable Consultar()
         {
-            NpgsqlConnection con = null;
-            string query = "select administracion_zonal_id, administracion_zonal_nombre, administracion_zonal_detalle, administracion_zonal_telefono, administracion_zonal_celular, administracion_zonal_mail, administracion_zonal_pagina_web, administracion_zonal_representante, administracion_zonal_estado " +
-                "from catastroestablecimiento.cm_administracion_zonal " +
-                "order by administracion_zonal_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.consultar_administracion_zonal()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -47,20 +43,16 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
 
-        public DataTable ConsultarId(int id)
+        public DataTable ConsultarId(int az_id)
         {
-            NpgsqlConnection con = null;
-            string query = "select administracion_zonal_id, administracion_zonal_nombre, administracion_zonal_detalle, administracion_zonal_telefono, administracion_zonal_celular, administracion_zonal_mail, administracion_zonal_pagina_web, administracion_zonal_representante, administracion_zonal_estado " +
-                "from catastroestablecimiento.cm_administracion_zonal where administracion_zonal_id = " + id + " order by administracion_zonal_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM catastroestablecimiento.consultar_administracion_zonalid(@az_id)", con);
+                comando.Parameters.AddWithValue("@az_id", az_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -79,17 +71,13 @@ namespace DAL_CE_Postgresql.Catastro
 
         public DataTable Administracion_Zonal()
         {
-            NpgsqlConnection con = null;
-            string query = "select administracion_zonal_id, administracion_zonal_nombre from catastroestablecimiento.cm_administracion_zonal order by administracion_zonal_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.administracion_zonal()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -112,12 +100,19 @@ namespace DAL_CE_Postgresql.Catastro
             NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into catastroestablecimiento.cm_administracion_zonal (administracion_zonal_nombre, administracion_zonal_detalle, administracion_zonal_telefono, administracion_zonal_celular, administracion_zonal_mail, administracion_zonal_pagina_web, administracion_zonal_representante, administracion_zonal_estado) " +
-                "values ('" + nombre + "','" + detalle + "','" + telefono + "','" + celular + "','" + mail + "','" + pagina_web + "','" + representante + "'," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "catastroestablecimiento.insertar_administracion_zonal";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("az_nombre", nombre);
+                comando.Parameters.AddWithValue("az_detalle", detalle);
+                comando.Parameters.AddWithValue("az_telefono", telefono);
+                comando.Parameters.AddWithValue("az_celular", celular);
+                comando.Parameters.AddWithValue("az_mail", mail);
+                comando.Parameters.AddWithValue("az_pagina_web", pagina_web);
+                comando.Parameters.AddWithValue("az_representante", representante);
+                comando.Parameters.AddWithValue("az_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -132,19 +127,24 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-        public void Editar(string nombre, string detalle, string telefono, string celular, string mail, string pagina_web, string representante, int estado, int id)
+        public void Editar(int id, string nombre, string detalle, string telefono, string celular, string mail, string pagina_web, string representante, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query =
-                "update catastroestablecimiento.cm_administracion_zonal set administracion_zonal_nombre = '" + nombre + "', administracion_zonal_detalle = '"+ detalle + "', " +
-                "administracion_zonal_telefono = '"+telefono+ "', administracion_zonal_celular = '"+celular+ "', administracion_zonal_mail = '"+mail+ "', " +
-                "administracion_zonal_pagina_web = '"+pagina_web+ "', administracion_zonal_representante = '"+representante+ "', administracion_zonal_estado = "+estado+" " +
-                "where administracion_zonal_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.editar_administracion_zonal", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("az_id", id);
+                comando.Parameters.AddWithValue("az_nombre", nombre);
+                comando.Parameters.AddWithValue("az_detalle", detalle);
+                comando.Parameters.AddWithValue("az_telefono", telefono);
+                comando.Parameters.AddWithValue("az_celular", celular);
+                comando.Parameters.AddWithValue("az_mail", mail);
+                comando.Parameters.AddWithValue("az_pagina_web", pagina_web);
+                comando.Parameters.AddWithValue("az_representante", representante);
+                comando.Parameters.AddWithValue("az_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -165,9 +165,10 @@ namespace DAL_CE_Postgresql.Catastro
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from catastroestablecimiento.cm_administracion_zonal where administracion_zonal_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.eliminar_administracion_zonal", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("az_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
