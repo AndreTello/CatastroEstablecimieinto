@@ -39,9 +39,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(tipo, nombre, fecha_inicio, fecha_fin, Convert.ToInt32(estado));
         }
 
-        public void Editar_Intervencion_Tecnica_Establecimiento(int tipo, string nombre, string fecha_inicio, string fecha_fin, string estado, string id)
+        public void Editar_Intervencion_Tecnica_Establecimiento(string id, int tipo, string nombre, string fecha_inicio, string fecha_fin, string estado)
         {
-            objdll.Editar(tipo, nombre, fecha_inicio, fecha_fin, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), tipo, nombre, fecha_inicio, fecha_fin, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Intervencion_Tecnica_Establecimiento(string id)

@@ -14,21 +14,17 @@ namespace DAL_CE_Postgresql.Catastro
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
 
+        NpgsqlCommand comando = new NpgsqlCommand();
+
         public DataTable Consultar()
         {
-            NpgsqlConnection con = null;
-            string query = "select tipo_intervencion_tecnica_establecimiento_id, tipo_intervencion_tecnica_establecimiento_nombre, tipo_intervencion_tecnica_establecimiento_detalle, tipo_intervencion_tecnica_establecimiento_estado " +
-                "from catastroestablecimiento.cm_tipo_intervencion_tecnica_establecimiento " +
-                "order by tipo_intervencion_tecnica_establecimiento_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.consultar_tipo_intervencion_tecnica_establecimiento()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -45,20 +41,16 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
-        public DataTable ConsultarID(int id)
+        public DataTable ConsultarID(int tite_id)
         {
-            NpgsqlConnection con = null;
-            string query = "select tipo_intervencion_tecnica_establecimiento_id, tipo_intervencion_tecnica_establecimiento_nombre, tipo_intervencion_tecnica_establecimiento_detalle, tipo_intervencion_tecnica_establecimiento_estado " +
-                "from catastroestablecimiento.cm_tipo_intervencion_tecnica_establecimiento where tipo_intervencion_tecnica_establecimiento_id = " + id + " order by tipo_intervencion_tecnica_establecimiento_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM catastroestablecimiento.consultar_tipo_intervencion_tecnica_establecimientoid(@tite_id)", con);
+                comando.Parameters.AddWithValue("@tite_id", tite_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -77,17 +69,13 @@ namespace DAL_CE_Postgresql.Catastro
 
         public DataTable Tipo_Intervencion_Tecnica()
         {
-            NpgsqlConnection con = null;
-            string query = "select tipo_intervencion_tecnica_establecimiento_id, tipo_intervencion_tecnica_establecimiento_nombre from catastroestablecimiento.cm_tipo_intervencion_tecnica_establecimiento order by tipo_intervencion_tecnica_establecimiento_id asc";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.tipo_intervencion_tecnica_establecimiento()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -110,12 +98,14 @@ namespace DAL_CE_Postgresql.Catastro
             NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into catastroestablecimiento.cm_tipo_intervencion_tecnica_establecimiento (tipo_intervencion_tecnica_establecimiento_nombre, tipo_intervencion_tecnica_establecimiento_detalle, tipo_intervencion_tecnica_establecimiento_estado) " +
-                "values ('" + nombre + "','" + detalle + "'," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "catastroestablecimiento.insertar_tipo_intervencion_tecnica_establecimiento";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("tite_nombre", nombre);
+                comando.Parameters.AddWithValue("tite_detalle", detalle);
+                comando.Parameters.AddWithValue("tite_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -130,18 +120,19 @@ namespace DAL_CE_Postgresql.Catastro
             }
         }
 
-        public void Editar(string nombre, string detalle, int estado, int id)
+        public void Editar(int id, string nombre, string detalle, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query =
-                "update catastroestablecimiento.cm_tipo_intervencion_tecnica_establecimiento set tipo_intervencion_tecnica_establecimiento_nombre = '" + nombre + "', tipo_intervencion_tecnica_establecimiento_detalle = '" + detalle + "', " +
-                "tipo_intervencion_tecnica_establecimiento_estado = " + estado + " " +
-                "where tipo_intervencion_tecnica_establecimiento_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.editar_tipo_intervencion_tecnica_establecimiento", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("tite_id", id); 
+                comando.Parameters.AddWithValue("tite_nombre", nombre);
+                comando.Parameters.AddWithValue("tite_detalle", detalle);
+                comando.Parameters.AddWithValue("tite_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -162,9 +153,10 @@ namespace DAL_CE_Postgresql.Catastro
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from catastroestablecimiento.cm_tipo_intervencion_tecnica_establecimiento where tipo_intervencion_tecnica_establecimiento_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.eliminar_tipo_intervencion_tecnica_establecimiento", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("tite_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

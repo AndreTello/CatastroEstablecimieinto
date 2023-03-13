@@ -120,7 +120,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Establecimiento(Convert.ToInt32(cmblote.SelectedValue), Convert.ToInt32(cmbadministracion.SelectedValue), Convert.ToInt32(cmbtipo.SelectedValue), Convert.ToInt32(cmbasociacion.SelectedValue), Convert.ToInt32(cmbintervencion.SelectedValue), txtpredio.Text, txtclave.Text, txtnomvial.Text, txtcprincipal.Text, txtcsecundaria.Text, txtparqueadero.Text, txtnparqueadero.Text, txtdias.Text, txthorarios.Text, cmbestado.Text, id);
+                objbll.Editar_Establecimiento(id, Convert.ToInt32(cmblote.SelectedValue), Convert.ToInt32(cmbadministracion.SelectedValue), Convert.ToInt32(cmbtipo.SelectedValue), Convert.ToInt32(cmbasociacion.SelectedValue), Convert.ToInt32(cmbintervencion.SelectedValue), txtpredio.Text, txtclave.Text, txtnomvial.Text, txtcprincipal.Text, txtcsecundaria.Text, txtparqueadero.Text, txtnparqueadero.Text, txtdias.Text, txthorarios.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -148,6 +148,7 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["establecimiento_id"].Value.ToString();
                 cmblote.Text = datos.CurrentRow.Cells["lote_nombre"].Value.ToString();
                 cmbadministracion.Text = datos.CurrentRow.Cells["administracion_zonal_nombre"].Value.ToString();
                 cmbtipo.Text = datos.CurrentRow.Cells["tipo_establecimiento_nombre"].Value.ToString();
@@ -162,8 +163,7 @@ namespace Prueba_Postgres
                 txtnparqueadero.Text = datos.CurrentRow.Cells["establecimiento_numero_parqueadero"].Value.ToString();
                 txtdias.Text = datos.CurrentRow.Cells["establecimiento_dias_apertura"].Value.ToString();
                 txthorarios.Text = datos.CurrentRow.Cells["establecimiento_horario_atencion"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["establecimiento_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["establecimiento_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["establecimiento_estado"].Value.ToString();                
             }
             else
             {

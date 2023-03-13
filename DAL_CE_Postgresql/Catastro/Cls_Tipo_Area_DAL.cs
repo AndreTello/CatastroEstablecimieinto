@@ -7,28 +7,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENT_CE;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DAL_CE_Postgresql.Catastro
 {
     public class Cls_Tipo_Area_DAL
     {
         Cls_Conexion_Postgresql_DAL conexion = new Cls_Conexion_Postgresql_DAL();
-                
+
+        NpgsqlCommand comando = new NpgsqlCommand();
+
         public DataTable Consultar()
         {
-            NpgsqlConnection con = null;
-            string query = "select tipo_area_id, tipo_area_identificacion, tipo_area_nombre, tipo_area_observacion, tipo_area_estado " +
-                "from catastroestablecimiento.cm_tipo_area " +
-                "order by tipo_area_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.consultar_tipo_area()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -45,21 +42,16 @@ namespace DAL_CE_Postgresql.Catastro
             return tabla;
         }
 
-        public DataTable ConsultarID(int id)
+        public DataTable ConsultarID(int ta_id)
         {
-            NpgsqlConnection con = null;
-            string query = "select tipo_area_id, tipo_area_identificacion, tipo_area_nombre, tipo_area_observacion, tipo_area_estado " +
-                "from catastroestablecimiento.cm_tipo_area " +
-                "where tipo_area_id = " + id + " order by tipo_area_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                NpgsqlCommand comando = new NpgsqlCommand("SELECT * FROM catastroestablecimiento.consultar_tipo_areaid(@ta_id)", con);
+                comando.Parameters.AddWithValue("@ta_id", ta_id);
+                NpgsqlDataAdapter datos = new NpgsqlDataAdapter(comando);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -78,17 +70,13 @@ namespace DAL_CE_Postgresql.Catastro
 
         public DataTable Tipo_Area()
         {
-            NpgsqlConnection con = null;
-            string query = "select tipo_area_id, tipo_area_nombre from catastroestablecimiento.cm_tipo_area order by tipo_area_id asc;";
-            NpgsqlCommand conector = null;
-            NpgsqlDataAdapter datos = null;
             DataTable tabla = new DataTable();
+            NpgsqlConnection con = null;
+            NpgsqlDataAdapter datos = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                conector = new NpgsqlCommand(query, con);
-                datos = new NpgsqlDataAdapter(conector);
-                tabla = new DataTable();
+                datos = new NpgsqlDataAdapter("SELECT * FROM catastroestablecimiento.tipo_area()", con);
                 datos.Fill(tabla);
             }
             catch (Exception ex)
@@ -110,12 +98,15 @@ namespace DAL_CE_Postgresql.Catastro
             NpgsqlConnection con = null;
             try
             {
-                con = conexion.EstablecerConexion();
-                string query =
-                "Insert into catastroestablecimiento.cm_tipo_area (tipo_area_identificacion, tipo_area_nombre, tipo_area_observacion, tipo_area_estado) " +
-                "values ('" + identificacion + "','" + nombre + "','" + observaciones + "'," + estado + ")";
-                NpgsqlCommand insert = new NpgsqlCommand(query, con);
-                insert.ExecuteNonQuery();
+                comando.Connection = conexion.EstablecerConexion();
+                comando.CommandText = "catastroestablecimiento.insertar_tipo_area";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("ta_identificacion", identificacion);
+                comando.Parameters.AddWithValue("ta_nombre", nombre);
+                comando.Parameters.AddWithValue("ta_observacion", observaciones);
+                comando.Parameters.AddWithValue("ta_estado", estado);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
             }
             catch (Exception ex)
             {
@@ -131,20 +122,20 @@ namespace DAL_CE_Postgresql.Catastro
         }
 
 
-        public void Editar(string identificacion, string nombre, string observaciones, int estado, int id)
+        public void Editar(int id, string identificacion, string nombre, string observaciones, int estado)
         {
             NpgsqlConnection con = null;
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "update catastroestablecimiento.cm_tipo_area set " +
-                "tipo_area_identificacion = '" + identificacion + "', " +
-                "tipo_area_nombre = '" + nombre + "', " +
-                "tipo_area_observacion = '" + observaciones + "', " +
-                "tipo_area_estado = " + estado +
-                " where tipo_area_id = " + id + "";
-                NpgsqlCommand update = new NpgsqlCommand(query, con);
-                update.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.editar_tipo_area", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("ta_id", id);
+                comando.Parameters.AddWithValue("ta_identificacion", identificacion);
+                comando.Parameters.AddWithValue("ta_nombre", nombre);
+                comando.Parameters.AddWithValue("ta_observacion", observaciones);
+                comando.Parameters.AddWithValue("ta_estado", estado);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -166,9 +157,10 @@ namespace DAL_CE_Postgresql.Catastro
             try
             {
                 con = conexion.EstablecerConexion();
-                string query = "delete from catastroestablecimiento.cm_tipo_area where tipo_area_id = " + id + "";
-                NpgsqlCommand delete = new NpgsqlCommand(query, con);
-                delete.ExecuteNonQuery();
+                NpgsqlCommand comando = new NpgsqlCommand("catastroestablecimiento.eliminar_tipo_area", con);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("ta_id", id);
+                comando.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

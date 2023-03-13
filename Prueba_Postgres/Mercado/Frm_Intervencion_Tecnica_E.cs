@@ -74,7 +74,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Intervencion_Tecnica_Establecimiento(Convert.ToInt32(cmbtipo.SelectedValue), txtnombre.Text, txtfinicio.Text, txtffin.Text, cmbestado.Text, id);
+                objbll.Editar_Intervencion_Tecnica_Establecimiento(id, Convert.ToInt32(cmbtipo.SelectedValue), txtnombre.Text, txtfinicio.Text, txtffin.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -101,12 +101,12 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_id"].Value.ToString();
                 cmbtipo.Text = datos.CurrentRow.Cells["tipo_intervencion_tecnica_establecimiento_nombre"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_nombre"].Value.ToString();
                 txtfinicio.Text = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_fecha_inicio"].Value.ToString();
                 txtffin.Text = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_fecha_fin"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["intervencion_tecnica_establecimiento_estado"].Value.ToString();                
             }
             else
             {
