@@ -47,7 +47,7 @@ namespace ProyectoGIS.App.Catastro.Zona
             }
             if (Request.QueryString["id"] !=null)
             {
-                objdll.Editar_Zona(Convert.ToInt32(CANTON_ID.SelectedValue), ZONA_CODIGO.Text, ZONA_NOMBRE.Text, ZONA_OBSERVACION.Text, ZONA_ESTADO.SelectedValue, Request.QueryString["id"]);
+                objdll.Editar_Zona(Request.QueryString["id"],Convert.ToInt32(CANTON_ID.SelectedValue), ZONA_CODIGO.Text, ZONA_NOMBRE.Text, ZONA_OBSERVACION.Text, ZONA_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
             }
             objdll.Insertar_Zona(Convert.ToInt32(CANTON_ID.SelectedValue), ZONA_CODIGO.Text, ZONA_NOMBRE.Text, ZONA_OBSERVACION.Text, ZONA_ESTADO.SelectedValue);

@@ -25,6 +25,7 @@ namespace ProyectoGIS.App.Administracion.GestiolPermiso
             string permiso_id = btnEliminar.CommandArgument;
             objdll.Eliminar_Permiso(permiso_id);
             DataBind();
+            Response.Redirect("./GestionPermiso");
         }
     }
 }

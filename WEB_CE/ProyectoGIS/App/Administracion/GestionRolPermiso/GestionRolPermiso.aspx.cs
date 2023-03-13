@@ -28,6 +28,7 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
             string rol_id = btnEliminar.CommandArgument;
             rol.Eliminar_Rol_Permiso(rol_id);
             DataBind();
+            Response.Redirect("./GestionRolPermiso");
         }
     }
 }

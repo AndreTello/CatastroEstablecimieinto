@@ -14,7 +14,7 @@ namespace ProyectoGIS.App.Administracion.GestionUsuario
         {
             if (!IsPostBack)
             {
-                ROL_ID.DataSource = rol.Consultar_Rol();
+                ROL_ID.DataSource = rol.Listar_Rol();
                 ROL_ID.DataTextField = "ROL_NOMBRE";
                 ROL_ID.DataValueField = "ROL_ID";
                 ROL_ID.DataBind();
@@ -40,6 +40,7 @@ namespace ProyectoGIS.App.Administracion.GestionUsuario
                         USUARIO_DIRECCION.Text = usr.Field<string>("USUARIO_DIRECCION").Trim();
                         USUARIO_TELEFONO.Text = usr.Field<string>("USUARIO_TELEFONO").Trim();
                         USUARIO_ESTADO.SelectedValue = ""+usr.Field<int>("USUARIO_ESTADO");
+                        ROL_ID.SelectedValue = ""+usr.Field<int>("ROL_ID");
 
                         // Cambiar el texto del botón "Guardar" a "Actualizar"
                         btnGuardar.Text = "Actualizar";
@@ -59,7 +60,7 @@ namespace ProyectoGIS.App.Administracion.GestionUsuario
             if (Request.QueryString["id"] != null)
             {
                 string userId = Request.QueryString["id"];
-                user.Editar_Usuario(Convert.ToInt32(ROL_ID.SelectedValue), USUARIO_LOGIN.Text, BCrypt.Net.BCrypt.HashPassword(USUARIO_CLAVE.Text), USUARIO_CEDULA.Text, USUARIO_APELLIDOS.Text, USUARIO_NOMBRES.Text, USUARIO_MAIL.Text, USUARIO_DIRECCION.Text, USUARIO_TELEFONO.Text, USUARIO_ESTADO.SelectedValue, userId);
+                user.Editar_Usuario(userId,Convert.ToInt32(ROL_ID.SelectedValue), USUARIO_LOGIN.Text, BCrypt.Net.BCrypt.HashPassword(USUARIO_CLAVE.Text), USUARIO_CEDULA.Text, USUARIO_APELLIDOS.Text, USUARIO_NOMBRES.Text, USUARIO_MAIL.Text, USUARIO_DIRECCION.Text, USUARIO_TELEFONO.Text, USUARIO_ESTADO.SelectedValue);
                 Response.Redirect("./GestionUsuario");
             }
             else
