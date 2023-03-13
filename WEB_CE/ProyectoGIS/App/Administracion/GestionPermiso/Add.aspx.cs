@@ -40,7 +40,7 @@ namespace ProyectoGIS.App.Administracion.GestiolPermiso
             }
             if (Request.QueryString["id"] != null)
             {
-                permiso.Editar_Permiso(PERMISO_NOMBRE.Text, PERMISO_DETALLE.Text, PERMISO_ESTADO.SelectedValue, Request.QueryString["id"]);
+                permiso.Editar_Permiso(Request.QueryString["id"], PERMISO_NOMBRE.Text, PERMISO_DETALLE.Text, PERMISO_ESTADO.SelectedValue);
                 Response.Redirect("./GestionPermiso");
             }
             else

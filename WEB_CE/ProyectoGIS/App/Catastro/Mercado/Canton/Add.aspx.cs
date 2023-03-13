@@ -55,7 +55,7 @@ namespace ProyectoGIS.App.Catastro.Canton
 
             if (Request.QueryString["id"] != null)
             {
-                objdll.Editar_Canton(Convert.ToInt32(PROVINCIA_ID.SelectedValue), CANTON_CODIGO.Text, CANTON_NOMBRE.Text, CANTON_OBSERVACION.Text, CANTON_ESTADO.SelectedValue, Request.QueryString["id"]);
+                objdll.Editar_Canton(Request.QueryString["id"],Convert.ToInt32(PROVINCIA_ID.SelectedValue), CANTON_CODIGO.Text, CANTON_NOMBRE.Text, CANTON_OBSERVACION.Text, CANTON_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
             }
             else

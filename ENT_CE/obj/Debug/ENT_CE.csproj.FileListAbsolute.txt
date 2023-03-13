@@ -4,3 +4,9 @@ C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.csproj.AssemblyRefere
 C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.csproj.CoreCompileInputs.cache
 C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.dll
 C:\Diomio\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\ENT_CE\bin\Debug\ENT_CE.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\ENT_CE\bin\Debug\ENT_CE.pdb
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.csproj.AssemblyReference.cache
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.csproj.CoreCompileInputs.cache
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.dll
+E:\Works\SefaKS\Git\CatastroEstablecimieinto\ENT_CE\obj\Debug\ENT_CE.pdb

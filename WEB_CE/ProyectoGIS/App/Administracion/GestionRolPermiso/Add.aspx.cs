@@ -17,12 +17,12 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
         {
             if (!IsPostBack)
             {
-                ROL_ID.DataSource = rol.Consultar_Rol();
+                ROL_ID.DataSource = rol.Listar_Rol();
                 ROL_ID.DataTextField = "ROL_NOMBRE";
                 ROL_ID.DataValueField = "ROL_ID";
                 ROL_ID.DataBind();
                 ROL_ID.Items.Insert(0, new ListItem("-- Seleccione un Rol --", ""));
-                PERMISO_ID.DataSource = permiso.Consultar_Permiso();
+                PERMISO_ID.DataSource = permiso.Listar_Permiso();
                 PERMISO_ID.DataTextField = "PERMISO_NOMBRE";
                 PERMISO_ID.DataValueField = "PERMISO_ID";
                 PERMISO_ID.DataBind();
@@ -35,7 +35,7 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
                     { 
                         PERMISO_ROL_ESTADO.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString().Trim();
                         PERMISO_ID.SelectedValue = dt.Rows[0]["permiso_id"].ToString().Trim();
-                        ROL_ID.SelectedValue = dt.Rows[0]["rol_permiso_estado"].ToString();
+                        ROL_ID.SelectedValue = dt.Rows[0]["rol_id"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }
                     else
@@ -55,7 +55,7 @@ namespace ProyectoGIS.App.Administracion.GestionRolPermiso
             if (Request.QueryString["id"] != null)
             {
                 string id = Request.QueryString["id"];
-                rolP.Editar_Rol_Permiso(Convert.ToInt32(ROL_ID.SelectedValue), Convert.ToInt32(PERMISO_ID.SelectedValue), PERMISO_ROL_ESTADO.SelectedValue, id);
+                rolP.Editar_Rol_Permiso(id,Convert.ToInt32(ROL_ID.SelectedValue), Convert.ToInt32(PERMISO_ID.SelectedValue), PERMISO_ROL_ESTADO.SelectedValue );
                 Response.Redirect("./GestionRolPermiso");
             }
             else

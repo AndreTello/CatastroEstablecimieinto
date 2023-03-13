@@ -49,7 +49,7 @@ namespace ProyectoGIS.App.Catastro.Parroquia
             if (Request.QueryString["id"] != null)
             {
                 string id = Request.QueryString["id"];
-                objdll.Editar_Parroquia(Convert.ToInt32(ZONA_ID.SelectedValue), PARROQUIA_CODIGO.Text, PARROQUIA_NOMBRE.Text, PARROQUIA_OBSERVACION.Text, PARROQUIA_ESTADO.SelectedValue,id);
+                objdll.Editar_Parroquia(id, Convert.ToInt32(ZONA_ID.SelectedValue), PARROQUIA_CODIGO.Text, PARROQUIA_NOMBRE.Text, PARROQUIA_OBSERVACION.Text, PARROQUIA_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
             }
             else

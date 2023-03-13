@@ -224,6 +224,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Mercado/Lote/Ficha">
+                                        <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Lote
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <span data-feather="shopping-cart" class="align-text-bottom"></span>
                                         Barrio

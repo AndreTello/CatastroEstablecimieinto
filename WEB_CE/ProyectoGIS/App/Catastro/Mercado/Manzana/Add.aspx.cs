@@ -50,7 +50,7 @@ namespace ProyectoGIS.App.Catastro.Manzana
             if (Request.QueryString["id"] != null)
             {
                 string id = Request.QueryString["id"];
-                objdll.Editar_Manzana(Convert.ToInt32(PARROQUIA_ID.SelectedValue), MANZANA_CODIGO.Text, MANZANA_NOMBRE.Text, MANZANA_OBSERVACION.Text, MANZANA_ESTADO.SelectedValue, id);
+                objdll.Editar_Manzana(id,Convert.ToInt32(PARROQUIA_ID.SelectedValue), MANZANA_CODIGO.Text, MANZANA_NOMBRE.Text, MANZANA_OBSERVACION.Text, MANZANA_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
             }
             else

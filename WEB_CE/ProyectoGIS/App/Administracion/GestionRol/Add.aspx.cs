@@ -41,7 +41,7 @@ namespace ProyectoGIS.App.Administracion.GestionRol
             if (Request.QueryString["id"] != null)
             {
                 string id = Request.QueryString["id"];
-                rol.Editar_Rol(ROL_NOMBRE.Text, ROL_DETALLE.Text, ROL_ESTADO.SelectedValue, id);
+                rol.Editar_Rol(id, ROL_NOMBRE.Text, ROL_DETALLE.Text, ROL_ESTADO.SelectedValue);
                 Response.Redirect("./GestionRoles");
             }
             else

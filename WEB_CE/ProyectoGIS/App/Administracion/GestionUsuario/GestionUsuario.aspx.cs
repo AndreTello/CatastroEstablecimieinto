@@ -27,6 +27,7 @@ namespace ProyectoGIS.App
             string usuario_id = btnEliminar.CommandArgument;
             objdll.Eliminar_Usuario(usuario_id);
             DataBind();
+            Response.Redirect("./GestionUsuario");
         }
     }
 }
