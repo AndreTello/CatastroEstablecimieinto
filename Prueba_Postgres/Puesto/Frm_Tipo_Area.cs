@@ -62,7 +62,7 @@ namespace Prueba_Postgres.Puesto
             }
             if (editar == true)
             {
-                objbll.Editar_Tipo_Area(txtidentificacion.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text, id);
+                objbll.Editar_Tipo_Area(id, txtidentificacion.Text, txtnombre.Text, txtobservacion.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -75,11 +75,11 @@ namespace Prueba_Postgres.Puesto
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["tipo_area_id"].Value.ToString();
                 txtidentificacion.Text = datos.CurrentRow.Cells["tipo_area_identificacion"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["tipo_area_nombre"].Value.ToString();
                 txtobservacion.Text = datos.CurrentRow.Cells["tipo_area_observacion"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["tipo_area_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["tipo_area_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["tipo_area_estado"].Value.ToString();                
             }
             else
             {

@@ -21,6 +21,7 @@ namespace DAL_CE_Postgresql
         static string puerto="5432";
 
 
+
         string CadenaConexion = "server=" + servidor + "; port=" + puerto + "; user id=" + usuario + "; password=" + password + "; database= " + bd + ";";
 
         public NpgsqlConnection EstablecerConexion()

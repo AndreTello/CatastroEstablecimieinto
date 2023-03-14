@@ -38,9 +38,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(identificacion, nombre, observaciones, Convert.ToInt32(estado));
         }
 
-        public void Editar_Tipo_Area(string identificacion, string nombre, string observaciones, string estado, string id)
+        public void Editar_Tipo_Area(string id, string identificacion, string nombre, string observaciones, string estado)
         {
-            objdll.Editar(identificacion, nombre, observaciones, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), identificacion, nombre, observaciones, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Tipo_Area(string id)

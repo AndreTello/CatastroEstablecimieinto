@@ -39,9 +39,9 @@ namespace BLL_CE.Catastro
             objdll.Insertar(lote, admnistracion, tipo, asociacion, intervencion, predio, clave_catastral, nomenclatura_vial, calle_principal, calle_secundaria, paqueadero, Convert.ToInt32(numero_parqueadero), dias_apertura, horario_atencion, Convert.ToInt32(estado));
         }
 
-        public void Editar_Establecimiento(int lote, int admnistracion, int tipo, int asociacion, int intervencion, string predio, string clave_catastral, string nomenclatura_vial, string calle_principal, string calle_secundaria, string paqueadero, string numero_parqueadero, string dias_apertura, string horario_atencion, string estado, string id)
+        public void Editar_Establecimiento(string id, int lote, int admnistracion, int tipo, int asociacion, int intervencion, string predio, string clave_catastral, string nomenclatura_vial, string calle_principal, string calle_secundaria, string paqueadero, string numero_parqueadero, string dias_apertura, string horario_atencion, string estado)
         {
-            objdll.Editar(lote, admnistracion, tipo, asociacion, intervencion, predio, clave_catastral, nomenclatura_vial, calle_principal, calle_secundaria, paqueadero, Convert.ToInt32(numero_parqueadero), dias_apertura, horario_atencion, Convert.ToInt32(estado), Convert.ToInt32(id));
+            objdll.Editar(Convert.ToInt32(id), lote, admnistracion, tipo, asociacion, intervencion, predio, clave_catastral, nomenclatura_vial, calle_principal, calle_secundaria, paqueadero, Convert.ToInt32(numero_parqueadero), dias_apertura, horario_atencion, Convert.ToInt32(estado));
         }
 
         public void Eliminar_Establecimiento(string id)

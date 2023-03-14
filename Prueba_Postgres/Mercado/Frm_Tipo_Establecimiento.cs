@@ -62,7 +62,7 @@ namespace Prueba_Postgres
             }
             if (editar == true)
             {
-                objbll.Editar_Tipo_Establecimiento(txtnombre.Text, txtdetalle.Text, cmbestado.Text, id);
+                objbll.Editar_Tipo_Establecimiento(id, txtnombre.Text, txtdetalle.Text, cmbestado.Text);
                 MessageBox.Show("ACTUALIZADO CORRECTAMENTE");
                 Mostrar_Datos();
                 editar = false;
@@ -90,10 +90,10 @@ namespace Prueba_Postgres
             if (datos.SelectedRows.Count > 0)
             {
                 editar = true;
+                id = datos.CurrentRow.Cells["tipo_establecimiento_id"].Value.ToString();
                 txtnombre.Text = datos.CurrentRow.Cells["tipo_establecimiento_nombre"].Value.ToString();
                 txtdetalle.Text = datos.CurrentRow.Cells["tipo_establecimiento_detalle"].Value.ToString();
-                cmbestado.Text = datos.CurrentRow.Cells["tipo_establecimiento_estado"].Value.ToString();
-                id = datos.CurrentRow.Cells["tipo_establecimiento_id"].Value.ToString();
+                cmbestado.Text = datos.CurrentRow.Cells["tipo_establecimiento_estado"].Value.ToString();                
             }
             else
             {
