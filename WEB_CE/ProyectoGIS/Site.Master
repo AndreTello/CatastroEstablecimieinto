@@ -301,20 +301,27 @@
                                                 Tipo de Documento del Puesto
                                             </a>
                                         </li>
+                                         <li class="nav-item">
+                                            <a class="nav-link" href="/App/Catastro/GiroNegocio/TipoProducto/Ficha">
+                                                <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                                Productos
+                                            </a>
+                                         </li>
                                     </ul>
                                 </li>
                                 <hr />
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/App/Catastro/GiroNegocio/TipoProducto/Ficha">
-                                        <span data-feather="shopping-cart" class="align-text-bottom"></span>
-                                        Productos
-                                    </a>
-                                </li>
+                               
                             </ul>
                         </li>
                         <li>
                             <a href="#" class="a fw-bold">Ficha Catastral</a>
                             <ul class="sub-menu">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="/App/Catastro/Mercado/Intervencion/Ficha">
+                                        <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                        Intervención Técnica del Establecimiento
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/App/Catastro/Mercado/Establecimiento/Ficha">
                                         <span data-feather="shopping-cart" class="align-text-bottom"></span>

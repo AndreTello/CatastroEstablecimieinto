@@ -2,17 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="lote_id" HeaderText="Id" SortExpression="Id" />
-                    <asp:BoundField DataField="manzana_nombre" HeaderText="Manzana" SortExpression="Manzana" />
-                    <asp:BoundField DataField="lote_codigo" HeaderText="Codigo Lote" SortExpression="CodigoLote" />
-                    <asp:BoundField DataField="lote_nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                    <asp:BoundField DataField="lote_estado" HeaderText="Estado" SortExpression="Estado" />
-                    <asp:BoundField DataField="lote_observacion" HeaderText="Observaciones" SortExpression="Observaciones" />
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:BoundField DataField="manzana_nombre" HeaderText="MANZANA" SortExpression="MANZANA" />
+                    <asp:BoundField DataField="lote_codigo" HeaderText="CÓDIGO LOTE" SortExpression="CÓDIGOLOTE" />
+                    <asp:BoundField DataField="lote_nombre" HeaderText="NOMBRE" SortExpression="NOMBRE" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("lote_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="OBSERVACIONES">
                         <ItemTemplate>
-                            <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <asp:Label ID="lblObservacion" Text='<%# Eval("lote_OBSERVACION").ToString() == "" ? "SIN OBSERVACIONES" : Eval("lote_OBSERVACION").ToString() %>' runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="ACCIONES">
+                        <ItemTemplate>
+                            <a href="./Add?id=<%# Eval("LOTE_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("lote_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
                         </ItemTemplate>
                     </asp:TemplateField>

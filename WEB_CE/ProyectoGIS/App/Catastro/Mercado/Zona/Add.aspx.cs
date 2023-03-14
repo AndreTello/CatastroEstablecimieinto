@@ -16,7 +16,7 @@ namespace ProyectoGIS.App.Catastro.Zona
         {
             if (!IsPostBack)
             {
-                CANTON_ID.DataSource = obj_can.Consultar_Canton();
+                CANTON_ID.DataSource = obj_can.Listar_Canton();
                 CANTON_ID.DataTextField = "CANTON_NOMBRE";
                 CANTON_ID.DataValueField = "CANTON_ID";
                 CANTON_ID.DataBind();
@@ -31,7 +31,7 @@ namespace ProyectoGIS.App.Catastro.Zona
                         ZONA_CODIGO.Text = dt.Rows[0]["ZONA_CODIGO"].ToString().Trim();
                         ZONA_OBSERVACION.Text = dt.Rows[0]["ZONA_OBSERVACION"].ToString().Trim();
                         ZONA_ESTADO.SelectedValue = dt.Rows[0]["ZONA_ESTADO"].ToString();
-                        CANTON_ID.SelectedValue = dt.Rows[0]["CANTON_NOMBRE"].ToString();
+                        CANTON_ID.SelectedValue = dt.Rows[0]["CANTON_id"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }
                 }

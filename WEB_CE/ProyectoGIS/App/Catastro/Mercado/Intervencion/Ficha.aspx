@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
-            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover table-bordered table-dark text-center align-middle" runat="server" AutoGenerateColumns="false" >
+            <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover text-nowrap table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
                     <asp:BoundField DataField="intervencion_tecnica_establecimiento_id" HeaderText="Id" />
                     <asp:BoundField DataField="tipo_intervencion_tecnica_establecimiento_nombre" HeaderText="Tipo de Intervención" />

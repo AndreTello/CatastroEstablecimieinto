@@ -11,9 +11,13 @@ namespace ProyectoGIS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["rol"].ToString() == "ADMIN" )
+            if(Session["rol"] != null)
             {
-                return;
+
+                if (Session["rol"].ToString() == "ADMIN")
+                {
+                    return;
+                }
             }
             Response.Redirect("/");
 

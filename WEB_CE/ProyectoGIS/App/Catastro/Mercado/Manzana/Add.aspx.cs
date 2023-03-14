@@ -17,7 +17,7 @@ namespace ProyectoGIS.App.Catastro.Manzana
         {
             if (!IsPostBack)
             {
-                PARROQUIA_ID.DataSource = obj_par.Consultar_Parroquia();
+                PARROQUIA_ID.DataSource = obj_par.Listar_Parroquia();
                 PARROQUIA_ID.DataTextField = "PARROQUIA_NOMBRE";
                 PARROQUIA_ID.DataValueField = "PARROQUIA_ID";
                 PARROQUIA_ID.DataBind();
@@ -33,7 +33,7 @@ namespace ProyectoGIS.App.Catastro.Manzana
                         MANZANA_OBSERVACION.Text = dt.Rows[0]["MANZANA_OBSERVACION"].ToString().Trim();
                         MANZANA_CODIGO.Text = dt.Rows[0]["MANZANA_CODIGO"].ToString().Trim();
                         MANZANA_ESTADO.SelectedValue = dt.Rows[0]["MANZANA_ESTADO"].ToString();
-                        PARROQUIA_ID.SelectedValue = dt.Rows[0]["PARROQUIA_NOMBRE"].ToString();
+                        PARROQUIA_ID.SelectedValue = dt.Rows[0]["PARROQUIA_id"].ToString();
                         btnGuardar.Text = "Actualizar";
                     }
                 }

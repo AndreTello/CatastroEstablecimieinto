@@ -37,7 +37,7 @@ namespace ProyectoGIS.App.Catastro.Provincia
             if(Request.QueryString["id"] != null)
             {
                 string id = Request.QueryString["id"];
-                objdll.Editar_Provincia(PROVINCIA_CODIGO.Text, PROVINCIA_NOMBRE.Text, PROVINCIA_OBSERVACION.Text, PROVINCIA_ESTADO.SelectedValue,id);
+                objdll.Editar_Provincia(id,PROVINCIA_CODIGO.Text, PROVINCIA_NOMBRE.Text, PROVINCIA_OBSERVACION.Text, PROVINCIA_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
 
             }

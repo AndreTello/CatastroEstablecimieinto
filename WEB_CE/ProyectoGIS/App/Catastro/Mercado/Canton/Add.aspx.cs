@@ -16,7 +16,7 @@ namespace ProyectoGIS.App.Catastro.Canton
         {
             if (!IsPostBack)
             {
-                PROVINCIA_ID.DataSource = obj_pro.Consultar_Provincia();
+                PROVINCIA_ID.DataSource = obj_pro.Listar_Provincia();
                 PROVINCIA_ID.DataTextField = "PROVINCIA_NOMBRE";
                 PROVINCIA_ID.DataValueField = "PROVINCIA_ID";
                 PROVINCIA_ID.DataBind();
@@ -29,7 +29,7 @@ namespace ProyectoGIS.App.Catastro.Canton
                     if(dt != null)
                     {
                         CANTON_NOMBRE.Text = dt.Rows[0]["CANTON_NOMBRE"].ToString().Trim();
-                        PROVINCIA_ID.SelectedValue = dt.Rows[0]["PROVINCIA_NOMBRE"].ToString();
+                        PROVINCIA_ID.SelectedValue = dt.Rows[0]["PROVINCIA_ID"].ToString();
                         CANTON_OBSERVACION.Text = dt.Rows[0]["CANTON_OBSERVACION"].ToString().Trim();
                         CANTON_CODIGO.Text = dt.Rows[0]["CANTON_CODIGO"].ToString().Trim();
                         CANTON_ESTADO.SelectedValue = dt.Rows[0]["CANTON_ESTADO"].ToString();

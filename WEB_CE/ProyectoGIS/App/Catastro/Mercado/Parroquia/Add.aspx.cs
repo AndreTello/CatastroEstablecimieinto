@@ -16,7 +16,7 @@ namespace ProyectoGIS.App.Catastro.Parroquia
         {
             if (!IsPostBack)
             {
-                ZONA_ID.DataSource = obj_zon.Consultar_Zona();
+                ZONA_ID.DataSource = obj_zon.Listar_Zona();
                 ZONA_ID.DataTextField = "ZONA_NOMBRE";
                 ZONA_ID.DataValueField = "ZONA_ID";
                 ZONA_ID.DataBind();

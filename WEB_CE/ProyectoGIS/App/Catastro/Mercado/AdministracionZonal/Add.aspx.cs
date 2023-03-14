@@ -50,7 +50,7 @@ namespace ProyectoGIS.App.Catastro.AdministracionZonal
             if (Request.QueryString["id"] != null)
             {
                 string id = Request.QueryString["id"];
-                objdll.Editar_Administracion_Zonal(ADMINISTRACION_ZONAL_NOMBRE.Text, ADMINISTRACION_ZONAL_DETALLE.Text, ADMINISTRACION_ZONAL_TELEFONO.Text, ADMINISTRACION_ZONAL_CELULAR.Text, ADMINISTRACION_ZONAL_MAIL.Text, ADMINISTRACION_ZONAL_PAGINA_WEB.Text, ADMINISTRACION_ZONAL_REPRESENTANTE.Text, ADMINISTRACION_ZONAL_ESTADO.SelectedValue,id);
+                objdll.Editar_Administracion_Zonal(id, ADMINISTRACION_ZONAL_NOMBRE.Text, ADMINISTRACION_ZONAL_DETALLE.Text, ADMINISTRACION_ZONAL_TELEFONO.Text, ADMINISTRACION_ZONAL_CELULAR.Text, ADMINISTRACION_ZONAL_MAIL.Text, ADMINISTRACION_ZONAL_PAGINA_WEB.Text, ADMINISTRACION_ZONAL_REPRESENTANTE.Text, ADMINISTRACION_ZONAL_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
 
             }

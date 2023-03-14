@@ -21,31 +21,31 @@ namespace ProyectoGIS.App.Catastro.Establecimiento
             
             if (!IsPostBack)
             {
-                ASOCIACION_ID.DataSource = obj_aso.Consultar_Asociacion();
+                ASOCIACION_ID.DataSource = obj_aso.Listar_Asociacion();
                 ASOCIACION_ID.DataTextField = "ASOCIACION_NOMBRE";
                 ASOCIACION_ID.DataValueField = "ASOCIACION_ID";
                 ASOCIACION_ID.DataBind();
                 ASOCIACION_ID.Items.Insert(0, new ListItem("-- Seleccione una Asociacion --", ""));
 
-                LOTE_ID.DataSource = obj_lot.Consultar_Lote();
+                LOTE_ID.DataSource = obj_lot.Listar_Lote();
                 LOTE_ID.DataTextField = "LOTE_NOMBRE";
                 LOTE_ID.DataValueField = "LOTE_ID";
                 LOTE_ID.DataBind();
                 LOTE_ID.Items.Insert(0, new ListItem("-- Seleccione un Lote --", ""));
 
-                INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = obj_int.Consultar_Intervencion_Tecnica_Establecimiento();
+                INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = obj_int.Listar_Intervencion_Tecnica_Establecimiento();
                 INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataTextField = "INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE";
                 INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataValueField = "INTERVENCION_TECNICA_ESTABLECIMIENTO_ID";
                 INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataBind();
                 INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.Items.Insert(0, new ListItem("-- Seleccione una Intervencion Tecnica --", ""));
 
-                ADMINISTRACION_ZONAL_ID.DataSource = obj_adm.Consultar_Administracion_Zonal();
+                ADMINISTRACION_ZONAL_ID.DataSource = obj_adm.Listar_Administracion_Zonal();
                 ADMINISTRACION_ZONAL_ID.DataTextField = "ADMINISTRACION_ZONAL_NOMBRE";
                 ADMINISTRACION_ZONAL_ID.DataValueField = "ADMINISTRACION_ZONAL_ID";
                 ADMINISTRACION_ZONAL_ID.DataBind();
                 ADMINISTRACION_ZONAL_ID.Items.Insert(0, new ListItem("-- Seleccione una Administracion Zonal --", ""));
 
-                TIPO_ESTABLECIMIENTO_ID.DataSource = obj_tip.Consultar_Tipo_Establecimiento();
+                TIPO_ESTABLECIMIENTO_ID.DataSource = obj_tip.Listar_Tipo_Establecimiento();
                 TIPO_ESTABLECIMIENTO_ID.DataTextField = "TIPO_ESTABLECIMIENTO_NOMBRE";
                 TIPO_ESTABLECIMIENTO_ID.DataValueField = "TIPO_ESTABLECIMIENTO_ID";
                 TIPO_ESTABLECIMIENTO_ID.DataBind();
@@ -57,11 +57,11 @@ namespace ProyectoGIS.App.Catastro.Establecimiento
                     DataTable dt = objdll.Consultar_IdEstablecimiento(id);
                     if(dt != null)
                     {
-                        ASOCIACION_ID.SelectedValue = dt.Rows[0]["ASOCIACION_NOMBRE"].ToString();
-                        LOTE_ID.SelectedValue = dt.Rows[0]["LOTE_NOMBRE"].ToString();
-                        INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue = dt.Rows[0]["INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE"].ToString();
-                        ADMINISTRACION_ZONAL_ID.SelectedValue = dt.Rows[0]["ADMINISTRACION_ZONAL_NOMBRE"].ToString();
-                        TIPO_ESTABLECIMIENTO_ID.SelectedValue = dt.Rows[0]["TIPO_ESTABLECIMIENTO_NOMBRE"].ToString();
+                        ASOCIACION_ID.SelectedValue = dt.Rows[0]["ASOCIACION_id"].ToString();
+                        LOTE_ID.SelectedValue = dt.Rows[0]["LOTE_id"].ToString();
+                        INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue = dt.Rows[0]["INTERVENCION_TECNICA_ESTABLECIMIENTO_id"].ToString();
+                        ADMINISTRACION_ZONAL_ID.SelectedValue = dt.Rows[0]["ADMINISTRACION_ZONAL_id"].ToString();
+                        TIPO_ESTABLECIMIENTO_ID.SelectedValue = dt.Rows[0]["TIPO_ESTABLECIMIENTO_id"].ToString();
 
                         ESTABLECIMIENTO_PREDIO.Text = dt.Rows[0]["ESTABLECIMIENTO_PREDIO"].ToString().Trim();
                         ESTABLECIMIENTO_CLAVE_CATASTRAL.Text = dt.Rows[0]["ESTABLECIMIENTO_CLAVE_CATASTRAL"].ToString().Trim();

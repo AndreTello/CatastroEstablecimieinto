@@ -44,7 +44,7 @@ namespace ProyectoGIS.App.Catastro.Asociacion
             }
             if (Request.QueryString["id"] != null)
             {
-                objdll.Editar_Asociacion(ASOCIACION_CODIGO.Text, ASOCIACION_NOMBRE.Text, ASOCIACION_TELEFONO.Text, ASOCIACION_MAIL.Text, ASOCIACION_CONTACTO.Text, ASOCIACION_OBSERVACION.Text, ASOCIACION_ESTADO.SelectedValue, Request.QueryString["id"]);
+                objdll.Editar_Asociacion(Request.QueryString["id"], ASOCIACION_CODIGO.Text, ASOCIACION_NOMBRE.Text, ASOCIACION_TELEFONO.Text, ASOCIACION_MAIL.Text, ASOCIACION_CONTACTO.Text, ASOCIACION_OBSERVACION.Text, ASOCIACION_ESTADO.SelectedValue);
                 Response.Redirect("./Ficha");
 
             }
