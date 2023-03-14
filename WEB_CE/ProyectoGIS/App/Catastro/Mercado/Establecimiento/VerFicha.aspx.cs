@@ -23,12 +23,18 @@ namespace ProyectoGIS.App.Catastro.Mercado.Establecimiento
     public partial class VerFicha : System.Web.UI.Page
     {
         Cls_Establecimiento_BLL objdll_Est = new Cls_Establecimiento_BLL();
+        Cls_Intervencion_Tecnica_Establecimiento_BLL objdll_int = new Cls_Intervencion_Tecnica_Establecimiento_BLL();
+        Cls_Tipo_Establecimiento_BLL objdll_tipo = new Cls_Tipo_Establecimiento_BLL();
+        Cls_Tipo_Identificacion_BLL objdll_ide = new Cls_Tipo_Identificacion_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
 
             string id = Request.QueryString["id"];
             DataTable FichaMercado = objdll_Est.Consultar_Establecimiento();
             DataRow[] FichaMercadoFiltrada = FichaMercado.Select($"ESTABLECIMIENTO_ID = '{id}'");
+            DataTable dt = objdll_int.Consultar_IdIntervencion_Tecnica_Establecimiento(id);
+            DataTable dt2 = objdll_tipo.Consultar_IdTipo_Establecimiento(id);
+            DataTable dt3 = 
             if(FichaMercadoFiltrada.Length == 1)
             {
                 DataRow ficha = FichaMercadoFiltrada[0];
@@ -39,7 +45,8 @@ namespace ProyectoGIS.App.Catastro.Mercado.Establecimiento
                 E_NOMENCLATURA.Text = ficha.Field<string>("ESTABLECIMIENTO_NOMENCLATURA_VIAL");
                 E_ADMINISTRACION_Z.Text = ficha.Field<string>("ADMINISTRACION_ZONAL_NOMBRE");
                 E_PARROQUIA.Text = ficha.Field<string>("LOTE_NOMBRE");
-                E_IDENTIFICACION.Text = ficha.Field<string>("TIPO_ESTABLECIMIENTO_NOMBRE");
+                E_IDENTIFICACION.Text = dt2.Rows[0]["tipo_establecimiento_nombre"].ToString();
+
                 E_NOMBRE_ASOCIACION.Text = ficha.Field<string>("ASOCIACION_NOMBRE");
                 E_PARQUEADERO.Text = ficha.Field<string>("ESTABLECIMIENTO_PAQUEADERO");
                 E_DIAS_APERTURA.Text = ficha.Field<string>("ESTABLECIMIENTO_DIAS_APERTURA");
@@ -47,13 +54,13 @@ namespace ProyectoGIS.App.Catastro.Mercado.Establecimiento
 
                 //Segunda columna
                 E_CALLE_P.Text = ficha.Field<string>("ESTABLECIMIENTO_CALLE_PRINCIPAL");
-                //E_N_PARQUEADERO.Text = ficha.Field<string>("ESTABLECIMIENTO_NUMERO_PARQUEADERO");
+                E_N_PARQUEADERO.Text = ficha.Field<string>("ESTABLECIMIENTO_NUMERO_PARQUEADERO");
                 E_HORA_AT.Text = ficha.Field<string>("ESTABLECIMIENTO_HORARIO_ATENCION");
                 E_TIPO_I.Text = ficha.Field<string>("INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE");
 
                 //Tercera columna
                 E_CALLE_S.Text = ficha.Field<string>("ESTABLECIMIENTO_CALLE_SECUNDARIA");
-                //E_AÑO_INTER.Text = ficha.Field<string>("ESTABLECIMIENTO_HORARIO_ATENCION
+                E_ANO_INTER.Text = dt.Rows[0]["intervencion_tecnica_establecimiento_fecha_inicio"].ToString();
 
             }
         }

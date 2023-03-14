@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,17 +14,29 @@ namespace ProyectoGIS.App.Catastro.Intervencion
         Cls_Tipo_Intervencion_Tecnica_BLL objdll2 = new Cls_Tipo_Intervencion_Tecnica_BLL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.Items.Insert(0, new ListItem("-- Seleccione un Tipo de Intervención --", ""));
             if (!IsPostBack)
             {
                 TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataSource = objdll2.Listar_Tipo_Intervencion_Tecnica();
                 TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataTextField = "TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE";
                 TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataValueField = "TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID";
                 TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.DataBind();
+                TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.Items.Insert(0, new ListItem("-- Seleccione un Tipo de Intervención --", ""));
+                string id = Request.QueryString["id"];
+                if(id != null)
+                {
+                    DataTable dt = objdll.Consultar_IdIntervencion_Tecnica_Establecimiento(id);
+                    if(dt != null)
+                    {
+                        INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text = dt.Rows[0]["INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE"].ToString();
+                        INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO.SelectedDate = Convert.ToDateTime( dt.Rows[0]["INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO"]);
+                        INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN.SelectedDate = Convert.ToDateTime(dt.Rows[0]["INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN"]);
+                        INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue = dt.Rows[0]["INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO"].ToString();
+                        TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue = dt.Rows[0]["TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID"].ToString();
+                        btnGuardar.Text = "Actualizar";
+                    }
+                }
             }
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.Items.Insert(0, new ListItem("-- Seleccione un Estado --", ""));
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.Items.Insert(1, new ListItem("Activo", "1"));
-            INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.Items.Insert(2, new ListItem("Inactivo", "0"));
+           
             
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -35,6 +48,12 @@ namespace ProyectoGIS.App.Catastro.Intervencion
             {
                 Response.Write("<script>alert('Debe llenar todos los campos')</script>");
                 return;
+            }
+            if (Request.QueryString["id"] != null)
+            {
+                objdll.Editar_Intervencion_Tecnica_Establecimiento(Request.QueryString["id"],Convert.ToInt32(TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue), INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text, INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO.SelectedDate.ToString("dd/MM/yyyy"), INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN.SelectedDate.ToString("dd/MM/yyyy"),INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue);
+                Response.Redirect("./Ficha");
+
             }
             objdll.Insertar_Intervencion_Tecnica_Establecimiento(Convert.ToInt32(TIPO_INTERVENCION_TECNICA_ESTABLECIMIENTO_ID.SelectedValue), INTERVENCION_TECNICA_ESTABLECIMIENTO_NOMBRE.Text, INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_INICIO.SelectedDate.ToString("dd/MM/yyyy"), INTERVENCION_TECNICA_ESTABLECIMIENTO_FECHA_FIN.SelectedDate.ToString("dd/MM/yyyy"),INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO.SelectedValue);
             Response.Redirect("./Ficha");

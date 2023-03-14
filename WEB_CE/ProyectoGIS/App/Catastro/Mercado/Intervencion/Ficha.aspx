@@ -1,18 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ficha.aspx.cs" Inherits="ProyectoGIS.App.Catastro.Intervencion.Ficha" %>
+﻿<%@ Page Title="Gestión de Técnica de Intervención de Establecimiento" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ficha.aspx.cs" Inherits="ProyectoGIS.App.Catastro.Intervencion.Ficha" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="tabla">
         <div class="table-responsive my-custom-scrollbar table-wrapper-scroll-y">
             <asp:GridView ID="MiTabla" class="table table-sm table-striped table-hover text-nowrap table-bordered table-secondary text-center align-middle" runat="server" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_id" HeaderText="Id" />
-                    <asp:BoundField DataField="tipo_intervencion_tecnica_establecimiento_nombre" HeaderText="Tipo de Intervención" />
-                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_fecha_inicio" HeaderText="Fecha Inicio" />
-                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_fecha_fin" HeaderText="Fecha Fin" />
-                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_estado" HeaderText="Estado" />
+                    <asp:BoundField DataField="tipo_intervencion_tecnica_establecimiento_nombre" HeaderText="TIPO DE INTERVENCIÓN" />
+                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_nombre" HeaderText="NOMBRE" />
+                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_fecha_inicio" HeaderText="FECHA DE INICIO" />
+                    <asp:BoundField DataField="intervencion_tecnica_establecimiento_fecha_fin" HeaderText="FECHA DE FIN" />
+                    <asp:TemplateField HeaderText="ESTADO">
+                       <ItemTemplate>
+                            <asp:Label ID="lblEstado" runat="server" Text='<%# Eval("intervencion_tecnica_establecimiento_estado").ToString() == "1" ? "Activo" : "Inactivo" %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="ACCIONES">
                         <ItemTemplate>
-                             <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CssClass="btn btn-primary" />
+                            <a href="./Add?id=<%# Eval("intervencion_tecnica_establecimiento_id") %>" class="btn btn-primary">Editar</a>
                             <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" CommandName="Eliminar" CommandArgument='<%# Eval("intervencion_tecnica_establecimiento_id") %>' OnClientClick="return confirm('¿Está seguro que desea eliminar este cantón?');" OnClick="btnEliminar_Click"  />
                         </ItemTemplate>
                     </asp:TemplateField>

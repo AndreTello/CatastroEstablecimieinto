@@ -25,12 +25,14 @@
         </Triggers>
     </asp:UpdatePanel>
     <label>Estado</label>
-    <asp:DropDownList CssClass="form-control mb-4 mt-2" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO" />
+    <asp:DropDownList CssClass="form-select" runat="server" ID="INTERVENCION_TECNICA_ESTABLECIMIENTO_ESTADO"  >
+        <asp:ListItem Text="-- Selecciona un Estado --" Value="" />
+        <asp:ListItem Value="1">Activo</asp:ListItem>
+        <asp:ListItem Value="0">Inactivo</asp:ListItem>
+    </asp:DropDownList>
 
-    <asp:UpdatePanel runat="server">
-         <ContentTemplate>
-            <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
-            <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
-         </ContentTemplate>
-    </asp:UpdatePanel>
+    
+    <asp:Button CssClass="btn btn-primary mt-3" runat="server" ID="btnGuardar" OnClick="btnGuardar_Click" Text="Guardar"/>
+    <a class="btn btn-danger mt-3" href="./Ficha" >Cancelar</a>
+
 </asp:Content>
